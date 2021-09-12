@@ -12,6 +12,7 @@
             ul.menu__enlaces#menu__enlaces
                 -const enlaces = ["Catalogo","Pedido","Carrito","Contactanos","Nosotros",]
                 each enlace in enlaces
-                    li( id="menu__enlace--" + enlace, class="menu__enlace borde-animado-centro menu__enlace--" + enlace) #{enlace}
+                    li
+                        a(href="./pages" + enlace +".html" id="menu__enlace--" + enlace, class="menu__enlace animated-border animated-border--center menu__enlace--" + enlace) #{enlace}
 
 

@@ -4,6 +4,8 @@
     padding: 0;
     box-sizing: border-box;
 }
+//  TODO: SPACED
+
 $margin-1: 48px;
 $margin-2: 40px;
 $margin-3: 32px;
@@ -20,30 +22,34 @@ $margin-7: 8px;
     $margin-6: 22px;
     $margin-7: 12px;
 }
+
 @font-face {
     font-family: 'poppins';    
     font-style: normal;
     font-weight:400;
     src: local('Poppins'), local('Poppins-Regular'), url(../galery/fonts/Poppins-Regular.ttf) format('truetype');
+    font-display: optional;
 }
 @font-face {
     font-family: 'roboto-condensed';  
     font-style: normal;  
     font-weight: 700;
     src: local('RobotoCondensed'), local('RobotoCondensed-Bold'), url(../galery/fonts/RobotoCondensed-Bold.ttf) format('truetype');
+    font-display: optional;
 }
 @font-face {
     font-family: 'roboto';  
     src: local('Roboto'), local('Roboto-Medium'), url(../galery/fonts/Roboto-Medium.ttf) format('truetype');
+    font-display: optional;
 }
 body{
     color: $text;
-    font-family: 'poppins';
+    font-family: 'poppins', arial;
     font-size: 1rem;
 }
 h1,h2,h3,h4{
     color: $color2;
-    font-family: 'roboto-condensed';
+    font-family: 'roboto-condensed', Helvetica;
 }
 .h1{
     font-size: 32px;
@@ -78,6 +84,7 @@ h1,h2,h3,h4{
 
 a {
     cursor: pointer;
+    user-select: none;
 }
 
 img {

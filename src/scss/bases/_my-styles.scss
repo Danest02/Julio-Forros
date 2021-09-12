@@ -1,5 +1,5 @@
 
-// TODO:STUB BOTONES
+// TODO: BOTONES
 .display-none{
     display: none;
 }
@@ -9,7 +9,7 @@
 
 .mybtn {
     font-size: 1rem;
-    font-family: 'roboto';
+    font-family: 'roboto', arial;
     background-color: $color1;
     line-height: 2.25em;
     display: inline-block;
@@ -50,51 +50,43 @@
 }
 
 
-// TODO:STUB BORDES ANIMADOS
+// TODO: Animated Borders
 
-.borde-animado-centro {
-    cursor: pointer;
+.animated-border {
     &:after {
         content: "";
         margin-top: 3px;
         display: block;
-        position: absolute;
-        width: 0;
+        transform: translateX(100%);
+        width: 0%;
         height: 3px;
-        left: 50%;
-        background: #fff;
-        transition: width .3s ease-in-out, left .3s ease-in-out;
-        // * width en 100% se elimina left se usa transform
-        // transform: translateX(-100%);
+        background: $color1;
+        border-radius: 3px;
+        transition: width .5s, transform .5s ;
     }
-
+    
     &:hover:after {
-        left: 0;
         width: 100%;
-        // transform: translateX(0);
+        transform: translateX(0);
     }
 }
 
-.borde-animado-right {
-    overflow: hidden;
-    padding: .5rem 0;
-
-    &:after {
-        content: "";
-        margin-top: 3px;
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 3px;
-        background: #fff;
-        transition: transform .3s linear, left .3s linear;
-        // * width en 100% se elimina left se usa transform
-        transform: translateX(-100%);
-    }
-
-    &:hover:after {
+.animated-border--left {
+    &::after{
         transform: translateX(0);
+    }
+}
+.animated-border--center {
+    &::after{
+        position: relative;
+        width: 0;
+        transform: translateX(0);
+        left: 50%;
+        transition: left .5s , width .5s;
+    }
+    &:hover::after{
         left: 0;
+        width: 100%;
     }
 }
 
@@ -141,7 +133,7 @@
     }
 }
 
-// TODO:STUB ESTILOS HEADER
+// TODO: ESTILOS HEADER
 
 // <div class="wave">
 // <svg viewBox="0 0 500 150" preserveAspectRatio="none"
@@ -150,21 +142,14 @@
 //         style="stroke: none; fill: #fff;"></path>
 // </svg>
 // </div>
-.wave {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 150px;
-    overflow: hidden;
-}
 
-// TODO:STUB IMAGENES
+// TODO: IMAGENES
 
 .img-responsive {
     max-width: 100%;
 }
 
-// TODO:STUB HAMBURGUER
+// TODO: HAMBURGUER
 // <div class="contenedor-hamburguer" id="contenedor-hamburguer">
     // <div class="hamburguer"></div>
 // </div>
