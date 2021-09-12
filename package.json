@@ -1,0 +1,23 @@
+{
+  "name": "julio-forros",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^4.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Danest02/Julio-Forros.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Danest02/Julio-Forros/issues"
+  },
+  "homepage": "https://github.com/Danest02/Julio-Forros#readme"
+}
