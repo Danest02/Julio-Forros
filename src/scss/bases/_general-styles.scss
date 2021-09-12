@@ -3,23 +3,86 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    // border: none !important;
 }
+$margin-1: 48px;
+$margin-2: 40px;
+$margin-3: 32px;
+$margin-4: 28px;
+$margin-5: 24px;
+$margin-6: 16px;
+$margin-7: 8px;
+@include min-width(768px){
+    $margin-1: 68px;
+    $margin-2: 56px;
+    $margin-3: 44px;
+    $margin-4: 40px;
+    $margin-5: 36px;
+    $margin-6: 22px;
+    $margin-7: 12px;
+}
+@font-face {
+    font-family: 'poppins';    
+    font-style: normal;
+    font-weight:400;
+    src: local('Poppins'), local('Poppins-Regular'), url(../galery/fonts/Poppins-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'roboto-condensed';  
+    font-style: normal;  
+    font-weight: 700;
+    src: local('RobotoCondensed'), local('RobotoCondensed-Bold'), url(../galery/fonts/RobotoCondensed-Bold.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'roboto';  
+    src: local('Roboto'), local('Roboto-Medium'), url(../galery/fonts/Roboto-Medium.ttf) format('truetype');
+}
+body{
+    color: $text;
+    font-family: 'poppins';
+    font-size: 1rem;
+}
+h1,h2,h3,h4{
+    color: $color2;
+    font-family: 'roboto-condensed';
+}
+.h1{
+    font-size: 32px;
+    @include min-width(768px){
+        font-size: 48px;
+    }
+}
+.h2{
+    font-size: 28px;
+    @include min-width(768px){
+        font-size: 40px;
+    }
+}
+.h3{
+    font-size: 24px;
+    @include min-width(768px){
+        font-size: 32px;
+    }
+}
+.h4{
+    font-size: 20px;
+    @include min-width(768px){
+        font-size: 22px;
+    }
+}
+
+.p-small{
+    font-size: 14px;
+}
+
+
 
 a {
-    text-decoration: none;
     cursor: pointer;
-    outline: none;
-}
-
-p {
-    font-family: $roboto-condensed;
 }
 
 img {
     max-width: 100%;
 }
-
-li {
+li{
     list-style: none;
 }

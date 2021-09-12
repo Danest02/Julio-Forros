@@ -6,92 +6,46 @@
 .visibility-hidden{
     visibility: hidden;
 }
-.mybtn-exit{
-    line-height: 0;
-    border-radius: 50%;
-    font-size: 1.3em;
-    padding: .5em .65em;
-    background-color: lightcoral;
-    outline:none;
-    color: #fff;
-    &:hover {
-        transition: background-color 0.4s linear;
-        background-color: coral;
-    }
 
-    &:active {
-        transform: scale(.85);
-    }
-
-
-}
 .mybtn {
-    font-size: 1.2em;
+    font-size: 1rem;
+    font-family: 'roboto';
     background-color: $color1;
+    line-height: 2.25em;
     display: inline-block;
-    line-height: 2.4em;
-    padding: 0 1.2em;
+    padding: 0 1.125em;
     color: #fff;
     text-decoration: none;
     text-align: center;
-    border-radius: 1.25em;
-    // border: 1px solid rgba(#000, .2);
+    border-radius: 1.125rem;
     outline:none;
     cursor: pointer;
+    transition: background-color 0.5s linear;
 
     &:hover {
-        transition: background-color 0.4s linear;
-        background-color: $color1;
+        background-color: $color1-hover;
     }
 
     &:active {
         transition: transform .5s;
-        transform: scale(.85);
-    }
-}
-.mybtn-zoon {
-    background: #ffffff;
-    display: inline-block;
-    line-height: 2.5em;
-    padding: 0 1.25em;
-    color: $color2;
-    text-decoration: none;
-    border-radius: 1.25em;
-    cursor: pointer;
-    transition: all 0.4s linear;
-    
-    &:hover {
-        transition: all 0.4s linear;
-        transform: scale(1.1);
-    }
-
-    &:active {
         transform: scale(.95);
+        background-color: $color1-active;
+
+    }
+    &:focus {
+        outline: 1px solid $color1;
     }
 }
 
 
-.mybtn-borde {
-    background: rgba(255, 255, 255, 0);
-    font-size: 1.2rem;
-    display: inline-block;
-    line-height: 2.4em;
-    padding: 0 1.2em;
-    color: $color1;
-    text-decoration: none;
-    border-radius: 1.25em;
-    border: 1px solid $color1;
-    cursor: pointer;
+.mybtn--ghost {
+    background-color: transparent;
+    color: $color2;
+    border: 1px solid $color2;
 
     &:hover {
-        transition: all 0.4s linear;
-        background: $color1;
+        background: $color2;
         color: #fff;
-    }
-
-    &:active {
-        transition: transform .5s;
-        transform: scale(.85);
     }
 }
 
@@ -231,7 +185,7 @@ $height: 5px;
         align-items: center;    
         width: $width;
         height: $height;
-        border-radius: $height / 2;
+        border-radius: $height * 0.5;
         position: relative;
         background-color: #000;
         transition: background-color 0.5s ease-in, transform 1s;
@@ -241,7 +195,7 @@ $height: 5px;
             display: block;
             width: $width;
             height: $height;
-            border-radius: $height / 2;
+            border-radius: $height * 0.5;
             background-color: #000;
             top: -0.6rem;
             transition: background-color 0.5s ease-in, transform 0.3s;

@@ -9,7 +9,7 @@ import terser from 'gulp-terser';
 import concat from 'gulp-concat';
 
 import pug from 'gulp-pug';
-import sass from 'gulp-sass';
+var sass = require('gulp-sass')(require('sass'));
 
 import clean from 'gulp-purgecss';
 
