@@ -1,5 +1,4 @@
 //- pug -w --pretty src/pug/pages/*.pug -o ./public -p ./src/pug/templates
-
 html(lang="es")
     head
         meta(charset="UTF-8")
@@ -19,11 +18,7 @@ html(lang="es")
         //- STUB LEAFLET.JS mapa
         //- link(rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css")
 
-        //- STUB SWIPER.JS
-        //- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" type="text/css" />
-        link(rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.min.css")
         
-
         //- STUB ESTILOS CSS
         link(rel="stylesheet" type="text/css" href="css/styles.css")
 
@@ -43,16 +38,14 @@ html(lang="es")
 
     body#body
         //- include ../blocks/menu.pug
-        header
-            //- include ../blocks/navbar.pug
+        header.header
+            include ../blocks/navbar-header.pug
             block header
 
-        main
+        main.main
             block main
-            include ../blocks/swiper-js.pug
             include ../blocks/js.pug
             footer
-                a hola
 
         
         footer.footer#footer

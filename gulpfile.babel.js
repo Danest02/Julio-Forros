@@ -20,7 +20,7 @@ import rename from 'gulp-rename'
 
 // gulp.task('html-min', () => {
 //     return gulp
-//         .src('./src/*html')
+//         .src('./public/*html')
 //         .pipe(
 //             htmlmin({
 //                 collapseWhitespace: true,
@@ -41,7 +41,7 @@ gulp.task('babel', () => {
 });
 
 
-const production = false;
+const production = true;
 gulp.task('pug', () => {
     return gulp
         .src('./src/pug/pages/*.pug')
@@ -50,9 +50,9 @@ gulp.task('pug', () => {
                 pretty: production ? false : true
             })
         )
-        .pipe(rename({
-            extname: ".php"
-          }))
+        // .pipe(rename({
+        //     extname: ".php"
+        //   }))
         .pipe(gulp.dest('./public'));
 });
 // gulp.task('rename', () => {

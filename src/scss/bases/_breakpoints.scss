@@ -1,0 +1,40 @@
+$mobile-portrait: 320px;
+$tablet: 768px;
+$tablet-landscape: 1024px;
+$laptop: 1366px;
+$desktop: 1920px;
+
+// @media (max-height: 500px) and (min-width: 800px)
+// @media (orientation: landscape) and (min-width: 767px)
+ 
+@mixin max-width($width){
+    @media screen and (max-width: $width){
+        @content;
+    }
+}
+@mixin min-width($min-width){
+    @media screen and (min-width: $min-width){
+        @content;
+    }
+}
+@mixin min-height($min-height){
+    @media screen and (min-height: $min-height){
+        @content;
+    }
+}
+@mixin min-height-min-width($height,$width){
+    @media (min-height:$height) and (min-width: $width){
+        @content;
+    }
+}
+@mixin max-height-max-width($height,$width){
+    @media (max-height:$height) and (max-width: $width){
+        @content;
+    }
+}
+@mixin landscape{
+    @media (orientation: landscape){
+        @content
+    }
+
+}

@@ -1,0 +1,13 @@
+@import "bases/variables";
+@import "bases/normalize";
+@import "bases/my-styles";
+@import "bases/general-styles";
+@import "bases/mixins-and-extends";
+@import "bases/breakpoints";
+@import "bases/keyframes";
+
+@import "blocks/navbar-header";
+@import "blocks/footer";
+
+@import "pages/index.scss";
+@import "media-queries/index-media-queries";

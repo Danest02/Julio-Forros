@@ -1,0 +1,17 @@
+
+.navbar-header#navbar-header
+        .navbar-header__contenedor-logo
+            img(class="navbar__logo navbar__logo--dragon" src="../galeria/imagenes/Logo Julio Forros Dragón.svg", alt="logo empresa Julio Forros")
+            img(class="navbar__logo navbar__logo--nombre" src="../galeria/imagenes/Logo Julio Forros Nombre Negro.svg", alt="nombre empresa Julio Forros")
+        .navbar-header__contenedor-botones
+            i(class="navbar__boton navbar__boton--buscar boton fas fa-search", alt="boton buscar")
+            i(class="navbar__boton navbar__boton--usuario boton fas fa-user-circle", alt="boton usuario")
+            .navbar__boton.navbar__boton--menu#navbar__boton--menu
+                .hamburguer#hamburguer
+        .menu#menu
+            ul.menu__enlaces#menu__enlaces
+                -const enlaces = ["Catalogo","Pedido","Carrito","Contactanos","Nosotros",]
+                each enlace in enlaces
+                    li( id="menu__enlace--" + enlace, class="menu__enlace borde-animado-centro menu__enlace--" + enlace) #{enlace}
+
+

@@ -1,0 +1,25 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    // border: none !important;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+}
+
+p {
+    font-family: $roboto-condensed;
+}
+
+img {
+    max-width: 100%;
+}
+
+li {
+    list-style: none;
+}
