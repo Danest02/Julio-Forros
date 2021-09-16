@@ -11,6 +11,7 @@
     <link rel="shortcut icon" href="../public/galery/favicon/favicon.svg" type="image/x-icon"/>
     <link rel="icon" href="../public/galery/favicon/favicon.svg" type="image/x-icon"/>
     <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons+Round"/>
     <meta property="og:url" content="http://www.julioforros.com"/>
     <meta property="og:type" content="website"/>
     <meta property="og:title" content="Julio Forros"/>
@@ -20,20 +21,25 @@
   <body id="body">
     <header class="header">
       <div class="navbar-header" id="navbar-header">
-        <div class="navbar-header__contenedor-logo"><img class="navbar__logo navbar__logo--dragon" src="galery/logos/Logo Julio Forros Dragón.svg" alt="logo empresa Julio Forros"/><img class="navbar__logo navbar__logo--nombre" src="galery/logos/Logo Julio Forros Nombre Negro.svg" alt="nombre empresa Julio Forros"/></div>
-        <div class="navbar-header__contenedor-botones"><i class="navbar__boton navbar__boton--buscar boton fas fa-search" alt="boton buscar"></i><i class="navbar__boton navbar__boton--usuario boton fas fa-user-circle" alt="boton usuario"></i>
-          <div class="navbar__boton navbar__boton--menu" id="navbar__boton--menu">
-            <div class="hamburguer" id="hamburguer"></div>
+        <div class="navbar-header__container-logo"><a href="index.html"><img class="navbar-header__logo navbar-header__logo--isotipo" src="galery/logos/Logo Julio Forros Dragón.svg" alt="logo empresa Julio Forros"/></a><a href="index.html"><img class="navbar-header__logo navbar-header__logo--logotipo" src="galery/logos/Logo Julio Forros Nombre Negro.svg" alt="nombre empresa Julio Forros"/></a></div>
+        <div class="navbar-header__container-links-buttons">
+          <div class="navbar-header__container-buttons">
+            <div class="navbar-header__button navbar-header__button--search" data-name="Buscar"><span class="navbar-header__button-text navbar-header__button-text--search">Buscar</span><span class="material-icons-round navbar-header__button-icon">search</span></div>
+            <div class="navbar-header__button navbar-header__button--dark-mode" data-name="Modo Oscuro"><span class="navbar-header__button-text navbar-header__button-text--dark-mode">Modo Oscuro</span><span class="material-icons-round navbar-header__button-icon">dark_mode</span></div>
+            <div class="navbar-header__button navbar-header__button--user" data-name="Iniciar Sesion"><span class="navbar-header__button-text navbar-header__button-text--user">Inicia Sesión</span><span class="material-icons-round navbar-header__button-icon">account_circle</span></div>
+            <div class="hamburguer" id="hamburguer">
+              <div class="hamburguer__div-center"></div>
+            </div>
           </div>
-        </div>
-        <div class="menu" id="menu">
-          <ul class="menu__enlaces" id="menu__enlaces">
-            <li><a class="menu__enlace animated-border animated-border--center menu__enlace--Catalogo" href="./pagesCatalogo.html" id="menu__enlace--Catalogo">Catalogo</a></li>
-            <li><a class="menu__enlace animated-border animated-border--center menu__enlace--Pedido" href="./pagesPedido.html" id="menu__enlace--Pedido">Pedido</a></li>
-            <li><a class="menu__enlace animated-border animated-border--center menu__enlace--Carrito" href="./pagesCarrito.html" id="menu__enlace--Carrito">Carrito</a></li>
-            <li><a class="menu__enlace animated-border animated-border--center menu__enlace--Contactanos" href="./pagesContactanos.html" id="menu__enlace--Contactanos">Contactanos</a></li>
-            <li><a class="menu__enlace animated-border animated-border--center menu__enlace--Nosotros" href="./pagesNosotros.html" id="menu__enlace--Nosotros">Nosotros</a></li>
-          </ul>
+          <div class="menu" id="menu">
+            <ul class="menu__links" id="menu__links">
+              <li><a class="menu__link animated-border animated-border  menu__link--Catalogo" href="./pagesCatalogo.html" id="menu__link--Catalogo">Catalogo</a></li>
+              <li><a class="menu__link animated-border animated-border  menu__link--Pedido" href="./pagesPedido.html" id="menu__link--Pedido">Pedido</a></li>
+              <li><a class="menu__link animated-border animated-border  menu__link--Carrito" href="./pagesCarrito.html" id="menu__link--Carrito">Carrito</a></li>
+              <li><a class="menu__link animated-border animated-border  menu__link--Contactanos" href="./pagesContactanos.html" id="menu__link--Contactanos">Contactanos</a></li>
+              <li><a class="menu__link animated-border animated-border  menu__link--Nosotros" href="./pagesNosotros.html" id="menu__link--Nosotros">Nosotros</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -41,6 +47,7 @@
       <h1 class="h1">Esto es Titulo</h1>
       <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><a class="mybtn">Ver mas</a>
       <script src="js/script.js"></script>
+      <script src="https://kit.fontawesome.com/2a4c2c58c8.js" crossorigin="anonymous"></script>
       <footer></footer>
     </main>
     <footer class="footer" id="footer">

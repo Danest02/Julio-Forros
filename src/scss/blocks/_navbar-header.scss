@@ -1,6 +1,117 @@
-.menu{
-    .menu__enlaces{
+.navbar-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    align-items: center;
+    height: 3.5rem;
+    overflow: hidden;
+
+    .navbar-header__container-logo {
         display: flex;
+        transition: transform .5s ease;
+
+        &:hover {
+            transform: scale(1.05) translateX(.25rem);
+        }
+
+        .navbar-header__logo {
+            height: 1.5rem;
+        }
+    }
+
+    .navbar-header__container-links-buttons {
+        display: flex;
+        align-items: center;
         gap: 1rem;
+        flex-direction: row-reverse;
+
+        .navbar-header__container-buttons {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            height: 100%;
+            
+            .navbar-header__button {
+                display: flex;
+                align-items: center;
+                transition: transform .5s;
+                &:active{
+                    transform: scale(1.05);
+                }
+                &:hover{
+                    color: $color1;
+                    .navbar-header__button-text--search{
+                        width: 79px;
+                    }
+                    .navbar-header__button-text--dark-mode{
+                        width: 131px;
+                    }
+                    .navbar-header__button-text--user{
+                        width: 123px;
+                    }
+                    .navbar-header__button-text{
+                        // width: 10rem;
+                        padding-left: 1rem;
+                        opacity: 1;
+
+                    }
+                    .navbar-header__button-icon{
+                        transform: scale(1.2);
+                        color: inherit;
+                        cursor: pointer;
+                    }
+                }
+                .navbar-header__button-text{
+                    transition:opacity .5s ease-in-out, width .5s ease-in-out, padding .5s ease-in-out;
+                    overflow: hidden;
+                    width: 0;
+                    opacity: 0;
+                    white-space: nowrap;
+                    cursor: pointer;
+
+                }
+                .navbar-header__button-icon {
+                    font-size: 24px;
+                    color: $icons-navbar-header;
+                    transition: color .5s, transform .3s ease-in;
+                }
+
+            }
+
+            .hamburguer {
+                margin-left: 2px;
+
+                @include desktop {
+                    display: none;
+                }
+            }
+        }
+
+        .menu {
+            display: none;
+
+            .menu__links {
+                display: flex;
+                gap: 1rem;
+            }
+
+            @include desktop {
+                display: flex;
+            }
+        }
+    }
+}
+
+.navbar-header__container-logo {
+    align-items: center;
+    gap: .5rem;
+
+    .navbar-header__logo--isotipo {
+        display: none;
+
+        @include mobile-landscape {
+            display: flex;
+            min-height: 2rem;
+        }
     }
 }

@@ -85,6 +85,8 @@ h1,h2,h3,h4{
 a {
     cursor: pointer;
     user-select: none;
+    text-decoration: none;
+    color: inherit;
 }
 
 img {

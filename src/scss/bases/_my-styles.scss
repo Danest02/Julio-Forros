@@ -81,99 +81,64 @@
         position: relative;
         width: 0;
         transform: translateX(0);
-        left: 50%;
+        margin: auto;
         transition: left .5s , width .5s;
     }
     &:hover::after{
-        left: 0;
         width: 100%;
     }
 }
 
 
-.borde-animado-doble {
-    // padding: .5rem 0;
-
-    &:before {
-        content: '';
-        display: block;
+.animated-border--doble {
+    position: relative;
+    transition: color .5s ease-in-out;
+    &::before, &::after{
+        background-color: $color1;
         position: absolute;
-        top: -2px;
-        width: 100%;
-        background-color: transparent;
+        width: 0;
         height: 2px;
-        transition: all 0.5s ease-in-out;
+        transition: width .5s, transform .5s;
     }
 
-    &:after {
+    &::before {
+        transform: translateX(-100%);
         content: '';
-        display: block;
-        position: absolute;
-        top: 100%;
+        top: -2px;
+        right: 0;
+    }
+
+    &::after {
         left: 0px;
-        width: 0%;
-        background-color: transparent;
-        height: 2px;
-        transition: all 0.5s ease-in-out;
     }
 
     &:hover {
-        text-decoration: none;
-        color: $color2;
+        color: $color1;
 
-        &:before {
-            width: 0%;
-            background: #fff;
-        }
-
-        &:after {
+        &::before, &::after {
             width: 100%;
-            background: #fff;
+            background: $color1;
+            transform: translateX(0);
         }
     }
 }
 
-// TODO: ESTILOS HEADER
-
-// <div class="wave">
-// <svg viewBox="0 0 500 150" preserveAspectRatio="none"
-//     style="height: 100%; width: 100%;">
-//     <path d="M0.00,49.99 C150.00,150.00 349.20,-49.99 500.00,49.99 L500.00,150.00 L0.00,150.00 Z"
-//         style="stroke: none; fill: #fff;"></path>
-// </svg>
-// </div>
-
-// TODO: IMAGENES
-
-.img-responsive {
-    max-width: 100%;
-}
-
-// TODO: HAMBURGUER
-// <div class="contenedor-hamburguer" id="contenedor-hamburguer">
-    // <div class="hamburguer"></div>
-// </div>
-$width: 30px;
-$height: 5px;
-.contenedor-hamburguer {
+.hamburguer{
+    $width: 28px;
+    $height: 4px;
+    background-color: transparent;
+    cursor: pointer;
+    height: 28px;
+    width: 28px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
-    background-color: transparent;
-    cursor: pointer;
-    min-height: 60px;
-    min-width: 60px;
-    .hamburguer{
-        display: flex;
-        justify-content: center;
-        align-items: center;    
+    .hamburguer__div-center{
+        position: absolute;
         width: $width;
         height: $height;
+        background-color:$icons-navbar-header;
         border-radius: $height * 0.5;
-        position: relative;
-        background-color: #000;
-        transition: background-color 0.5s ease-in, transform 1s;
         &:before, &:after{
             content: " ";
             position: absolute;
@@ -181,20 +146,20 @@ $height: 5px;
             width: $width;
             height: $height;
             border-radius: $height * 0.5;
-            background-color: #000;
-            top: -0.6rem;
-            transition: background-color 0.5s ease-in, transform 0.3s;
-
+            background-color:$icons-navbar-header;
+            top: -8px;
+            transition: background-color 0.5s ease, transform 0.3s;
+    
         }
         &:after{
-            top: 0.6rem;
+            top: 8px;
         }
+        
     }
-
     .hamburguer-simple{
         height: 0;
         &:before, &:after{
-            top: 0;
+            top: -2px;
             transform: rotate(-45deg);
         }
         &:after{
@@ -250,11 +215,9 @@ $height: 5px;
         }
 
     }
-
-
-
-
 }
+
+
 .contenedor-hamburguer-scroll {
     background-color: #fff;
     box-shadow: 0 0 9px 0 rgba(0, 0, 0, .5);

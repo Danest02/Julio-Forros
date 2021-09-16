@@ -1,18 +1,28 @@
 
 .navbar-header#navbar-header
-        .navbar-header__contenedor-logo
-            img(class="navbar__logo navbar__logo--dragon" src="galery/logos/Logo Julio Forros Dragón.svg", alt="logo empresa Julio Forros")
-            img(class="navbar__logo navbar__logo--nombre" src="galery/logos/Logo Julio Forros Nombre Negro.svg", alt="nombre empresa Julio Forros")
-        .navbar-header__contenedor-botones
-            i(class="navbar__boton navbar__boton--buscar boton fas fa-search", alt="boton buscar")
-            i(class="navbar__boton navbar__boton--usuario boton fas fa-user-circle", alt="boton usuario")
-            .navbar__boton.navbar__boton--menu#navbar__boton--menu
+        .navbar-header__container-logo
+            a(href="index.html")
+                img(class="navbar-header__logo navbar-header__logo--isotipo" src="galery/logos/Logo Julio Forros Dragón.svg", alt="logo empresa Julio Forros")
+            a(href="index.html")
+                img(class="navbar-header__logo navbar-header__logo--logotipo" src="galery/logos/Logo Julio Forros Nombre Negro.svg", alt="nombre empresa Julio Forros")
+        .navbar-header__container-links-buttons
+            .navbar-header__container-buttons
+                div(class="navbar-header__button navbar-header__button--search" data-name="Buscar")
+                    span.navbar-header__button-text.navbar-header__button-text--search Buscar
+                    span(class="material-icons-round navbar-header__button-icon") search
+                div(class="navbar-header__button navbar-header__button--dark-mode" data-name="Modo Oscuro")
+                    span.navbar-header__button-text.navbar-header__button-text--dark-mode Modo Oscuro
+                    span(class="material-icons-round navbar-header__button-icon" ) dark_mode
+                div(class="navbar-header__button navbar-header__button--user" data-name="Iniciar Sesion")
+                    span.navbar-header__button-text.navbar-header__button-text--user Inicia Sesión
+                    span(class="material-icons-round navbar-header__button-icon") account_circle
                 .hamburguer#hamburguer
-        .menu#menu
-            ul.menu__enlaces#menu__enlaces
-                -const enlaces = ["Catalogo","Pedido","Carrito","Contactanos","Nosotros",]
-                each enlace in enlaces
-                    li
-                        a(href="./pages" + enlace +".html" id="menu__enlace--" + enlace, class="menu__enlace animated-border animated-border--center menu__enlace--" + enlace) #{enlace}
+                    .hamburguer__div-center
+            .menu#menu
+                ul.menu__links#menu__links
+                    -const links = ["Catalogo","Pedido","Carrito","Contactanos","Nosotros",]
+                    each link in links
+                        li
+                            a(href="./pages" + link +".html" id="menu__link--" + link, class="menu__link animated-border animated-border  menu__link--" + link) #{link}
 
 
