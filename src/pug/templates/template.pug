@@ -38,17 +38,17 @@ html(lang="es")
 
 
 
-    body#body
+    body.body#body
         //- include ../blocks/menu.pug
         header.header
             include ../blocks/navbar-header.pug
             block header
 
-        main.main
+        main.main.container
             block main
             include ../blocks/js.pug
             footer
 
         
-        footer.footer#footer
-            block footer
+        include ../blocks/footer.pug
+

@@ -5,6 +5,10 @@
     align-items: center;
     height: 3.5rem;
     overflow: hidden;
+    font-size: 'roboto';
+    @include desktop{
+        height: 4rem;
+    }
 
     .navbar-header__container-logo {
         display: flex;
@@ -15,7 +19,12 @@
         }
 
         .navbar-header__logo {
-            height: 1.5rem;
+            height: 1.75rem;
+            @include desktop{
+                height: 2rem;
+            }
+        }
+        .navbar-header__logo--logotipo{
         }
     }
 
@@ -68,6 +77,7 @@
                     opacity: 0;
                     white-space: nowrap;
                     cursor: pointer;
+                    user-select: none;
 
                 }
                 .navbar-header__button-icon {
@@ -89,7 +99,7 @@
 
         .menu {
             display: none;
-
+            transform: translateY(3px);
             .menu__links {
                 display: flex;
                 gap: 1rem;
@@ -104,14 +114,16 @@
 
 .navbar-header__container-logo {
     align-items: center;
-    gap: .5rem;
+    @include desktop{
+        gap: .5rem;
+    }
 
     .navbar-header__logo--isotipo {
         display: none;
 
         @include mobile-landscape {
             display: flex;
-            min-height: 2rem;
+            min-height: 2.5rem;
         }
     }
 }
