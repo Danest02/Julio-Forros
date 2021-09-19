@@ -95,3 +95,14 @@ img {
 li{
     list-style: none;
 }
+
+.container{
+    padding: 0 1rem;
+    max-width: 1154px;
+    background-color: lightcoral;
+    margin-left: auto;
+    margin-right: auto;
+    @include desktop{
+        padding: 0;
+    }
+}
