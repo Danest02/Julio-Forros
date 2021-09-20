@@ -42,6 +42,7 @@
             .navbar-header__button {
                 display: flex;
                 align-items: center;
+                cursor: pointer;
                 &:hover{
                     color: $color1;
                     .navbar-header__button-text--search{
@@ -62,7 +63,6 @@
                     .navbar-header__button-icon{
                         transform: scale(1.2);
                         color: inherit;
-                        cursor: pointer;
                     }
                 }
                 .navbar-header__button-text{
@@ -71,7 +71,6 @@
                     width: 0;
                     opacity: 0;
                     white-space: nowrap;
-                    cursor: pointer;
                     user-select: none;
 
                 }

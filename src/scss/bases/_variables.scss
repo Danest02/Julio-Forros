@@ -14,7 +14,8 @@ $icons-navbar-header: #4F4F4F;
 $color-footer-icons: #FEFEFE;
 
 *{
-    --logo-color: #777;
+    --scroll-bar: 0px;
+    --width-100vw: calc(100vw - var(--scroll-bar))
 }
 
 .logotipo{

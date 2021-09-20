@@ -1,5 +1,5 @@
 .footer{
-    width: 100%;
+    @extend .width-100vw;
     margin-top: auto;
     background-color: #333;
     color: $white;

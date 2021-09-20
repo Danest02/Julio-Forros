@@ -1,6 +1,7 @@
 // // TODO:STUB  BACKGROUNDS
 .button-effect{
     transition: color .5s ease, transform .5s ease;
+    cursor: pointer;
     &:active{
         transform: scale(1.05);
     }
@@ -8,6 +9,9 @@
         color: $color1;
     }
 
+}
+.width-100vw{
+    max-width: var(--widht-100vw)
 }
 
 
