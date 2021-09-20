@@ -6,21 +6,21 @@
 }
 //  TODO: SPACED
 
-$margin-1: 48px;
-$margin-2: 40px;
-$margin-3: 32px;
-$margin-4: 28px;
-$margin-5: 24px;
-$margin-6: 16px;
-$margin-7: 8px;
+$space-1: 48px;
+$space-2: 40px;
+$space-3: 32px;
+$space-4: 28px;
+$space-5: 24px;
+$space-6: 16px;
+$space-7: 8px;
 @include min-width(768px){
-    $margin-1: 68px;
-    $margin-2: 56px;
-    $margin-3: 44px;
-    $margin-4: 40px;
-    $margin-5: 36px;
-    $margin-6: 22px;
-    $margin-7: 12px;
+    $space-1: 68px;
+    $space-2: 56px;
+    $space-3: 44px;
+    $space-4: 40px;
+    $space-5: 36px;
+    $space-6: 22px;
+    $space-7: 12px;
 }
 
 @font-face {

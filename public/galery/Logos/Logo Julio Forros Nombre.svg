@@ -4,7 +4,7 @@
 viewBox="0 0 7464.79 1490.33">
  <defs>
   <style type="text/css">
-    *{--logo-color: #333;}
+    *{--logo-color: #444;}
     .logotipo {fill:var(--logo-color, #F1623F)}
   </style>  
  </defs>

@@ -42,10 +42,6 @@
             .navbar-header__button {
                 display: flex;
                 align-items: center;
-                transition: transform .5s;
-                &:active{
-                    transform: scale(1.05);
-                }
                 &:hover{
                     color: $color1;
                     .navbar-header__button-text--search{
@@ -82,8 +78,9 @@
                 .navbar-header__button-icon {
                     font-size: 24px;
                     color: $icons-navbar-header;
-                    transition: color .5s, transform .3s ease-in;
+                    transition: color .3s ease-in, transform .3s ease-in;
                 }
+
 
             }
 

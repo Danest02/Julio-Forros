@@ -1,13 +1,25 @@
 .footer{
     width: 100%;
-    min-height: 3rem;
     margin-top: auto;
     background-color: #333;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: $space-1;
     .footer__contacts{
-        .footer__contact-icon{
-            max-height: 24px;
-            max-width: 24px;
-            color: $color-footer-icons;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        .footer__contact-link{
+            gap: 4px;
+            display: flex;
+            align-items: center;
+            @extend .button-effect;
+            .footer__contact-icon{
+                max-height: 24px;
+                max-width: 24px;
+            }
         }
     }
 }
