@@ -1,3 +1,4 @@
+
 .navbar-header {
     display: flex;
     justify-content: space-between;
@@ -23,8 +24,6 @@
             @include desktop{
                 height: 2rem;
             }
-        }
-        .navbar-header__logo--logotipo{
         }
     }
 
@@ -117,7 +116,8 @@
     @include desktop{
         gap: .5rem;
     }
-
+    .navbar-header__logo--logotipo{
+    }
     .navbar-header__logo--isotipo {
         display: none;
 

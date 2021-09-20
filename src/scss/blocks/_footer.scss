@@ -2,11 +2,12 @@
     width: 100%;
     min-height: 3rem;
     margin-top: auto;
-    background-color: lightsalmon;
+    background-color: #333;
     .footer__contacts{
         .footer__contact-icon{
             max-height: 24px;
-            color: red;
+            max-width: 24px;
+            color: $color-footer-icons;
         }
     }
 }

@@ -10,6 +10,15 @@ $icon-nabvar: #4F4F4F;
 $light-grey: #2C2C2C;
 $dark-gray: #4F4F4F;
 $icons-navbar-header: #4F4F4F;
+$color-footer-icons: #FEFEFE;
+
+*{
+    --logo-color: #777;
+}
+
+.logotipo{
+    fill: green;
+}
 
 
 // * FUENTES
