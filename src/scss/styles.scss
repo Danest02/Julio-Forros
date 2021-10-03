@@ -2,8 +2,8 @@
 @import "bases/normalize";
 @import "bases/breakpoints";
 @import "bases/my-styles";
-@import "bases/general-styles";
 @import "bases/mixins-and-extends";
+@import "bases/general-styles";
 @import "bases/keyframes";
 /*  */
 @import "blocks/navbar-header";
@@ -15,3 +15,4 @@
 
 // npm install -g sass-migrator
 // sass-migrator division **/*.scs
+

@@ -11,6 +11,10 @@ import concat from 'gulp-concat';
 import pug from 'gulp-pug';
 var sass = require('gulp-sass')(require('sass'));
 
+var postcss = require ('gulp-postcss');
+var autoprefixer = require ('autoprefixer');
+var cssnano = require ('cssnano');
+
 import clean from 'gulp-purgecss';
 
 import rename from 'gulp-rename'
@@ -78,34 +82,53 @@ gulp.task('pugPages', () => {
 //         .pipe(gulp.dest('./public'));
 // });
 
-gulp.task('sass', () => {
-    return gulp
-        .src('./src/scss/styles.scss')
+// gulp.task('sass', () => {
+//     return gulp
+//         .src('./src/scss/styles.scss')
+//         .pipe(
+//             sass({
+//                 outputStyle: 'compressed'
+//             })
+//         )
+//         .pipe(gulp.dest('./public/css'))
+// });
+
+gulp.task ('css', function () {
+    var procesadores = [
+		autoprefixer,
+		cssnano
+	];
+	return gulp.src ('./src/scss/styles.scss')
+		.pipe (sass (). on ('error', sass.logError))
+		.pipe (postcss (procesadores))
         .pipe(
-            sass({
-                outputStyle: 'compressed'
+            clean({
+              content: ['./public/*.html']
             })
-        )
-        .pipe(gulp.dest('./public/css'))
+          )    
+		.pipe (gulp.dest ('./public/css'));
 });
 
-gulp.task('clean', () => {
-    return gulp
-      .src('./public/css/styles.css')
-      .pipe(
-        clean({
-          content: ['./public/*.html']
-        })
-      )
-      .pipe(gulp.dest('./public/css'));
-});
+
+// gulp.task('clean', () => {
+//     return gulp
+//       .src('./public/css/styles.css')
+//       .pipe(
+//         clean({
+//           content: ['./public/*.html']
+//         })
+//       )
+//       .pipe(gulp.dest('./public/css'));
+// });
 
 gulp.task('default', () => {
     gulp.watch('./src/js/*.js', gulp.series('babel'))
-    // gulp.watch('./src/*.html', gulp.series('html-min'))
     gulp.watch('./src/pug/**/*.pug', gulp.series('pugIndex'));
     gulp.watch('./src/pug/**/*.pug', gulp.series('pugPages'));
+    gulp.watch('./src/scss/**/*.scss', gulp.series('css'))
+    // gulp.watch('./src/scss/**/*.scss', gulp.series('clean'))
+    // gulp.watch('./src/*.html', gulp.series('html-min'))
     // gulp.watch('./src/pug/**/*.pug', gulp.series('rename'));
-    gulp.watch('./src/scss/**/*.scss', gulp.series('sass'))
+    // gulp.watch('./src/scss/**/*.scss', gulp.series('sass'))
 });
 

@@ -16,6 +16,9 @@ $color-footer-icons: #FEFEFE;
 *{
     --scroll-bar: 0px;
     --width-100vw: calc(100vw - var(--scroll-bar))
+    --navbar-header__button-text-1: 0;
+    --navbar-header__button-text-2: 0;
+    --navbar-header__button-text-3: 0;
 }
 
 .logotipo{
