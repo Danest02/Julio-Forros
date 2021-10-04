@@ -101,25 +101,25 @@ gulp.task ('css', function () {
 	return gulp.src ('./src/scss/styles.scss')
 		.pipe (sass (). on ('error', sass.logError))
 		.pipe (postcss (procesadores))
-        .pipe(
-            clean({
-              content: ['./public/*.html']
-            })
-          )    
+        // .pipe(
+        //     clean({
+        //       content: ['./public/*.html']
+        //     })
+        //   )    
 		.pipe (gulp.dest ('./public/css'));
 });
 
 
-// gulp.task('clean', () => {
-//     return gulp
-//       .src('./public/css/styles.css')
-//       .pipe(
-//         clean({
-//           content: ['./public/*.html']
-//         })
-//       )
-//       .pipe(gulp.dest('./public/css'));
-// });
+gulp.task('clean', () => {
+    return gulp
+      .src('./public/css/styles.css')
+      .pipe(
+        clean({
+          content: ['./public/*.html']
+        })
+      )
+      .pipe(gulp.dest('./public/css'));
+});
 
 gulp.task('default', () => {
     gulp.watch('./src/js/*.js', gulp.series('babel'))
