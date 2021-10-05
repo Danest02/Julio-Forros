@@ -1,7 +1,7 @@
 const navbarHeader = document.getElementById("navbar-header");
 let initialScroll =  window.pageYOffset;
-let mainScroll = document.getElementById("main").offsetTop
-const hamburguer = document.getElementById("hamburguer");
+let mainScroll = document.getElementById("main").offsetTop;
+let hamburguer = document.getElementById("hamburguer");
 
 function disableScroll(){  
     var x = window.scrollX;
@@ -14,6 +14,7 @@ function enableScroll(){
 
 
 hamburguer.addEventListener("click", ()=> {
+    document.querySelector(".hamburguer__div-center").classList.toggle("hamburguer--simple")
     navbarHeader.classList.toggle("navbar-header--hamburguer")
     if(navbarHeader.classList.contains("navbar-header--hamburguer")){
         disableScroll()

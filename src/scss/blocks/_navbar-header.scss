@@ -8,7 +8,6 @@
     padding: 0 1rem;
     align-items: center;
     height: 3.5rem;
-    overflow: hidden;
     font-size: 'roboto';
     opacity: 1;
     transition: transform .5s ease, opacity .5s ease;
@@ -37,7 +36,6 @@
         align-items: center;
         gap: 1rem;
         flex-direction: row-reverse;
-        
         .navbar-header__container-buttons {
             display: flex;
             align-items: center;
@@ -48,6 +46,7 @@
                 display: flex;
                 align-items: center;
                 cursor: pointer;
+                z-index: 10;
                 &:hover{
                     color: $color1;
                     .navbar-header__button-text--search{
@@ -60,7 +59,6 @@
                         width: 123px;
                     }
                     .navbar-header__button-text{
-                        // width: 10rem;
                         padding-left: 1rem;
                         opacity: 1;
 
@@ -103,16 +101,35 @@
         }
 
         .menu {
-            display: none;
-            transform: translateY(3px);
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            clip-path: circle(0.0% at 100% 0);
+            transition: background-color .7s ease-in-out, clip-path .7s ease-in-out;
+            @include desktop{
+                position: static;
+                clip-path: none;
+                transform: translateY(3px);
+                
+            }
             .menu__links {
+                height: 100%;
+                padding-left: 10%;
                 display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
                 gap: 1rem;
+                @include desktop{
+                    padding: 0;
+                    height: auto;
+                    flex-direction: row;
+                }
+
             }
 
-            @include desktop {
-                display: flex;
-            }
         }
     }
 }
@@ -148,15 +165,13 @@
     opacity: 0;
 }
 .navbar-header--hamburguer{
+    
     .navbar-header__container-links-buttons{
         .menu{
-            display: block;
-            position: fixed;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background-color: red;
+            background-color: $background;
+            // display: block;
+            // transition: background-color .7s ease-in-out, clip-path .7s ease-in-out;
+            clip-path: circle(150% at 100% 0);
         }
     }
 }
