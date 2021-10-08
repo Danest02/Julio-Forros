@@ -1,4 +1,5 @@
 //- pug -w --pretty src/pug/pages/*.pug -o ./public -p ./src/pug/templates
+
 html(lang="es")
     head
         meta(charset="UTF-8")
@@ -31,15 +32,16 @@ html(lang="es")
         //- STUB SOCIAL CARDS
         meta(property="og:url" content="http://www.julioforros.com")
         meta(property="og:type" content="website")
-        meta(property="og:title" content="Julio Forros")
+        meta(property="og:title" content="titulo del post o pagina")
         meta(property="og:description" content="Fabrica de accesorios para motocicletas")
         meta(property="og:image" content="http://www.blackparadox.com/images/logo.svg")
-
+        meta(property="og:site_name" content="Nombre de la pagina")
+        block head
+        
 
 
 
     body.body#body
-        //- include ../blocks/menu.pug
         header.header
             include ../blocks/navbar-header.pug
             block header

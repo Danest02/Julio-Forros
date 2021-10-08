@@ -1,4 +1,10 @@
+$navbar-header-heihgt: 3.5rem;
+@include desktop{
+    $navbar-header-heihgt: 4rem;
+
+}
 .navbar-header {
+    z-index: 20;
     position: fixed;
     top: 0;
     right: 0;
@@ -7,26 +13,33 @@
     justify-content: space-between;
     padding: 0 1rem;
     align-items: center;
-    height: 3.5rem;
+    height: $navbar-header-heihgt;
     font-size: 'roboto';
     opacity: 1;
     transition: transform .5s ease, opacity .5s ease;
-    @include desktop{
-        height: 4rem;
-    }
-
+    gap: 1rem;
     .navbar-header__container-logo {
         display: flex;
         transition: transform .5s ease;
-
+        @include min-width(500px){
+            gap: 1rem;
+        }
+        
         &:hover {
             transform: scale(1.05) translateX(.25rem);
         }
-
+        
         .navbar-header__logo {
             height: 1.75rem;
+            display: flex;
             @include desktop{
                 height: 2rem;
+            }
+        }
+        .navbar-header__logo--isotipo{
+            display: none;
+            @include min-width(500px){
+                display: inline;
             }
         }
     }
@@ -47,25 +60,33 @@
                 align-items: center;
                 cursor: pointer;
                 z-index: 10;
-                &:hover{
-                    color: $color1;
-                    .navbar-header__button-text--search{
-                        width: 79px;
+                @include desktop{
+                    &:hover{
+                        color: $color1;
+                        .navbar-header__button-text--search{
+                            width: 79px;
+                        }
+                        .navbar-header__button-text--dark-mode{
+                            width: 131px;
+                        }
+                        .navbar-header__button-text--user{
+                            width: 123px;
+                        }
+                        .navbar-header__button-text{
+                            padding-left: 1rem;
+                            opacity: 1;
+    
+                        }
+                        .navbar-header__button-icon{
+                            transform: scale(1.2);
+                            color: inherit;
+                        }
                     }
-                    .navbar-header__button-text--dark-mode{
-                        width: 131px;
-                    }
-                    .navbar-header__button-text--user{
-                        width: 123px;
-                    }
-                    .navbar-header__button-text{
-                        padding-left: 1rem;
-                        opacity: 1;
-
-                    }
+                }
+                &:active{
                     .navbar-header__button-icon{
                         transform: scale(1.2);
-                        color: inherit;
+                        color: $color1;
                     }
                 }
                 .navbar-header__button-text{
@@ -153,11 +174,10 @@
 .navbar-header--scroll{
     background-color: $background;
     justify-content: end;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .2);
+    height: 3rem;
     .navbar-header__container-logo{
         display: none;
-    }
-    @include desktop{
-        height: 3rem;
     }
 }
 .navbar-header--hide{

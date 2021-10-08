@@ -1,6 +1,107 @@
 .body{
+    $vector-height: 72px;
     min-height: 100vh;
     height: 2000px;
     display: flex;
     flex-direction: column;
+    .header{
+        @extend .width-100vw;
+        height: 100vh;
+        // background-color: yellow;
+        padding-top: $navbar-header-heihgt;
+        @include min-width-landscape(500px){
+            min-height: calc(100vh + $vector-height);
+        }
+        .header-index{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            position: relative;
+            padding-bottom: calc($vector-height - $space-6);
+            // background-color: green;
+            @include min-width-landscape(500px){
+                padding-bottom: calc($vector-height + $space-6);
+            }
+            .slider-header{
+                height: 100%;
+                display: flex;
+                .slider-header__container{
+                    display: flex;
+                    height: 100%;
+                    flex-direction: column;
+                    gap: $space-5;
+                    // background-color: pink;
+                    width: 70%;
+                    .slider-header__content{
+                        .slider-header__slide{
+                            width: 100%;
+                            display: grid;
+                            grid-template-columns: auto;
+                            grid-template-rows: min-content 1fr min-content;
+                            padding-top: $space-5;
+                            gap: $space-6; 
+                            // background-color: red;
+                            @include min-width-landscape(500px){
+                                grid-template-columns: min-content auto;
+                                grid-template-rows: 1fr auto auto 2fr;
+                                padding-top: 0;
+                            }
+                            .slider-header__button-container{
+                                margin-left: auto;
+                                margin-right: auto;
+                                z-index: 100;
+                                @include min-width-landscape(500px){
+                                    grid-column: 1 / 2;
+                                    grid-row: 3 / 4;    
+                                } 
+                            }
+
+                            .slider-header__tittle-container{
+                                text-align: center;
+                                // background-color: purple;
+                                @include min-width-landscape(500px){
+                                    grid-column: 1 / 2;
+                                    grid-row: 2 / 3;    
+                                }
+                                .slider-header__tittle{
+                                    color: $text;
+                                }
+                            }
+
+                            .slider-header__img-container{
+                                @include min-width-landscape(500px){
+                                    grid-column: 2 / 3;
+                                    grid-row: 1 / 5;
+                                }
+                                // background-color: blue;
+                                .slider-header__img{
+                                    height: 100%;
+                                    object-fit: cover;
+                                    object-position: center;
+                                }
+                            }
+                        }
+                    }
+                    .swiper-pagination {
+                        position: relative;
+                        // background-color: violet;
+                        bottom: 0px;
+                    }
+                }
+            }
+            .vector {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                .vector__svg {
+                    width: 100%;
+                    max-height: 72px;
+                    filter: drop-shadow(0px -7px 0px rgb(112, 109, 109));
+                }
+            }
+    
+        }
+    }
 }
