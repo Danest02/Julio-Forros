@@ -12,9 +12,9 @@
             justify-content: space-between;
             height: 100%;
             position: relative;
-            padding-bottom: calc($vector-height - $space-6);
+            padding-bottom: calc($vector-height - var(--space-6));
             @include min-width-landscape(500px){
-                padding-bottom: calc($vector-height + $space-6);
+                padding-bottom: calc($vector-height + var(--space-6));
             }
             .slider-header{
                 height: 100%;
@@ -23,7 +23,7 @@
                     display: flex;
                     height: 100%;
                     flex-direction: column;
-                    gap: $space-5;
+                    gap: var(--space-5);
                     @include min-width-landscape(500px){
                         width: 70%;
                     }
@@ -32,8 +32,8 @@
                             display: grid;
                             grid-template-columns: auto;
                             grid-template-rows: min-content 1fr min-content;
-                            padding-top: $space-5;
-                            gap: $space-6; 
+                            padding-top: var(--space-5);
+                            gap: var(--space-6); 
                             @include min-width-landscape(500px){
                                 grid-template-columns: min-content auto;
                                 grid-template-rows: 1fr auto auto 2fr;
@@ -100,9 +100,9 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                padding-top: $space-6;
-                padding-bottom: $space-6;
-                gap: $space-5;
+                padding-top: var(--space-6);
+                padding-bottom: var(--space-6);
+                gap: var(--space-5);
                 .index-catalog__products-container{
                     display: flex;
                     justify-content: center;
@@ -110,10 +110,7 @@
                     .index-catalog__products-pictures{
                         display: grid;
                         grid-template-columns: minmax(0, 350px);
-                        gap: $space-6;
-                        @include min-width($tablet){
-                            gap: 22px;
-                        }
+                        gap: var(--space-6);
                         @include min-width($mobile-landscape){
                             grid-template-columns: repeat(2, minmax(0, 380px));
                         }
@@ -134,10 +131,10 @@
                         flex-direction: column;
                         align-items: center;
                         justify-content: space-between;
-                        gap: $space-6;
+                        gap: var(--space-6);
                         min-width: 311px;
                         height: 424px;
-                        padding: 1rem;
+                        padding: var(--space-6);
                         background-color: $background;
                         border-radius: 1rem;
                         display: none;

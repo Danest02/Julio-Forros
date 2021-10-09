@@ -25,5 +25,24 @@ $color-footer-icons: #FEFEFE;
     fill: green;
 }
 
+:root{
+    --space-1: 48px;
+    --space-2: 40px;
+    --space-3: 32px;
+    --space-4: 28px;
+    --space-5: 24px;
+    --space-6: 16px;
+    --space-7: 8px;
+    @include min-width(768px){
+        --space-1: 68px;
+        --space-2: 56px;
+        --space-3: 44px;
+        --space-4: 40px;
+        --space-5: 36px;
+        --space-6: 22px;
+        --space-7: 12px;
+    }
+}
+
 
 // * FUENTES
