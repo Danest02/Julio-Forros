@@ -114,7 +114,11 @@ li{
     max-width: 1154px;
     margin-left: auto;
     margin-right: auto;
-    @media (max-width:1366px) and (min-width:1024px){
+    @media (max-width:$tablet-landscape) and (min-width: 850px){
+        margin-right:60px;
+        margin-left: 60px;
+    }
+    @media (max-width:1366px) and (min-width:$tablet-landscape){
         margin-right: 122px;
         margin-left: 122px;
     }
