@@ -1,5 +1,6 @@
 .body{
     $vector-height: 72px;
+    // display: none;
     .header{
         height: 100vh;
         padding-top: $navbar-header-heihgt;
@@ -8,7 +9,7 @@
         }
         .header-index{
             display: flex;
-            flex-direction: column;
+            flex-direction: column; 
             justify-content: space-between;
             height: 100%;
             position: relative;
@@ -158,6 +159,9 @@
                             @extend .scrollbar-style;
                             &::-webkit-scrollbar {
                                 width: 6px;
+                            }
+                            &::-webkit-scrollbar-thumb{
+                                background-color: $ligth-gray ;
                             }
                                                 
                         }

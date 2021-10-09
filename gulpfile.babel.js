@@ -101,6 +101,15 @@ gulp.task ('css', function () {
 	return gulp.src ('./src/scss/styles.scss')
 		.pipe (sass (). on ('error', sass.logError))
 		.pipe (postcss (procesadores))
+        .pipe(
+            clean({
+              content: ['./public/*.html'],
+              css: ['./public/css/styles.css'],
+              safelist: ['hamburguer--simple', 'navbar-header--scroll', 'navbar-header--hide', 'navbar-header--hamburguer'],
+              FontFace: true,
+              variables: true
+            })
+          )    
 		.pipe (gulp.dest ('./public/css'));
 });
 
@@ -125,7 +134,7 @@ gulp.task('default', () => {
     gulp.watch('./src/pug/**/*.pug', gulp.series('pugIndex'));
     gulp.watch('./src/pug/**/*.pug', gulp.series('pugPages'));
     gulp.watch('./src/scss/**/*.scss', gulp.series('css'))
-    gulp.watch('./src/scss/**/*.scss', gulp.series('clean'))
+    // gulp.watch('./src/scss/**/*.scss', gulp.series('clean'))
     // gulp.watch('./src/*.html', gulp.series('html-min'))
     // gulp.watch('./src/pug/**/*.pug', gulp.series('rename'));
     // gulp.watch('./src/scss/**/*.scss', gulp.series('sass'))
