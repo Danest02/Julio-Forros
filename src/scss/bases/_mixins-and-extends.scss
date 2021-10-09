@@ -2,6 +2,7 @@
 .button-effect{
     transition: color .5s ease, transform .5s ease;
     cursor: pointer;
+    user-select: none;
     &:active{
         transform: scale(1.05);
     }
@@ -10,9 +11,33 @@
     }
 
 }
-.width-100vw{
-    max-width: var(--widht-100vw)
+.max-width-100vw{
+    max-width: var(--widht-100vw);
 }
+.scrollbar-style{
+    &::-webkit-scrollbar {
+        width: 7px;
+    }
+    
+    &::-webkit-scrollbar-track {
+        border-radius: 20px;
+        
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: $color1;
+        border-radius: 3px;
+    }
+
+}
+// .min-width-100vw{
+//     max-width: calc(100vw - var(--scroll-bar));
+//     position: relative;
+//     left: 50%;
+//     right: 50%;
+//     margin-left: -50vw;
+//     margin-right: -50vw;
+// }
 
 
 // @mixin background-image {
