@@ -8,16 +8,23 @@ block header
                 .slider-header__content.swiper-wrapper
                     .slider-header__slide.swiper-slide 
                         .slider-header__tittle-container
-                            h3.slider-header__tittle.h1 Asiento DT Personalizado
+                            h2.slider-header__tittle.h1 Asiento DT Personalizado
                         .slider-header__img-container
                             img(class="slider-header__img" src="galery/images/slider-header__img1.jpg", alt="alt")
                         .slider-header__button-container
                                 buttom(class="button-slider button mybtn") Un vistazo
-                    .slider-header__slide.swiper-slide Slide 2
-                    .slider-header__slide.swiper-slide Slide 3
-                    .slider-header__slide.swiper-slide Slide 4
-                    .slider-header__slide.swiper-slide Slide 5
-                .swiper-pagination 
+                    .slider-header__slide.swiper-slide 
+                        .slider-header__tittle-container
+                            h2.slider-header__tittle.h1 Asiento DT Personalizado
+                        .slider-header__img-container
+                            img(class="slider-header__img" src="galery/images/slider-header__img1.jpg", alt="alt")
+                        .slider-header__button-container
+                                buttom(class="button-slider button mybtn") Un vistazo
+                    .slider-header__slide.swiper-slide
+                    .slider-header__slide.swiper-slide
+                    .slider-header__slide.swiper-slide
+                    .slider-header__slide.swiper-slide
+                .slider-header__swiper-pagination.swiper-pagination
         .vector
                 <svg class="vector__svg" preserveAspectRatio="none" viewBox="0 0 1366 308" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M0 41.2667L0 307.35H1366V41.2668C1183.14 144.069 944.309 206.304 683 206.304C421.691 206.304 182.857 144.069 0 41.2667Z" fill="#2C2C2C"/>
@@ -29,52 +36,96 @@ block header
 
 
 block main
-    .index-catalog
-        .index-catalog__container.container
-            .index-catalog__products-container
-                .index-catalog__products-pictures
-                    .index-catalog__product-picture
-                    .index-catalog__product-picture
-                    .index-catalog__product-picture
-                    .index-catalog__product-picture
-                .index-catalog__products-list-container
-                    h1.index-catalog__tittle.h2 Catálogo
-                    ul.index-catalog__products-list
-                        li.index-catalog__product-list product
-                        li.index-catalog__product-list product
-                        li.index-catalog__product-list product
-                        li.index-catalog__product-list product
-                        li.index-catalog__product-list product
-                        li.index-catalog__product-list product
-                        li.index-catalog__product-list product
-                        li.index-catalog__product-list product
-                        li.index-catalog__product-list product
-                        li.index-catalog__product-list product
-                        li.index-catalog__product-list product
-                        li.index-catalog__product-list product
-                        li.index-catalog__product-list product
-                        li.index-catalog__product-list product
-                        li.index-catalog__product-list product
-                        li.index-catalog__product-list product
-                        li.index-catalog__product-list product
-                        li.index-catalog__product-list product
-                        li.index-catalog__product-list product
-                        li.index-catalog__product-list product
-                        li.index-catalog__product-list product
-                        li.index-catalog__product-list product
-                        li.index-catalog__product-list product
-                        li.index-catalog__product-list product
-                        li.index-catalog__product-list product
-                        li.index-catalog__product-list product
-                        li.index-catalog__product-list product
-                        li.index-catalog__product-list product
-                        li.index-catalog__product-list product
-                    a(class="index-catalog__button-desktop mybtn") Ver el catálogo
-            a(class="index-catalog__button mybtn") Ver el catálogo
-    .vector-rotate-horizontally
-        <svg class="vector-rotate-horizontally__svg" preserveAspectRatio="none" viewBox="0 0 1366 308" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 41.2667L0 307.35H1366V41.2668C1183.14 144.069 944.309 206.304 683 206.304C421.691 206.304 182.857 144.069 0 41.2667Z" fill="#2C2C2C"/>
-        </svg>
+    section.index-catalog.seccion
+        .index-catalog__background
+            .index-catalog__container.container
+                .index-catalog__products-container
+                    .index-catalog__products-pictures
+                        .index-catalog__product-picture
+                        .index-catalog__product-picture
+                        .index-catalog__product-picture
+                        .index-catalog__product-picture
+                    .index-catalog__products-list-container
+                        h1.index-catalog__tittle.h2 Catálogo
+                        ul.index-catalog__products-list
+                            li.index-catalog__product-list product
+                            li.index-catalog__product-list product
+                            li.index-catalog__product-list product
+                            li.index-catalog__product-list product
+                            li.index-catalog__product-list product
+                            li.index-catalog__product-list product
+                            li.index-catalog__product-list product
+                            li.index-catalog__product-list product
+                            li.index-catalog__product-list product
+                            li.index-catalog__product-list product
+                            li.index-catalog__product-list product
+                            li.index-catalog__product-list product
+                            li.index-catalog__product-list product
+                            li.index-catalog__product-list product
+                            li.index-catalog__product-list product
+                            li.index-catalog__product-list product
+                            li.index-catalog__product-list product
+                            li.index-catalog__product-list product
+                            li.index-catalog__product-list product
+                            li.index-catalog__product-list product
+                            li.index-catalog__product-list product
+                            li.index-catalog__product-list product
+                            li.index-catalog__product-list product
+                            li.index-catalog__product-list product
+                            li.index-catalog__product-list product
+                            li.index-catalog__product-list product
+                            li.index-catalog__product-list product
+                            li.index-catalog__product-list product
+                            li.index-catalog__product-list product
+                        a(class="index-catalog__button-desktop mybtn") Ver el catálogo
+                a(class="index-catalog__button mybtn") Ver el catálogo
+        .vector-rotate-horizontally
+            <svg class="vector-rotate-horizontally__svg" preserveAspectRatio="none" viewBox="0 0 1366 308" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 41.2667L0 307.35H1366V41.2668C1183.14 144.069 944.309 206.304 683 206.304C421.691 206.304 182.857 144.069 0 41.2667Z" fill="#2C2C2C"/>
+            </svg>
+    section.functionalities-and-contact-us-container.container.seccion
+        .index-contact-us
+            span(class="index-contact-us__icon material-icons-round") person
+            p.index-contact-us__paragraph Hay alguien esperandote
+            a.index-contact-us__button.mybtn Contactanos
+        .functionalities
+            h1.functionalities__tittle.h1 ¡Espera! Esto puede interesarte
+            .functionalities__cards
+                .functionalities__functionality
+                    p.functionalities__paragraph Conoce nuestros productos y precios
+                    a.functionalities__button.mybtn.mybtn--ghost Catalogo
+                .functionalities__functionality
+                    p.functionalities__paragraph Haz seguimientos del estado de tu pedido
+                    a.functionalities__button.mybtn.mybtn--ghost Pedido
+                .functionalities__functionality
+                    p.functionalities__paragraph Revisa tu factura, quizas te falte algo
+                    a.functionalities__button.mybtn.mybtn--ghost Carrito
+    section.index-search.container.seccion 
+        h1.index-search__tittle.h1 ¿Estás buscando algo?
+        p.index-search__paragraph Prueba con palabras con nombres de productos
+        .search-bar
+            input(class="search-bar__input" type="search" name="search-bar" placeholder="Estoy buscando...")
+            a(href="#" class="search-bar__button")
+                span(class="material-icons-round search-bar__button-icon"   ) search
+    section.slider-index-main
+        .slider-index-main__container.swiper.swiper-index-main.container
+            .slider-index-main__content.swiper-wrapper
+                .slider-index-main__slide.swiper-slide
+                    h2.slider-index-main__tittle.h1 Sabanas en impresión
+                    a(href="#" class="slider-index-main__button mybtn mybtn--ghost") Ver más
+                .slider-index-main__slide.swiper-slide
+                    h2.slider-index-main__tittle.h1 Resinas para todo tanque
+                    a(href="#" class="slider-index-main__button mybtn mybtn--ghost") Ver más
+                .slider-index-main__slide.swiper-slide
+                    h2.slider-index-main__tittle.h1 Sabanas en impresión
+                    a(href="#" class="slider-index-main__button mybtn mybtn--ghost") Ver más
+                .slider-index-main__slide.swiper-slide
+                    h2.slider-index-main__tittle.h1 Forros personalizado
+                    a(href="#" class="slider-index-main__button mybtn mybtn--ghost") Ver más
+            //- .slider-index-main__swiper-arrow-next.slider-index-main__swiper-arrow.swiper-button-next
+            //- .slider-index-main__swiper-arrow-prev.slider-index-main__swiper-arrow.swiper-button-prev
+            .slider-index-main__swiper-pagination.swiper-pagination 
+
 
 
     script(src="https://unpkg.com/swiper@7/swiper-bundle.min.js") 

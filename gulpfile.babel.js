@@ -105,7 +105,7 @@ gulp.task ('css', function () {
             clean({
               content: ['./public/*.html'],
               css: ['./public/css/styles.css'],
-              safelist: ['hamburguer--simple', 'navbar-header--scroll', 'navbar-header--hide', 'navbar-header--hamburguer'],
+              safelist: ['hamburguer--simple', 'navbar-header--scroll', 'navbar-header--hide', 'navbar-header--hamburguer', 'swiper-pagination-bullet', 'swiper-pagination-bullet-active'],
               FontFace: true,
               variables: true
             })
@@ -121,7 +121,7 @@ gulp.task('clean', () => {
         clean({
           content: ['./public/*.html'],
           css: ['./public/css/styles.css'],
-          safelist: ['hamburguer--simple', 'navbar-header--scroll', 'navbar-header--hide', 'navbar-header--hamburguer'],
+          safelist: ['hamburguer--simple', 'navbar-header--scroll', 'navbar-header--hide', 'navbar-header--hamburguer', 'mybtn--ghost', 'swiper-pagination-bullet', 'swiper-pagination-bullet-active'],
           FontFace: true,
           variables: true
         })

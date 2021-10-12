@@ -8,6 +8,7 @@
 }
 
 .mybtn {
+    width: max-content;
     font-size: 1rem;
     font-family: 'roboto', arial;
     background-color: $color1;
@@ -20,7 +21,8 @@
     border-radius: 1.125rem;
     outline:none;
     cursor: pointer;
-    transition: background-color 0.5s linear;
+    border: 1px solid $color1;
+    transition: background-color .3s linear, border .3s linear;
 
     &:hover {
         background-color: $color1-hover;
@@ -64,7 +66,7 @@
         border-radius: 3px;
         transition: width .5s, transform .5s ;
     }
-    
+
     &:hover:after {
         width: 100%;
         transform: translateX(0);
@@ -149,12 +151,12 @@
             background-color:$icons-navbar-header;
             top: -8px;
             transition: background-color 0.5s ease, transform 0.3s;
-    
+
         }
         &:after{
             top: 8px;
         }
-        
+
     }
     .hamburguer--simple{
         height: 0;

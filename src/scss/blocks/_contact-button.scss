@@ -26,7 +26,7 @@
             transform: scale(1.1);
         }
     }
-    @include desktop{
+    @include min-width(1200px){
         &::before {
             content: "Click para comenzar una conversacion por WhatsApp";
             font-size: 14px;

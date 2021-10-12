@@ -1,68 +1,112 @@
-
- * {
-    margin: 0 ;
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }  
+}
 
 //  TODO: SPACED
-
+@font-face {
+    font-family: 'material-icons-round';
+    font-style: normal;
+    font-weight: 400;
+    // src: url(https://miweb.com/MaterialIcons-Regular.eot);
+    // /* For IE6-8 */
+    src: local('Material Icons'),
+        local('MaterialIcons-Regular'),
+        url(../galery/fonts/MaterialIconsRound-Regular.otf) format('truetype');
+}
+.material-icons-round{
+    font-family: 'material-icons-round';
+    line-height: 1;
+}
 
 @font-face {
-    font-family: 'poppins';    
+    font-family: 'poppins';
     font-style: normal;
-    font-weight:400;
+    font-weight: 400;
     src: local('Poppins'), local('Poppins-Regular'), url(../galery/fonts/Poppins-Regular.ttf) format('truetype');
     font-display: optional;
 }
+
 @font-face {
-    font-family: 'roboto-black';  
-    font-style: normal;  
-    font-weight: 900;
-    src: local('RobotoBlack'), local('Roboto-Black'), url(../galery/fonts/Roboto-Black.ttf) format('truetype');
+    font-family: 'poppins-semibold';
+    font-style: normal;
+    font-weight: 600;
+    src: local('PoppinsSemiBold'), local('Poppins-SemiBold'), url(../galery/fonts/Poppins-SemiBold.ttf) format('truetype');
     // font-display: optional;
 }
+
 @font-face {
-    font-family: 'roboto';  
+    font-family: 'roboto-black';
+    font-style: normal;
+    font-weight: 900;
+    src: local('RobotoBlack'), local('Roboto-Black'), url(../galery/fonts/Roboto-Black.ttf) format('truetype');
+    font-display: optional;
+}
+
+@font-face {
+    font-family: 'roboto';
     src: local('Roboto'), local('Roboto-Medium'), url(../galery/fonts/Roboto-Medium.ttf) format('truetype');
     font-display: optional;
 }
-body{
+
+body {
     color: $text;
-    font-family: 'poppins', arial;
+    font-family: 'poppins', arial, sans-serif;
     font-size: 1rem;
-    
+
 }
-h1,h2,h3,h4{
+
+h1,
+h2,
+h3,
+h4 {
+    text-align: center;
     color: $color2;
     font-family: 'roboto-black', Helvetica;
 }
-.h1{
+input[type=search]{
+    &::placeholder{
+        user-select: none;
+    }
+    &::-webkit-search-cancel-button{
+        display: none;
+    }
+}
+
+.h1 {
     font-size: 32px;
-    @include min-width(768px){
+
+    @include min-width(768px) {
         font-size: 48px;
     }
 }
-.h2{
+
+.h2 {
     font-size: 28px;
-    @include min-width(768px){
+
+    @include min-width(768px) {
         font-size: 40px;
     }
 }
-.h3{
+
+.h3 {
     font-size: 24px;
-    @include min-width(768px){
+
+    @include min-width(768px) {
         font-size: 32px;
     }
 }
-.h4{
+
+.h4 {
     font-size: 20px;
-    @include min-width(768px){
+
+    @include min-width(768px) {
         font-size: 22px;
     }
 }
 
-.p-small{
+.p-small {
     font-size: 14px;
 }
 
@@ -78,14 +122,20 @@ a {
 img {
     max-width: 100%;
 }
-li{
+
+li {
     list-style: none;
 }
 
-
-.body{
+html,body{
+    height: 100%;
+    position: relative;
+}
+.body {
     @extend .scrollbar-style;
-    .header, .main{
+
+    .header,
+    .main {
         @extend .max-width-100vw;
         width: 100%;
     }
@@ -93,20 +143,34 @@ li{
     display: flex;
     flex-direction: column;
 }
-.container{
+.seccion{
+    margin-bottom: var(--space-1);
+}
+
+.container {
     padding: 0 24px;
     max-width: 1154px;
     margin-left: auto;
     margin-right: auto;
-    @media (max-width:$tablet-landscape) and (min-width: 850px){
-        margin-right:60px;
+    // overflow: hidden;
+
+    @media (max-width:$tablet-landscape) and (min-width: 850px) {
+        margin-right: 60px;
         margin-left: 60px;
     }
-    @media (max-width:1366px) and (min-width:$tablet-landscape){
+
+    @media (max-width:1366px) and (min-width:$tablet-landscape) {
         margin-right: 122px;
         margin-left: 122px;
     }
-    @include desktop{
+
+    @include desktop {
         padding: 0;
     }
+}
+.box-shadown{
+    box-shadow: 0 0 10px rgba(0,0,0,.25);
+}
+.border-radius{
+    border-radius: 1rem;
 }
