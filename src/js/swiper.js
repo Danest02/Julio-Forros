@@ -53,7 +53,7 @@ var swiper = new Swiper('.swiper-index-main', {
     //- cssMode: true,
     centeredSlides: true,
     slidesPerView: "auto",
-    spaceBetween: 0,
+    spaceBetween: 30,
     grabCursor: true,
     //- freeMode: true;
 
