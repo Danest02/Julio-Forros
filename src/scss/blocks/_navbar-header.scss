@@ -21,9 +21,6 @@ $navbar-header-heihgt: 3.5rem;
     .navbar-header__container-logo {
         display: flex;
         transition: transform .5s ease;
-        @include min-width(500px){
-            gap: 1rem;
-        }
         
         &:hover {
             transform: scale(1.05) translateX(.25rem);
@@ -34,12 +31,6 @@ $navbar-header-heihgt: 3.5rem;
             display: flex;
             @include desktop{
                 height: 2rem;
-            }
-        }
-        .navbar-header__logo--isotipo{
-            display: none;
-            @include min-width(500px){
-                display: inline;
             }
         }
     }
@@ -157,19 +148,27 @@ $navbar-header-heihgt: 3.5rem;
 
 .navbar-header__container-logo {
     align-items: center;
-    @include desktop{
-        gap: .5rem;
+    @include min-width(500px){
+        gap: .7rem;
     }
-    .navbar-header__logo--logotipo{
-    }
-    .navbar-header__logo--isotipo {
+    .navbar-header__logo--isotipo{
         display: none;
-
-        @include mobile-landscape {
-            display: flex;
+        fill: $color1;
+        width: 3rem;
+        @include min-width(500px){
+            display: inline;
             min-height: 2.5rem;
         }
     }
+    .navbar-header__logo--logotipo{
+        width: 8.9rem;
+        @include min-width(500px){
+            fill: $logo-color ;
+            width: 10rem;
+        }
+
+    }
+
 }
 .navbar-header--scroll{
     background-color: $background;

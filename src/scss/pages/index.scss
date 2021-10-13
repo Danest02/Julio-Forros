@@ -399,5 +399,34 @@
                 }
             }
         }
+        .about-us{
+            .about-us__logo{
+                .about-us__logotipo-container{
+                    // background-color: greenyellow;
+    
+                    height: 3rem;
+                    width: 220px;
+                    // height: min-content;
+                    .about-us__logotipo{
+                        height: 100%;
+                        width: 100%;
+                        // background-color: blue;
+                    }
+                }
+                .about-us__isotipo-container{
+                    // background-color: grey;
+                    // height: max-content;
+                    height: 180px;
+                    width: 220px;
+                    .about-us__isotipo{
+                        height: 100%;
+                        width: 100%;
+                        // background-color: green;
+                        fill: $color1;
+
+                    }
+                }
+            }
+        }
     }
 }  

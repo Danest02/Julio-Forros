@@ -22,7 +22,7 @@
   <body class="body" id="body">
     <header class="header">
       <div class="navbar-header" id="navbar-header">
-        <div class="navbar-header__container-logo"><a href="index.html"><img class="navbar-header__logo navbar-header__logo--isotipo" src="galery/logos/Logo Julio Forros Dragón.svg" alt="logo empresa Julio Forros"/></a><a href="index.html"><img class="navbar-header__logo navbar-header__logo--logotipo" src="galery/logos/Logo Julio Forros Nombre.svg" alt="nombre empresa Julio Forros"/></a></div>
+        <div class="navbar-header__container-logo"><a href="index.html"><svg class="navbar-header__logo navbar-header__logo--isotipo"><use href="galery/logos/logo.svg#isotipo"/></svg></a><a href="index.html"><svg class="navbar-header__logo navbar-header__logo--logotipo"><use href="galery/logos/logo.svg#logotipo"/></svg></a></div>
         <div class="navbar-header__container-links-buttons">
           <div class="navbar-header__container-buttons">
             <div class="navbar-header__button navbar-header__button--search" data-name="Buscar"><span class="navbar-header__button-text navbar-header__button-text--search">Buscar</span><span class="material-icons-round navbar-header__button-icon">search</span></div>
@@ -181,6 +181,10 @@
       </section>
       <section class="about-us seccion container">
         <h1 class="about-us__tittle h1">Sobre nosotros</h1>
+        <div class="about-us__logo">
+          <div class="about-us__isotipo-container"><svg class="about-us__isotipo"><use href="galery/logos/logo.svg#isotipo"/></svg></div>
+          <div class="about-us__logotipo-container"><svg class="about-us__logotipo"><use href="galery/logos/logo.svg#logotipo"/></svg></div>
+        </div>
       </section>
       <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"> </script>
       <script src="./js/scripts-min.js"></script><a class="contact-button" href="https://wa.me/3123832384">
