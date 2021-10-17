@@ -468,7 +468,7 @@
             flex-direction: column;
             align-items: center;
             .about-us__content {
-                max-width: 900px;
+                max-width: 890px;
                 display: flex;
                 align-items: center;
                 flex-wrap: wrap;
@@ -538,5 +538,91 @@
             }
 
         }
+        .visit-us{
+            .visit-us__venues{
+                margin-left: auto;
+                margin-right: auto;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                gap: var(--space-4);
+                max-width: 890px;
+                .visit-us__venue{
+                    flex: 1;
+                    display: grid;
+                    grid-template-columns: min-content 1fr;
+                    grid-template-rows: repeat(4, min-content);    
+                    column-gap: var(--space-6);
+                    .visit-us__venue-tittle, .visit-us__venue-paragraph{
+                        margin-bottom: var(--space-7);
+                    }
+                    .visit-us__venue-img{
+                        grid-column: 1 / 2;
+                        grid-row: 1 / 4;
+                        min-width: 115px;
+                        max-width: 115px;
+                        height: 115px;
+                        @extend .border-radius;
+                        @include min-width(500px){
+                            margin-bottom: var(--space-6);
+                            grid-column: 1 / 2;
+                            grid-row: 1 / 2;
+                        }
+                    }
+                    .visit-us__venue-tittle{
+                        grid-column: 2 / 3;
+                        grid-row: 1 / 2;
+                        text-align: left;
+                        color: $text;
+                        @include min-width(500px){
+                            grid-column: 1 / 2;
+                            grid-row: 2 / 3;
+                        }
+                    }
+                    .visit-us__venue-paragraph{
+                        grid-column: 2 / 3;
+                        grid-row: 2 / 3;
+                        @extend .p-small;
+                        @include min-width(500px){
+                            grid-column: 1 / 2;
+                            grid-row: 3 / 4;
+                        }
+                        @include max-width(315px){
+                            display: none;
+                        }
+                    }
+                    .visit-us__venue-address{
+                        grid-column: 2 / 3;
+                        grid-row: 3 / 4;
+                        &::before{
+                            font-family: "material-icons-round";
+                            content: "\e0c8";
+                            margin-right: 4px;
+                            vertical-align: middle;
+                            font-size: 24px;
+                            color:$color1;
+                        }
+                        @include min-width(500px){
+                            grid-column: 1 / 2;
+                            grid-row: 4 / 5;
+                        }
+                    }
+                    .visit-us__venue-map{
+                        @extend .border-radius;
+                        grid-column: 1 / 3;
+                        grid-row: 4 / 5;
+                        margin-top: var(--space-6);
+                        @include min-width(500px){
+                            margin-top: 0;
+                            grid-column: 2 / 3;
+                            grid-row: 1 / 5;
+                        }
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
     }
 }

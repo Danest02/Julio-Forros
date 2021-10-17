@@ -54,7 +54,11 @@ body {
     color: $text;
     font-family: 'poppins', arial, sans-serif;
     font-size: 1rem;
-
+    line-height: 1;
+    
+}
+p{
+    line-height: 1.5;
 }
 
 h1,
@@ -130,6 +134,10 @@ li {
 html,body{
     height: 100%;
     position: relative;
+}
+address{
+    font-style: normal;
+    display: inline-block;
 }
 .body {
     @extend .scrollbar-style;
