@@ -22,12 +22,13 @@
     outline:none;
     cursor: pointer;
     border: 1px solid $color1;
-    transition: background-color .3s linear, border .3s linear;
-
+    transition: background-color .3s linear;
+    user-select: none;
+    
     &:hover {
         background-color: $color1-hover;
     }
-
+    
     &:active {
         transition: transform .5s;
         transform: scale(.95);

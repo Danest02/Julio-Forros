@@ -21,11 +21,19 @@
   </head>
   <body class="body" id="body">
     <header class="header">
+      <div class="search">
+        <div class="search__container container">
+          <button class="mybtn search__close-button" id="searchButtonClose">Cerrar</button>
+          <div class="search-bar">
+            <input class="search-bar__input" type="search" name="search-bar" placeholder="Estoy buscando..."/><a class="search-bar__button" href="#"><span class="material-icons-round search-bar__button-icon">search</span></a>
+          </div>
+        </div>
+      </div>
       <div class="navbar-header" id="navbar-header">
         <div class="navbar-header__container-logo"><a href="index.html"><svg class="navbar-header__logo navbar-header__logo--isotipo"><use href="galery/logos/logo.svg#isotipo"/></svg></a><a href="index.html"><svg class="navbar-header__logo navbar-header__logo--logotipo"><use href="galery/logos/logo.svg#logotipo"/></svg></a></div>
         <div class="navbar-header__container-links-buttons">
           <div class="navbar-header__container-buttons">
-            <div class="navbar-header__button navbar-header__button--search" data-name="Buscar"><span class="navbar-header__button-text navbar-header__button-text--search">Buscar</span><span class="material-icons-round navbar-header__button-icon">search</span></div>
+            <div class="navbar-header__button navbar-header__button--search" id="searchButtonNavBar" data-name="Buscar"><span class="navbar-header__button-text navbar-header__button-text--search">Buscar</span><span class="material-icons-round navbar-header__button-icon">search</span></div>
             <div class="navbar-header__button navbar-header__button--dark-mode" data-name="Modo Oscuro"><span class="navbar-header__button-text navbar-header__button-text--dark-mode">Modo Oscuro</span><span class="material-icons-round navbar-header__button-icon">dark_mode</span></div>
             <div class="navbar-header__button navbar-header__button--user" data-name="Iniciar Sesion"><span class="navbar-header__button-text navbar-header__button-text--user">Inicia Sesión</span><span class="material-icons-round navbar-header__button-icon">account_circle</span></div>
             <div class="hamburguer" id="hamburguer">

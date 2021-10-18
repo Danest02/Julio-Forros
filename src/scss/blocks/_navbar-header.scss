@@ -4,7 +4,7 @@ $navbar-header-heihgt: 3.5rem;
 
 }
 .navbar-header {
-    z-index: 20;
+    z-index: $z-index-2;
     position: fixed;
     top: 0;
     right: 0;
@@ -50,7 +50,7 @@ $navbar-header-heihgt: 3.5rem;
                 display: flex;
                 align-items: center;
                 cursor: pointer;
-                z-index: 10;
+                z-index: $z-index-1;
                 @include min-width($tablet-landscape){
                     &:hover{
                         color: $color1;
@@ -104,7 +104,7 @@ $navbar-header-heihgt: 3.5rem;
 
             .hamburguer {
                 margin-left: 2px;
-                z-index: 10;
+                z-index: $z-index-1;
 
                 @include min-width($tablet-landscape) {
                     display: none;
@@ -145,30 +145,32 @@ $navbar-header-heihgt: 3.5rem;
         }
     }
 }
+.navbar-header{
 
-.navbar-header__container-logo {
-    align-items: center;
-    @include min-width(500px){
-        gap: .7rem;
-    }
-    .navbar-header__logo--isotipo{
-        display: none;
-        fill: $color1;
-        width: 3rem;
+    .navbar-header__container-logo {
+        align-items: center;
         @include min-width(500px){
-            display: inline;
-            min-height: 2.5rem;
+            gap: .7rem;
         }
-    }
-    .navbar-header__logo--logotipo{
-        width: 8.9rem;
-        @include min-width(500px){
-            fill: $logo-color ;
-            width: 10rem;
+        .navbar-header__logo--isotipo{
+            display: none;
+            fill: $color1;
+            width: 3rem;
+            @include min-width(500px){
+                display: inline;
+                min-height: 2.5rem;
+            }
         }
-
+        .navbar-header__logo--logotipo{
+            width: 8.9rem;
+            @include min-width(500px){
+                fill: $logo-color ;
+                width: 10rem;
+            }
+    
+        }
+    
     }
-
 }
 .navbar-header--scroll{
     background-color: $background;

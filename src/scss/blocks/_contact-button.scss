@@ -42,7 +42,7 @@
     .contact-button__icon {
         max-height: 48px;
         max-width: 48px;
-        pointer-events: visible;
+        pointer-events: auto;
         transition: transform .5s ease;
     }
 

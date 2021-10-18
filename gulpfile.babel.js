@@ -105,7 +105,7 @@ gulp.task ('css', function () {
             clean({
               content: ['./public/*.html'],
               css: ['./public/css/styles.css'],
-              safelist: ['hamburguer--simple', 'navbar-header--scroll', 'navbar-header--hide', 'navbar-header--hamburguer', 'swiper-pagination-bullet', 'swiper-pagination-bullet-active'],
+              safelist: ['search--visible', 'hamburguer--simple', 'navbar-header--scroll', 'navbar-header--hide', 'navbar-header--hamburguer', 'swiper-pagination-bullet', 'swiper-pagination-bullet-active'],
               FontFace: true,
               variables: true
             })
@@ -114,20 +114,20 @@ gulp.task ('css', function () {
 });
 
 
-gulp.task('clean', () => {
-    return gulp
-      .src('./public/css/styles.css')
-      .pipe(
-        clean({
-          content: ['./public/*.html'],
-          css: ['./public/css/styles.css'],
-          safelist: ['hamburguer--simple', 'navbar-header--scroll', 'navbar-header--hide', 'navbar-header--hamburguer', 'mybtn--ghost', 'swiper-pagination-bullet', 'swiper-pagination-bullet-active'],
-          FontFace: true,
-          variables: true
-        })
-      )
-      .pipe(gulp.dest('./public/css'));
-});
+// gulp.task('clean', () => {
+//     return gulp
+//       .src('./public/css/styles.css')
+//       .pipe(
+//         clean({
+//           content: ['./public/*.html'],
+//           css: ['./public/css/styles.css'],
+//           safelist: ['hamburguer--simple', 'navbar-header--scroll', 'navbar-header--hide', 'navbar-header--hamburguer', 'mybtn--ghost', 'swiper-pagination-bullet', 'swiper-pagination-bullet-active'],
+//           FontFace: true,
+//           variables: true
+//         })
+//       )
+//       .pipe(gulp.dest('./public/css'));
+// });
 
 gulp.task('default', () => {
     gulp.watch('./src/js/*.js', gulp.series('babel'))
