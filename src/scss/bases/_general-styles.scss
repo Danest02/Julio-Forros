@@ -40,8 +40,8 @@ $z-index-5: 50;
     font-family: 'poppins-semibold';
     font-style: normal;
     font-weight: 600;
+    // font-display: optional;
     src: local('PoppinsSemiBold'), local('Poppins-SemiBold'), url(../galery/fonts/Poppins-SemiBold.ttf) format('truetype');
-    font-display: optional;
 }
 
 @font-face {

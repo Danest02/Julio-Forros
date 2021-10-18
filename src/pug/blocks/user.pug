@@ -1,0 +1,18 @@
+.user
+    .user__container.container
+        button.mybtn.user__close-button#userButtonClose Cerrar
+        span(class="material-icons-round user__icon") account_circle
+        .user__sing-in
+            .user__inputs
+                .user__field.user__field--name
+                    input(type="text" placeholder="Nombre de Usuario" class="user__input")
+                .user__field.user__field--password
+                    input(type="password" placeholder="Contraseña" class="user__input")
+            input(type="button" value="Iniciar Sesión" class="mybtn mybtn--disable")
+        .user__text
+            .user__log-in
+                p.user--question-log-in ¿No tienes una cuenta?
+                a.user__button-log-in Crear una cuenta
+            .user__recover-password 
+                a.user__button-recover-password ¿olvidaste tu contraseña?
+

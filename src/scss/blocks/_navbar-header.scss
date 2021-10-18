@@ -167,6 +167,9 @@ $navbar-header-heihgt: 3.5rem;
                 fill: $logo-color ;
                 width: 10rem;
             }
+            @include max-width(300px){
+                display: none;
+            }
     
         }
     

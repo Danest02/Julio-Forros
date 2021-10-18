@@ -21,6 +21,28 @@
   </head>
   <body class="body" id="body">
     <header class="header">
+      <div class="user">
+        <div class="user__container container">
+          <button class="mybtn user__close-button" id="userButtonClose">Cerrar</button><span class="material-icons-round user__icon">account_circle</span>
+          <div class="user__sing-in">
+            <div class="user__inputs">
+              <div class="user__field user__field--name">
+                <input class="user__input" type="text" placeholder="Nombre de Usuario"/>
+              </div>
+              <div class="user__field user__field--password">
+                <input class="user__input" type="password" placeholder="Contraseña"/>
+              </div>
+            </div>
+            <input class="mybtn mybtn--disable" type="button" value="Iniciar Sesión"/>
+          </div>
+          <div class="user__text">
+            <div class="user__log-in">
+              <p class="user--question-log-in">¿No tienes una cuenta?</p><a class="user__button-log-in">Crear una cuenta</a>
+            </div>
+            <div class="user__recover-password"> <a class="user__button-recover-password">¿olvidaste tu contraseña?</a></div>
+          </div>
+        </div>
+      </div>
       <div class="search">
         <div class="search__container container">
           <button class="mybtn search__close-button" id="searchButtonClose">Cerrar</button>
@@ -35,7 +57,7 @@
           <div class="navbar-header__container-buttons">
             <div class="navbar-header__button navbar-header__button--search" id="searchButtonNavBar" data-name="Buscar"><span class="navbar-header__button-text navbar-header__button-text--search">Buscar</span><span class="material-icons-round navbar-header__button-icon">search</span></div>
             <div class="navbar-header__button navbar-header__button--dark-mode" data-name="Modo Oscuro"><span class="navbar-header__button-text navbar-header__button-text--dark-mode">Modo Oscuro</span><span class="material-icons-round navbar-header__button-icon">dark_mode</span></div>
-            <div class="navbar-header__button navbar-header__button--user" data-name="Iniciar Sesion"><span class="navbar-header__button-text navbar-header__button-text--user">Inicia Sesión</span><span class="material-icons-round navbar-header__button-icon">account_circle</span></div>
+            <div class="navbar-header__button navbar-header__button--user" id="userButtonNavBar" data-name="Iniciar Sesion"><span class="navbar-header__button-text navbar-header__button-text--user">Inicia Sesión</span><span class="material-icons-round navbar-header__button-icon">account_circle</span></div>
             <div class="hamburguer" id="hamburguer">
               <div class="hamburguer__div-center"></div>
             </div>

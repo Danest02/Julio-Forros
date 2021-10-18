@@ -1,0 +1,126 @@
+.user{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $background;
+    z-index: $z-index-3;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .user__container{
+        transition: opacity 1s;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;    
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-4);
+        @include max-height-landscape(500px){
+            flex-direction: row;
+        }
+        .user__close-button{
+            opacity: 0;
+            transition: opacity 1s ease-in;
+            position: fixed;
+            top: var(--space-6);
+            right: var(--space-6);
+        }
+        .user__icon{
+            font-size: 80px;
+            color: $ligth-gray;
+        }
+        .user__sing-in{
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-5);
+            align-items: center;
+            .user__inputs{
+                display: flex;
+                flex-direction: column;
+                gap: var(--space-6);
+                .user__field{
+                    padding: .5rem .5rem .5rem 0;
+                    border-bottom: 2px solid $ligth-gray;
+                    &::before{
+                        font-family: "material-icons-round";
+                        margin-right: 4px;
+                        vertical-align: middle;
+                        font-size: 24px;
+                        color:$ligth-gray;
+                    }
+                    .user__input{
+                        outline: none;
+                        border: none;
+                        width: calc(100% - 50px);
+    
+        
+        
+                    }
+                }
+                .user__field--name{
+                    &::before{
+                        content: "\e7fd";
+                    }
+                }
+                .user__field--password{
+                    &::before{
+                        content: "\e897";
+                    }
+                }
+            }
+    
+        }
+        .user__text{
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-6);
+            .user__log-in{
+                .user__button-log-in{
+                    color: $color2;
+                }
+            }
+            .user__recover-password {
+                .user__button-recover-password{
+                    transition: color .3s ease;
+                    @extend .p-small;
+                    &::after{
+                        font-family: "material-icons-round";
+                        margin-left: 4px;
+                        display: inline-block;
+                        vertical-align: middle;
+                        font-size: 18px;
+                        color:$text;
+                        content: "\e5c8";
+                        transform: translateY(-2px);
+                    }
+                    &:hover{
+                        color: $color1;
+                        &::after{
+                            transition: color .3s ease;
+                            color: $color1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+.user--visible{
+    opacity: 1;
+    pointer-events: auto;
+    .user__container{
+        opacity: 1;
+        .user__close-button{
+            opacity: 1;
+        }
+    }
+}
