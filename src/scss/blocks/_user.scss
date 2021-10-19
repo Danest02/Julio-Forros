@@ -13,18 +13,16 @@
     justify-content: center;
     align-items: center;
     .user__container{
-        transition: opacity 1s;
-        opacity: 0;
+        // background-color: powderblue;
         width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;    
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         gap: var(--space-4);
-        @include max-height-landscape(500px){
-            flex-direction: row;
+        .user__icon{
+            font-size: 80px;
+            color: $ligth-gray;
         }
         .user__close-button{
             opacity: 0;
@@ -33,83 +31,52 @@
             top: var(--space-6);
             right: var(--space-6);
         }
-        .user__icon{
-            font-size: 80px;
-            color: $ligth-gray;
-        }
-        .user__sing-in{
+        .sing-in{
+            display: none !important;
+            // background-color: pink;
+            width: 100%;
+            height: 100%;
             display: flex;
             flex-direction: column;
-            gap: var(--space-5);
-            align-items: center;
-            .user__inputs{
+            justify-content: center;
+            align-items: center;    
+            gap: var(--space-4);
+            @include max-height-landscape(500px){
+                flex-direction: row;
+            }    
+            .sing-in__more-options{
                 display: flex;
                 flex-direction: column;
                 gap: var(--space-6);
-                .user__field{
-                    padding: .5rem .5rem .5rem 0;
-                    border-bottom: 2px solid $ligth-gray;
-                    &::before{
-                        font-family: "material-icons-round";
-                        margin-right: 4px;
-                        vertical-align: middle;
-                        font-size: 24px;
-                        color:$ligth-gray;
-                    }
-                    .user__input{
-                        outline: none;
-                        border: none;
-                        width: calc(100% - 50px);
-    
-        
-        
+                .sing-in__log-in{
+                    .user__button-log-in{
+                        color: $color2;
                     }
                 }
-                .user__field--name{
-                    &::before{
-                        content: "\e7fd";
-                    }
-                }
-                .user__field--password{
-                    &::before{
-                        content: "\e897";
-                    }
-                }
-            }
-    
-        }
-        .user__text{
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-6);
-            .user__log-in{
-                .user__button-log-in{
-                    color: $color2;
-                }
-            }
-            .user__recover-password {
-                .user__button-recover-password{
-                    transition: color .3s ease;
-                    @extend .p-small;
-                    &::after{
-                        font-family: "material-icons-round";
-                        margin-left: 4px;
-                        display: inline-block;
-                        vertical-align: middle;
-                        font-size: 18px;
-                        color:$text;
-                        content: "\e5c8";
-                        transform: translateY(-2px);
-                    }
-                    &:hover{
-                        color: $color1;
+                .sing-in__recover-password {
+                    .sing-in__button-recover-password{
+                        transition: color .3s ease;
+                        @extend .p-small;
                         &::after{
-                            transition: color .3s ease;
+                            font-family: "material-icons-round";
+                            margin-left: 4px;
+                            display: inline-block;
+                            vertical-align: middle;
+                            font-size: 18px;
+                            color:$text;
+                            content: "\e5c8";
+                            transform: translateY(-2px);
+                        }
+                        &:hover{
                             color: $color1;
+                            &::after{
+                                transition: color .3s ease;
+                                color: $color1;
+                            }
                         }
                     }
                 }
-            }
+            }    
         }
     }
 
@@ -118,9 +85,62 @@
     opacity: 1;
     pointer-events: auto;
     .user__container{
-        opacity: 1;
         .user__close-button{
+            opacity: 1;
+        }
+        .sing-in{
             opacity: 1;
         }
     }
 }
+.user__form{
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+    align-items: center;
+    // background-color: grey;
+    width: 100%;
+    .user__inputs{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: var(--space-6);
+        // background-color: green;
+        width: 100%;
+        .user__field{
+            padding: .5rem .5rem .5rem 0;
+            border-bottom: 2px solid $ligth-gray;
+            // background-color: blue;
+            display: flex;
+            width: 280px;
+            max-width: 100%;
+            &::before{
+                font-family: "material-icons-round";
+                margin-right: 4px;
+                vertical-align: middle;
+                font-size: 24px;
+                color:$ligth-gray;
+            }
+            .user__input{
+                outline: none;
+                border: none;
+                width: 100%;
+        
+        
+        
+            }
+        }
+        .user__field--name{
+            &::before{
+                content: "\e7fd";
+            }
+        }
+        .user__field--password{
+            &::before{
+                content: "\e897";
+            }
+        }        
+    }
+
+}
+

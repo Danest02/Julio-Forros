@@ -65,10 +65,10 @@ body {
     line-height: 1;
     
 }
+input::placeholder{
+    user-select: none;
+}
 input[type=search]{
-    &::placeholder{
-        user-select: none;
-    }
     &::-webkit-search-cancel-button{
         display: none;
     }
