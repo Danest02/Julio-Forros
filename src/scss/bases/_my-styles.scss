@@ -1,10 +1,13 @@
 
 // TODO: BOTONES
 .display-none{
-    display: none;
+    display: none !important;
 }
 .visibility-hidden{
     visibility: hidden;
+}
+.opacity{
+    opacity: 0 !important;
 }
 
 .mybtn {

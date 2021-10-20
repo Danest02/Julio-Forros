@@ -1,31 +1,50 @@
 .user
     .user__container.container
-        button.mybtn.user__close-button#userButtonClose Cerrar
-        span(class="material-icons-round user__icon") account_circle
-        .sing-in
-            .sing-in__form.user__form
-                .sing-in__inputs.user__inputs
-                    .user__field.user__field--name
-                        input(type="text" placeholder="Nombre de Usuario" class="user__input")
-                    .user__field.user__field--password
-                        input(type="password" placeholder="Contraseña" class="user__input")
-                input(type="button" value="Iniciar Sesión" class="mybtn mybtn--disable")
-            .sing-in__more-options
-                .sing-in__log-in
-                    p.sing-in--question-log-in ¿No tienes una cuenta?
-                    a.sing-in__button-log-in Crear una cuenta
-                .sing-in__recover-password 
-                    a.sing-in__button-recover-password ¿olvidaste tu contraseña?
-        .log-in
-            .log-in__form.user__form
-                .log-in__inputs.user__inputs
-                    .user__field.user__field--name  
-                        input(type="text" placeholder="Escriba su nombre completo" class="user__input")
-                    .user__field.user__field--password
-                        input(type="password" placeholder="Escriba su contraseña" class="user__input")
-                    .user__field.user__field--password
-                        input(type="password" placeholder="Confirme su contraseña" class="user__input")
-                input(type="button" value="Crear cuenta" class="mybtn mybtn--disable")
+        .user__content
+            .user__buttons
+                button.user__button.mybtn.user__button--close#userButtonClose Cerrar
+                button.user__button.mybtn.mybtn--ghost.user__button--go-back#userButtonGoBack.opacity Atras
+            span(class="material-icons-round user__icon") account_circle
+            .sing-in#singIn
+                h2.h3 Iniciar sesión
+                form.sing-in__form.user__form
+                    .sing-in__inputs.user__inputs
+                        .user__field.user__field--name
+                            input(type="text" placeholder="Nombre de Usuario" class="user__input")
+                        .user__field.user__field--password
+                            input(type="password" placeholder="Contraseña" class="user__input")
+                    input(type="submit" value="Iniciar Sesión" class="mybtn mybtn--disable")
+                .sing-in__more-options
+                    .sing-in__log-in
+                        p.sing-in--question-log-in ¿No tienes una cuenta?
+                        a.sing-in__button-log-in#singInLogIn Crear una cuenta
+                    .sing-in__recover-password 
+                        a.sing-in__button-recover-password ¿olvidaste tu contraseña?
+            .log-in#logIn.display-none
+                h2.h3 Crear cuenta
+                form.log-in__form.user__form
+                    .log-in__inputs.user__inputs
+                        .user__field.user__field--name  
+                            input(type="text" placeholder="Nombre y apellidos" class="user__input")
+                        .user__field.user__field--name  
+                            input(type="text" placeholder="Nombre de usuario" class="user__input")
+                        .user__field.user__field--password
+                            input(type="password" placeholder="Escriba su contraseña" class="user__input")
+                        .user__field.user__field--password
+                            input(type="password" placeholder="Confirme su contraseña" class="user__input")
+                    //- spam Los siguientes datos son opcionales, pero nos ayudan en su atención
+                    fieldset.log-in__fieldset
+                        legend(align="center" class=" log-in__legend") los siguientes datos son opcionales
+                        .user__inputs
+                            .user__field.user__field--cell  
+                                input( placeholder="Numero de celular" class="user__input")
+                            .user__field.user__field--phone
+                                input( placeholder="Numero de telefono" class="user__input")
+                            .user__field.user__field--mail
+                                input( placeholder="Correo electronico" class="user__input")
+                            .user__field.user__field--location
+                                input( placeholder="Direccion" class="user__input")
+                    input(type="submit" value="Crear cuenta" class="mybtn mybtn--disable")
 
 
 

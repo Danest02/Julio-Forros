@@ -34,6 +34,16 @@ $desktop: 1366px - 80px;
         @content;
     }
 }
+@mixin min-width-portrait($min-width){
+    @media screen and (min-width: $min-width) and (orientation:portrait){
+        @content;
+    }
+}
+@mixin max-width-portrait($max-width){
+    @media screen and (max-width: $max-width) and (orientation:portrait){
+        @content;
+    }
+}
 @mixin max-height-landscape($max-height){
     @media screen and (max-height: $max-height) and (orientation:landscape){
         @content;

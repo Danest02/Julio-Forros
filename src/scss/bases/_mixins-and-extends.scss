@@ -17,6 +17,29 @@
 .min-width-100vw{
     min-width: var(--widht-100vw);
 }
+
+// TODO:STUB  SCROLLBAR
+
+
+.scrollbar-none {
+    overflow-y: scroll;
+    // * para mozilla
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    &::-webkit-scrollbar-track {
+        display: none;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        display: none;
+    }
+
+}
+
 .scrollbar-style{
     &::-webkit-scrollbar {
         width: 7px;
@@ -83,28 +106,6 @@
 
 // .background-linear-gradient-image {
 //     background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, 0.5)), url(../../galeria/fondo4.png);
-// }
-
-// // TODO:STUB  SCROLLBAR
-
-
-// .scrollbar-none {
-//     overflow-y: scroll;
-//     // * para mozilla
-//     scrollbar-width: none;
-
-//     &::-webkit-scrollbar {
-//         display: none;
-//     }
-
-//     &::-webkit-scrollbar-track {
-//         display: none;
-//     }
-
-//     &::-webkit-scrollbar-thumb {
-//         display: none;
-//     }
-
 // }
 // // TODO:STUB  BOTONES
 // @mixin scale-boton{
