@@ -10,20 +10,37 @@ block header
                         .slider-header__tittle-container
                             h2.slider-header__tittle.h1 Asiento DT Personalizado
                         .slider-header__img-container
-                            img(class="slider-header__img" src="galery/images/slider-header__img1.jpg", alt="alt")
+                            img(class="slider-header__img" src="galery/images/slider-header/slider-header-1.jpg", alt="alt")
                         .slider-header__button-container
-                                buttom(class="button-slider button mybtn") Un vistazo
+                            buttom(class="button-slider button mybtn") Un vistazo
                     .slider-header__slide.swiper-slide 
                         .slider-header__tittle-container
-                            h2.slider-header__tittle.h1 Asiento DT Personalizado
+                            h2.slider-header__tittle.h1 Asiento NKD 3 Partes
                         .slider-header__img-container
-                            img(class="slider-header__img" src="galery/images/slider-header__img1.jpg", alt="alt")
+                            img(class="slider-header__img" src="galery/images/slider-header/slider-header-2.jpg", alt="alt")
                         .slider-header__button-container
-                                buttom(class="button-slider button mybtn") Un vistazo
-                    .slider-header__slide.swiper-slide
-                    .slider-header__slide.swiper-slide
-                    .slider-header__slide.swiper-slide
-                    .slider-header__slide.swiper-slide
+                            buttom(class="button-slider button mybtn") Un vistazo
+                    .slider-header__slide.swiper-slide 
+                        .slider-header__tittle-container
+                            h2.slider-header__tittle.h1 Protectores de Defensas
+                        .slider-header__img-container
+                            img(class="slider-header__img" src="galery/images/slider-header/slider-header-3.jpg", alt="alt")
+                        .slider-header__button-container
+                            buttom(class="button-slider button mybtn") Un vistazo
+                    .slider-header__slide.swiper-slide 
+                        .slider-header__tittle-container
+                            h2.slider-header__tittle.h1 Espumas
+                        .slider-header__img-container
+                            img(class="slider-header__img" src="galery/images/slider-header/slider-header-4.jpg", alt="alt")
+                        .slider-header__button-container
+                            buttom(class="button-slider button mybtn") Un vistazo
+                    .slider-header__slide.swiper-slide 
+                        .slider-header__tittle-container
+                            h2.slider-header__tittle.h1 Sabanas en Impresión
+                        .slider-header__img-container
+                            img(class="slider-header__img" src="galery/images/slider-header/slider-header-5.jpg", alt="alt")
+                        .slider-header__button-container
+                            buttom(class="button-slider button mybtn") Un vistazo
                 .slider-header__swiper-pagination.swiper-pagination
         .vector
                 <svg class="vector__svg" preserveAspectRatio="none" viewBox="0 0 1366 308" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -41,25 +58,29 @@ block main
             .index-catalog__container.container
                 .index-catalog__products-container
                     .index-catalog__products-pictures
-                        .index-catalog__product-picture
-                        .index-catalog__product-picture
-                        .index-catalog__product-picture
-                        .index-catalog__product-picture
+                        div(class="index-catalog__product-picture-container" data-name-product="Forros")
+                            img(class="index-catalog__product-picture" src="galery/images/forros.jpg", alt="alt")
+                        div(class="index-catalog__product-picture-container" data-name-product="Asientos")
+                            img(class="index-catalog__product-picture" src="galery/images/asientos.jpg", alt="alt")
+                        div(class="index-catalog__product-picture-container" data-name-product="Defensas")
+                            img(class="index-catalog__product-picture" src="galery/images/defensas.jpg", alt="alt")
+                        div(class="index-catalog__product-picture-container" data-name-product="Sabanas")
+                            img(class="index-catalog__product-picture" src="galery/images/sabanas.png", alt="alt")
                     .index-catalog__products-list-container
                         h1.index-catalog__tittle.h2 Catálogo
                         ul.index-catalog__products-list
-                            li.index-catalog__product-list product
-                            li.index-catalog__product-list product
-                            li.index-catalog__product-list product
-                            li.index-catalog__product-list product
-                            li.index-catalog__product-list product
-                            li.index-catalog__product-list product
-                            li.index-catalog__product-list product
-                            li.index-catalog__product-list product
-                            li.index-catalog__product-list product
-                            li.index-catalog__product-list product
-                            li.index-catalog__product-list product
-                            li.index-catalog__product-list product
+                            li.index-catalog__product-list Sillas
+                            li.index-catalog__product-list Resinas
+                            li.index-catalog__product-list protectoes de defensas
+                            li.index-catalog__product-list Protectores parilla
+                            li.index-catalog__product-list Espumas
+                            li.index-catalog__product-list Protectores de barra
+                            li.index-catalog__product-list Cortavientos
+                            li.index-catalog__product-list Sabanas
+                            li.index-catalog__product-list Carpas
+                            li.index-catalog__product-list Cascos
+                            li.index-catalog__product-list Maleteros
+                            li.index-catalog__product-list Luces
                             li.index-catalog__product-list product
                             li.index-catalog__product-list product
                             li.index-catalog__product-list product
@@ -93,13 +114,13 @@ block main
             .functionalities__cards
                 .functionalities__functionality
                     p.functionalities__paragraph Conoce nuestros productos y precios
-                    a.functionalities__button.mybtn.mybtn--ghost Catalogo
+                    a.functionalities__button.functionalities__button--catalog.mybtn.mybtn--ghost Catalogo
                 .functionalities__functionality
                     p.functionalities__paragraph Haz seguimientos del estado de tu pedido
-                    a.functionalities__button.mybtn.mybtn--ghost Pedido
+                    a.functionalities__button.functionalities__button--order.mybtn.mybtn--ghost Pedido
                 .functionalities__functionality
                     p.functionalities__paragraph Revisa tu factura, quizas te falte algo
-                    a.functionalities__button.mybtn.mybtn--ghost Carrito
+                    a.functionalities__button.functionalities__button--cart.mybtn.mybtn--ghost Carrito
     section.index-search.container.seccion 
         h1.index-search__tittle.h1 ¿Estás buscando algo?
         p.index-search__paragraph Prueba con palabras con nombres de productos

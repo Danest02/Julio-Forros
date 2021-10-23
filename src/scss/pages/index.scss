@@ -40,7 +40,6 @@
                             }
 
                             .slider-header__button-container {
-                                // grid-row: 3 / 4;
                                 justify-self: center;
 
                                 @include min-width-landscape(500px) {
@@ -50,7 +49,6 @@
                             }
 
                             .slider-header__tittle-container {
-                                // grid-row: 1 / 2;
                                 text-align: center;
 
                                 @include min-width-landscape(500px) {
@@ -68,15 +66,15 @@
                                 justify-self: center;
                                 overflow: hidden;
 
-                                // grid-row: 2 / 3;
                                 @include min-width-landscape(500px) {
                                     grid-column: 2 / 3;
                                     grid-row: 1 / 5;
                                 }
 
                                 .slider-header__img {
+                                    width: 100%;
                                     height: 100%;
-                                    object-fit: cover;
+                                    object-fit: contain;
                                     object-position: center;
                                 }
                             }
@@ -149,8 +147,46 @@
                                 grid-template-columns: repeat(2, minmax(0, 380px));
                             }
 
-                            .index-catalog__product-picture {
+                            .index-catalog__product-picture-container {
                                 min-height: 136px;
+                                height: 136px;
+                                max-height: 200px;
+                                overflow: hidden;
+                                background-color: $ligth-gray;
+                                cursor: pointer;
+                                position: relative;
+                                @extend .border-radius;
+
+                                &::before {
+                                    content: attr(data-name-product);
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    right: 0;
+                                    bottom: 0;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    text-align: center;
+                                    transition: opacity .5s ease;
+                                    background-color: rgba(0, 0, 0, .6);
+                                    color: #fff;
+                                    z-index: $z-index-1;
+                                    font-family: 'roboto-black';
+                                    @extend .h2;
+                                    line-height: 1.1;
+                                    padding: var(--space-1);
+                                }
+
+                                &:hover {
+                                    .index-catalog__product-picture {
+                                        transform: scale(1.1);
+                                    }
+
+                                    &::before {
+                                        opacity: 0;
+                                    }
+                                }
 
                                 @include min-height-min-width(360px, 360px) {
                                     height: 170px;
@@ -160,8 +196,13 @@
                                     height: 200px;
                                 }
 
-                                background-color: $ligth-gray;
-                                @extend .border-radius;
+                                .index-catalog__product-picture {
+                                    transition: transform .3s ease;
+                                    object-fit: cover;
+                                    height: 100%;
+                                    width: 100%;
+                                    position: relative;
+                                }
                             }
                         }
 
@@ -204,7 +245,7 @@
                                 }
 
                                 &::-webkit-scrollbar-thumb {
-                                    background-color: $ligth-gray;
+                                    background-color: $color-claro;
                                 }
 
                             }
@@ -327,7 +368,7 @@
                         align-items: flex-end;
                         gap: 1rem;
                         padding: 1rem;
-                        @extend .border-shadow;
+                        @extend .border-shadow-left;
                         @extend .border-radius;
 
                         .functionalities__button {
@@ -337,10 +378,30 @@
                                 display: inline-block;
                                 vertical-align: middle;
                                 font-family: "material-icons-round";
-                                content: "\e8cc";
                                 font-size: 18px;
                                 color: inherit;
                             }
+                        }
+
+                        .functionalities__button--catalog {
+                            &::before{
+                                content: "\e3b6";
+                            }
+                            
+                        }
+
+                        .functionalities__button--order {
+                            &::before{
+                                content: "\e179";
+                            }
+                            
+                        }
+
+                        .functionalities__button--cart {
+                            &::before{
+                                content: "\e8cc";
+                            }
+                            
                         }
                     }
                 }
@@ -377,6 +438,7 @@
                         gap: var(--space-6);
                         min-width: min-content;
                         width: calc(100% / 2);
+
                         @include max-width(380px) {
                             min-width: 100%;
 
@@ -411,6 +473,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+
             .about-us__content {
                 max-width: 890px;
                 display: flex;
@@ -428,6 +491,10 @@
                     text-align: center;
 
                     .about-us__logo {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: var(--space-7);
                         .about-us__logotipo-container {
                             height: 3rem;
                             width: 220px;
@@ -439,8 +506,9 @@
                         }
 
                         .about-us__isotipo-container {
-                            height: 180px;
-                            width: 220px;
+                            height: 160px;
+                            width: 200px;
+                            // background-color: green;
 
                             .about-us__isotipo {
                                 height: 100%;
@@ -458,6 +526,7 @@
                     flex-direction: column;
                     gap: var(--space-5);
                     text-align: left;
+
                     .about-us__venue {
                         min-width: 200px;
                         display: flex;
@@ -465,7 +534,9 @@
                         gap: var(--space-6);
                         padding: 1rem 1rem 1rem 2rem;
                         @extend .border-radius;
-                        @extend .border-shadow;
+                        @extend .border-shadow-left;
+                        // @extend .border-shadow;
+
                         .about-us__venue-tittle {
                             color: $text;
                             text-align: left;
@@ -473,76 +544,89 @@
                     }
                 }
             }
-            .about-us__button{
+
+            .about-us__button {
                 width: 100%;
                 margin-left: auto;
                 margin-right: auto;
-                margin-top: var(--space-4);
+                margin-top: var(--space-3);
             }
 
         }
-        .visit-us{
-            .visit-us__venues{
+
+        .visit-us {
+            .visit-us__venues {
                 margin-left: auto;
                 margin-right: auto;
                 display: grid;
                 gap: var(--space-4);
                 max-width: 890px;
-                .visit-us__venue{
+
+                .visit-us__venue {
                     display: flex;
                     flex-direction: column;
                     gap: var(--space-6);
-                    @include min-width(500px){
+
+                    @include min-width(500px) {
                         flex-direction: row;
                     }
-                    .visit-us__venue-map{
+
+                    .visit-us__venue-map {
                         @extend .border-radius;
                         height: 100%;
                         width: 100%;
                     }
-                    .visit-us__description{
+
+                    .visit-us__description {
                         display: flex;
                         flex-direction: row;
                         gap: var(--space-6);
-                        @include min-width(500px){
+
+                        @include min-width(500px) {
                             flex-direction: column;
-                        }    
-                        .visit-us__venue-img{
+                        }
+
+                        .visit-us__venue-img {
                             min-width: 115px;
                             max-width: 115px;
                             height: 115px;
                             @extend .border-radius;
                         }
-                        .visit-us__venue-text{
+
+                        .visit-us__venue-text {
                             display: flex;
                             flex-direction: column;
                             gap: var(--space-7);
                             height: min-content;
-                            .visit-us__venue-tittle{
+
+                            .visit-us__venue-tittle {
                                 text-align: left;
                                 color: $text;
                             }
-                            .visit-us__venue-paragraph{
+
+                            .visit-us__venue-paragraph {
                                 @extend .p-small;
-                                @include max-width(315px){
+
+                                @include max-width(315px) {
                                     display: none;
                                 }
                             }
-                            .visit-us__venue-address{
-                                &::before{
+
+                            .visit-us__venue-address {
+                                &::before {
                                     font-family: "material-icons-round";
                                     content: "\e0c8";
                                     margin-right: 4px;
                                     vertical-align: middle;
                                     font-size: 24px;
-                                    color:$color1;
+                                    color: $color1;
                                 }
                             }
                         }
                     }
-                   
-                   
-                   
+
+
+
                 }
             }
         }

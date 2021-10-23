@@ -39,10 +39,10 @@
                     <input class="user__input" type="password" placeholder="Contraseña"/>
                   </div>
                 </div>
-                <input class="mybtn mybtn--disable" type="submit" value="Iniciar Sesión"/>
+                <input class="mybtn mybtn--disable" type="button" value="Iniciar Sesión"/>
               </form>
               <div class="sing-in__more-options">
-                <div class="sing-in__log-in">
+                <div class="sing-in__log-in"> 
                   <p class="sing-in--question-log-in">¿No tienes una cuenta?</p><a class="sing-in__button-log-in" id="singInLogIn">Crear una cuenta</a>
                 </div>
                 <div class="sing-in__recover-password"> <a class="sing-in__button-recover-password">¿olvidaste tu contraseña?</a></div>
@@ -53,16 +53,16 @@
               <form class="log-in__form user__form">
                 <div class="log-in__inputs user__inputs">
                   <div class="user__field user__field--name"> 
-                    <input class="user__input" type="text" placeholder="Nombre y apellidos"/>
+                    <input class="user__input" required="required" minlength="3" type="text" placeholder="Nombre y apellidos"/>
                   </div>
                   <div class="user__field user__field--name"> 
-                    <input class="user__input" type="text" placeholder="Nombre de usuario"/>
+                    <input class="user__input" required="required" type="text" placeholder="Nombre de usuario"/>
                   </div>
                   <div class="user__field user__field--password">
-                    <input class="user__input" type="password" placeholder="Escriba su contraseña"/>
+                    <input class="user__input" required="required" min="4" type="password" placeholder="Escriba su contraseña"/>
                   </div>
                   <div class="user__field user__field--password">
-                    <input class="user__input" type="password" placeholder="Confirme su contraseña"/>
+                    <input class="user__input" required="required" min="4" type="password" placeholder="Confirme su contraseña"/>
                   </div>
                 </div>
                 <fieldset class="log-in__fieldset">
@@ -126,24 +126,47 @@
                 <div class="slider-header__tittle-container">
                   <h2 class="slider-header__tittle h1">Asiento DT Personalizado</h2>
                 </div>
-                <div class="slider-header__img-container"><img class="slider-header__img" src="galery/images/slider-header__img1.jpg" alt="alt"/></div>
+                <div class="slider-header__img-container"><img class="slider-header__img" src="galery/images/slider-header/slider-header-1.jpg" alt="alt"/></div>
                 <div class="slider-header__button-container">
                   <buttom class="button-slider button mybtn">Un vistazo</buttom>
                 </div>
               </div>
               <div class="slider-header__slide swiper-slide"> 
                 <div class="slider-header__tittle-container">
-                  <h2 class="slider-header__tittle h1">Asiento DT Personalizado</h2>
+                  <h2 class="slider-header__tittle h1">Asiento NKD 3 Partes</h2>
                 </div>
-                <div class="slider-header__img-container"><img class="slider-header__img" src="galery/images/slider-header__img1.jpg" alt="alt"/></div>
+                <div class="slider-header__img-container"><img class="slider-header__img" src="galery/images/slider-header/slider-header-2.jpg" alt="alt"/></div>
                 <div class="slider-header__button-container">
                   <buttom class="button-slider button mybtn">Un vistazo</buttom>
                 </div>
               </div>
-              <div class="slider-header__slide swiper-slide"></div>
-              <div class="slider-header__slide swiper-slide"></div>
-              <div class="slider-header__slide swiper-slide"></div>
-              <div class="slider-header__slide swiper-slide"></div>
+              <div class="slider-header__slide swiper-slide"> 
+                <div class="slider-header__tittle-container">
+                  <h2 class="slider-header__tittle h1">Protectores de Defensas</h2>
+                </div>
+                <div class="slider-header__img-container"><img class="slider-header__img" src="galery/images/slider-header/slider-header-3.jpg" alt="alt"/></div>
+                <div class="slider-header__button-container">
+                  <buttom class="button-slider button mybtn">Un vistazo</buttom>
+                </div>
+              </div>
+              <div class="slider-header__slide swiper-slide"> 
+                <div class="slider-header__tittle-container">
+                  <h2 class="slider-header__tittle h1">Espumas</h2>
+                </div>
+                <div class="slider-header__img-container"><img class="slider-header__img" src="galery/images/slider-header/slider-header-4.jpg" alt="alt"/></div>
+                <div class="slider-header__button-container">
+                  <buttom class="button-slider button mybtn">Un vistazo</buttom>
+                </div>
+              </div>
+              <div class="slider-header__slide swiper-slide"> 
+                <div class="slider-header__tittle-container">
+                  <h2 class="slider-header__tittle h1">Sabanas en Impresión</h2>
+                </div>
+                <div class="slider-header__img-container"><img class="slider-header__img" src="galery/images/slider-header/slider-header-5.jpg" alt="alt"/></div>
+                <div class="slider-header__button-container">
+                  <buttom class="button-slider button mybtn">Un vistazo</buttom>
+                </div>
+              </div>
             </div>
             <div class="slider-header__swiper-pagination swiper-pagination"></div>
           </div>
@@ -160,26 +183,26 @@
           <div class="index-catalog__container container">
             <div class="index-catalog__products-container">
               <div class="index-catalog__products-pictures">
-                <div class="index-catalog__product-picture"></div>
-                <div class="index-catalog__product-picture"></div>
-                <div class="index-catalog__product-picture"></div>
-                <div class="index-catalog__product-picture"></div>
+                <div class="index-catalog__product-picture-container" data-name-product="Forros"><img class="index-catalog__product-picture" src="galery/images/forros.jpg" alt="alt"/></div>
+                <div class="index-catalog__product-picture-container" data-name-product="Asientos"><img class="index-catalog__product-picture" src="galery/images/asientos.jpg" alt="alt"/></div>
+                <div class="index-catalog__product-picture-container" data-name-product="Defensas"><img class="index-catalog__product-picture" src="galery/images/defensas.jpg" alt="alt"/></div>
+                <div class="index-catalog__product-picture-container" data-name-product="Sabanas"><img class="index-catalog__product-picture" src="galery/images/sabanas.png" alt="alt"/></div>
               </div>
               <div class="index-catalog__products-list-container">
                 <h1 class="index-catalog__tittle h2">Catálogo</h1>
                 <ul class="index-catalog__products-list">
-                  <li class="index-catalog__product-list">product</li>
-                  <li class="index-catalog__product-list">product</li>
-                  <li class="index-catalog__product-list">product</li>
-                  <li class="index-catalog__product-list">product</li>
-                  <li class="index-catalog__product-list">product</li>
-                  <li class="index-catalog__product-list">product</li>
-                  <li class="index-catalog__product-list">product</li>
-                  <li class="index-catalog__product-list">product</li>
-                  <li class="index-catalog__product-list">product</li>
-                  <li class="index-catalog__product-list">product</li>
-                  <li class="index-catalog__product-list">product</li>
-                  <li class="index-catalog__product-list">product</li>
+                  <li class="index-catalog__product-list">Sillas</li>
+                  <li class="index-catalog__product-list">Resinas</li>
+                  <li class="index-catalog__product-list">protectoes de defensas</li>
+                  <li class="index-catalog__product-list">Protectores parilla</li>
+                  <li class="index-catalog__product-list">Espumas</li>
+                  <li class="index-catalog__product-list">Protectores de barra</li>
+                  <li class="index-catalog__product-list">Cortavientos</li>
+                  <li class="index-catalog__product-list">Sabanas</li>
+                  <li class="index-catalog__product-list">Carpas</li>
+                  <li class="index-catalog__product-list">Cascos</li>
+                  <li class="index-catalog__product-list">Maleteros</li>
+                  <li class="index-catalog__product-list">Luces</li>
                   <li class="index-catalog__product-list">product</li>
                   <li class="index-catalog__product-list">product</li>
                   <li class="index-catalog__product-list">product</li>
@@ -215,13 +238,13 @@
           <h1 class="functionalities__tittle h1">¡Espera! Esto puede interesarte</h1>
           <div class="functionalities__cards">
             <div class="functionalities__functionality">
-              <p class="functionalities__paragraph">Conoce nuestros productos y precios</p><a class="functionalities__button mybtn mybtn--ghost">Catalogo</a>
+              <p class="functionalities__paragraph">Conoce nuestros productos y precios</p><a class="functionalities__button functionalities__button--catalog mybtn mybtn--ghost">Catalogo</a>
             </div>
             <div class="functionalities__functionality">
-              <p class="functionalities__paragraph">Haz seguimientos del estado de tu pedido</p><a class="functionalities__button mybtn mybtn--ghost">Pedido</a>
+              <p class="functionalities__paragraph">Haz seguimientos del estado de tu pedido</p><a class="functionalities__button functionalities__button--order mybtn mybtn--ghost">Pedido</a>
             </div>
             <div class="functionalities__functionality">
-              <p class="functionalities__paragraph">Revisa tu factura, quizas te falte algo</p><a class="functionalities__button mybtn mybtn--ghost">Carrito</a>
+              <p class="functionalities__paragraph">Revisa tu factura, quizas te falte algo</p><a class="functionalities__button functionalities__button--cart mybtn mybtn--ghost">Carrito</a>
             </div>
           </div>
         </div>
