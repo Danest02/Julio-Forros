@@ -1,10 +1,10 @@
-.user{
+.user {
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: $background;
+    background-color: var(--background);
     z-index: $z-index-3;
     opacity: 0;
     pointer-events: none;
@@ -12,178 +12,198 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    .user__container{
+
+    .user__container {
         width: 100%;
         height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        
-        .user__content{
+
+        .user__content {
             max-height: 100%;
             width: 100%;
             padding: var(--space-6) 0 var(--space-1);
             overflow: scroll;
             @extend .scrollbar-none;
-            // background-color: powderblue;
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: var(--space-6);
             justify-content: flex-start;
-            @include max-width(570px){
-            }
-            .user__icon{
+
+            @include max-width(570px) {}
+
+            .user__icon {
                 font-size: 80px;
-                color: $ligth-gray;
+                color: var(--ligth-gray);
             }
-            .user__buttons{
+
+            .user__buttons {
                 display: none;
                 width: 100%;
                 display: flex;
                 flex-direction: column;
                 gap: var(--space-6);
                 align-items: flex-end;
-                .user__button{
+
+                .user__button {
                     opacity: 0;
                     transition: opacity 1s ease-in;
                     right: var(--space-6);
-                    @include min-width(500px){
+
+                    @include min-width(500px) {
                         position: absolute;
-                        
+
                     }
                 }
-                }
-            .user__button--close{
+            }
+
+            .user__button--close {
                 top: var(--space-6);
             }
-            .user__button--go-back{
+
+            .user__button--go-back {
                 top: calc(var(--space-6) + 38px + var(--space-6));
             }
-                    
-            .log-in, .sing-in{
+
+            .log-in,
+            .sing-in {
                 width: 100%;
                 display: flex;
                 flex-direction: column;
-                align-items: center;    
+                align-items: center;
                 gap: var(--space-4);
-                // background-color: pink;
             }
-            .sing-in{
-                .sing-in__more-options{
+
+            .sing-in {
+                .sing-in__more-options {
                     display: flex;
                     flex-direction: column;
                     gap: var(--space-6);
-                    .sing-in__log-in{
-                        .sing-in__button-log-in{
-                            color: $color2;
+
+                    .sing-in__log-in {
+                        .sing-in__button-log-in {
+                            color: var(--color2);
                         }
                     }
+
                     .sing-in__recover-password {
-                        .sing-in__button-recover-password{
+                        .sing-in__button-recover-password {
                             transition: color .3s ease;
                             @extend .p-small;
-                            &::after{
+
+                            &::after {
                                 font-family: "material-icons-round";
                                 margin-left: 4px;
                                 display: inline-block;
                                 vertical-align: middle;
                                 font-size: 18px;
-                                color:$text;
+                                color: var(--text);
                                 content: "\e5c8";
                                 transform: translateY(-2px);
                             }
-                            &:hover{
-                                color: $color1;
-                                &::after{
+
+                            &:hover {
+                                color: var(--color1);
+
+                                &::after {
                                     transition: color .3s ease;
-                                    color: $color1;
+                                    color: var(--color1);
                                 }
                             }
                         }
                     }
-                }    
-            }    
+                }
+            }
         }
     }
 
 }
-.user--visible{
+
+.user--visible {
     opacity: 1;
     pointer-events: auto;
-    .user__container{
-        .user__content{
-            .user__buttons{
-                .user__button{
+
+    .user__container {
+        .user__content {
+            .user__buttons {
+                .user__button {
                     opacity: 1;
                 }
             }
-            .user__button--go-back{
+
+            .user__button--go-back {
                 transition: opacity .5s ease-in-out;
-                &::before{
-                    font-family: "material-icons-round";
-                    margin-right: 4px;
-                    display: inline-block;
-                    vertical-align: middle;
+                &::before {
+                    @extend .pseudo-icon;
                     font-size: 18px;
-                    color:inherit;
+                    color: inherit;
                     content: "\e5c4";
                     transform: translateY(-2px);
                 }
-    
+
             }
-            .sing-in{
+
+            .sing-in {
                 opacity: 1;
             }
         }
     }
 }
-.user__form{
+
+.user__form {
     display: flex;
     flex-direction: column;
     gap: var(--space-5);
     align-items: center;
-    // background-color: grey;
     width: 100%;
-    .user__inputs{
+
+    .user__inputs {
         display: flex;
         align-items: center;
         flex-direction: column;
         gap: var(--space-6);
-        // background-color: green;
         width: 100%;
-        .user__field:focus-within{
-            &:before{
-                color: $color1;
+
+        .user__field:focus-within {
+            &:before {
+                color: var(--color1);
             }
         }
-        .user__field--name{
-            &::before{
+
+        .user__field--name {
+            &::before {
                 content: "\e7fd";
             }
         }
-        .user__field--password{
-            &::before{
+
+        .user__field--password {
+            &::before {
                 content: "\e897";
             }
-        }  
-        .user__field--cell{
-            &::before{
+        }
+
+        .user__field--cell {
+            &::before {
                 content: "\e32c";
             }
         }
-        .user__field--phone{
-            &::before{
+
+        .user__field--phone {
+            &::before {
                 content: "\e0cd";
             }
         }
-        .user__field--mail{
-            &::before{
+
+        .user__field--mail {
+            &::before {
                 content: "\e0e6";
             }
         }
-        .user__field--location{
-            &::before{
+
+        .user__field--location {
+            &::before {
                 content: "\e0c8";
             }
         }
@@ -191,47 +211,42 @@
 
 }
 
-.user__field{
+.user__field {
     padding: .5rem .5rem .5rem 0;
-    border-bottom: 2px solid $ligth-gray;
-    // background-color: blue;
+    border-bottom: 2px solid var(--ligth-gray);
     display: flex;
     width: 280px;
     max-width: 100%;
-    &::before{
+
+    &::before {
+        @extend .pseudo-icon;
         transition: color .3s ease-in;
-        font-family: "material-icons-round";
-        margin-right: 4px;
-        vertical-align: middle;
-        font-size: 24px;
-        color:$ligth-gray;
+        color: var(--ligth-gray);
     }
-    .user__input{
+
+    .user__input {
         outline: none;
         border: none;
         width: 100%;
-
-
-
+        background-color: transparent;
     }
 }
 
-.log-in{
-    .log-in__form{
+.log-in {
+    .log-in__form {
         gap: var(--space-4);
-        .log-in__fieldset{
+
+        .log-in__fieldset {
             padding: 0;
             border: none;
             margin: 0;
-            // outline: none;
             @extend .border-radius;
-            .log-in__legend{
+
+            .log-in__legend {
                 font-family: 'poppins-semibold';
-                // @extend .h4;
                 margin: 0;
                 padding: 0;
                 margin-bottom: var(--space-6);
-                // color: $color2;
                 width: 100%;
             }
         }

@@ -1,6 +1,6 @@
 const navbarHeader = document.getElementById("navbar-header");
 let initialScroll =  window.pageYOffset;
-let mainScroll = document.getElementById("main").offsetTop;
+let mainScroll = document.querySelector("main").offsetTop;
 let hamburguer = document.getElementById("hamburguer");
 
 hamburguer.addEventListener("click", ()=> {

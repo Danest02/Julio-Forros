@@ -12,7 +12,7 @@
                 div(class="navbar-header__button navbar-header__button--search" id="searchButtonNavBar" data-name="Buscar")
                     span.navbar-header__button-text.navbar-header__button-text--search Buscar
                     span(class="material-icons-round navbar-header__button-icon") search
-                div(class="navbar-header__button navbar-header__button--dark-mode" data-name="Modo Oscuro")
+                div(class="navbar-header__button navbar-header__button--dark-mode" data-name="Modo Oscuro" id="buttonDarkMode")
                     span.navbar-header__button-text.navbar-header__button-text--dark-mode Modo Oscuro
                     span(class="material-icons-round navbar-header__button-icon" ) dark_mode
                 div(class="navbar-header__button navbar-header__button--user" id="userButtonNavBar" data-name="Iniciar Sesion")
@@ -25,6 +25,6 @@
                     -const links = ["Catalogo","Pedido","Carrito","Contactanos","Nosotros",]
                     each link in links
                         li
-                            a(href="./pages" + link +".html" id="menu__link--" + link, class="menu__link animated-border animated-border  menu__link--" + link) #{link}
+                            a(href="./" + link +".html" id="menu__link--" + link, class="menu__link animated-border animated-border  menu__link--" + link) #{link}
 
 

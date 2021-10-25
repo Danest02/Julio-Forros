@@ -19,7 +19,7 @@ html(lang="es")
         //- STUB LEAFLET.JS mapa
         //- link(rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css")
 
-        
+    
         //- STUB ESTILOS CSS
         link(rel="stylesheet" type="text/css" href="css/styles.css")
 
@@ -42,13 +42,19 @@ html(lang="es")
 
 
     body.body#body
+
+        -const whatsappNumberFactory = "320 645 0619"
+        -const phoneNumberFactory = "332 0211"
+        -const whatsappNumberStore = "320 645 0619"
+        -const phoneNumberStore = "332 0211"
+
         header.header
             include ../blocks/user.pug
             include ../blocks/search.pug
             include ../blocks/navbar-header.pug
             block header
 
-        main.main#main
+        main
             block main
             include ../blocks/js.pug
             include ../blocks/contact-button

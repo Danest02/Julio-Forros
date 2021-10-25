@@ -7,7 +7,7 @@
         transform: scale(1.05);
     }
     &:hover{
-        color: $color1;
+        color: var(--color1);
     }
 
 }
@@ -51,7 +51,7 @@
     }
     
     &::-webkit-scrollbar-thumb {
-        background-color: $color1;
+        background-color: var(--color1);
         border-radius: 3px;
     }
 

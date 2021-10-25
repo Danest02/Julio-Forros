@@ -1,0 +1,73 @@
+extends ./templates/template.pug
+block head
+block header
+block main
+    .main
+        .contact-us.container.seccion
+            .contact-us__introduction
+                spam.material-icons-round.contact-us__introduction-icon support_agent
+                p.contact-us__introduction-paragraph Puedes comunicarte con nosotros desde cualquiera de nuestros medios de contacto
+            .contact-us__contact-means 
+                .contact-us__venues
+                    .contact-us__venue.contact-us__venue--factory
+                        h2.h2 Fabrica
+                        .contact-us__venue-schedule.contact-us__venue-information
+                            spam.contact-us__subtittle.contact-us__subtittle--schedule Nuestros horarios de atención son 
+                            p.contact-us__venue-paragraph
+                                |De lunes a viernes
+                                br
+                                |8:00 a.m a 1:00 p.m - 2:00 p.m a 5:30 p.m
+                                br
+                                br
+                                |Sabados
+                                br
+                                |8:00 a.m a 2:30 p.m
+                        .contact-us__venue-contacts.contact-us__venue-information
+                            spam.contact-us__subtittle.contact-us__subtittle--contacts Contacta con la Fabrica
+                            div
+                                a.contact-us__venue-contact.contact-us__venue-contact--whatsapp
+                                    <svg class="contact-us__icon-svg"><use href="galery/icon/icons.svg#whatsapp-icon"/></svg>
+                                    span.contact-us__span.contact-us__span--whatsapp #{whatsappNumberFactory}
+                                .contact-us__venue-contact.contact-us__venue-contact--phone 
+                                    <svg class="contact-us__icon-svg"><use href="galery/icon/icons.svg#phone-icon"/></svg>
+                                    span.contact-us__span #{phoneNumberFactory}
+                    .contact-us__venue.contact-us__venue--store
+                        h2.h2 Almacen
+                        .contact-us__venue-schedule.contact-us__venue-information
+                            spam.contact-us__subtittle.contact-us__subtittle--schedule Nuestros horarios de atención son 
+                            p.contact-us__venue-paragraph
+                                |De lunes a viernes
+                                br
+                                |8:00 a.m a 1:00 p.m - 2:00 p.m a 5:30 p.m
+                                br
+                                br
+                                |Sabados
+                                br
+                                |8:00 a.m a 2:30 p.m
+                        .contact-us__venue-contacts.contact-us__venue-information
+                            spam.contact-us__subtittle.contact-us__subtittle--contacts Contacta con el Almacen
+                            div
+                                a.contact-us__venue-contact.contact-us__venue-contact--whatsapp
+                                    <svg class="contact-us__icon-svg"><use href="galery/icon/icons.svg#whatsapp-icon"/></svg>
+                                    span.contact-us__span.contact-us__span--whatsapp #{whatsappNumberStore}
+                                .contact-us__venue-contact.contact-us__venue-contact--phone
+                                    <svg class="contact-us__icon-svg"><use href="galery/icon/icons.svg#phone-icon"/></svg>
+                                    span.contact-us__span #{phoneNumberStore}
+                .contact-us__social-networks
+                    span.contact-us__subtittle Siguenos en redes
+                    div
+                        a.contact-us__social-network
+                            <svg class="contact-us__icon-svg"><use href="galery/icon/icons.svg#facebook-icon"/></svg>
+                            span.contact-us__span Julio Forros
+                        a.contact-us__social-network
+                            <svg class="contact-us__icon-svg"><use href="galery/icon/icons.svg#instagram-icon"/></svg>
+                            span.contact-us__span @Julio Forros
+                .contact-us__mail
+                    span.contact-us__subtittle Escribenos al correo 
+                    a.contact-us__link-mail
+                        <svg class="contact-us__icon-svg"><use href="galery/icon/icons.svg#instagram-icon"/></svg>
+                        span.contact-us__span julioforrospereira#[wbr]@gmail
+
+
+
+

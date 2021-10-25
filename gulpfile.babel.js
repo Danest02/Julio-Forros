@@ -45,24 +45,24 @@ gulp.task('babel', () => {
 });
 
 
-const index = false;
-gulp.task('pugIndex', () => {
-    return gulp
-        .src('./src/pug/index.pug')
-        .pipe(
-            pug({
-                pretty: index ? false : true
-            })
-        )
-        // .pipe(rename({
-        //     extname: ".php"
-        //   }))
-        .pipe(gulp.dest('./public'));
-});
-const pages = false;
+// const index = false;
+// gulp.task('pugIndex', () => {
+//     return gulp
+//         .src('./src/pug/index.pug')
+//         .pipe(
+//             pug({
+//                 pretty: index ? false : true
+//             })
+//         )
+//         // .pipe(rename({
+//         //     extname: ".php"
+//         //   }))
+//         .pipe(gulp.dest('./public'));
+// });
+const pages = true;
 gulp.task('pugPages', () => {
     return gulp
-        .src('./src/pug/pages/*.pug')
+        .src('./src/pug/*.pug')
         .pipe(
             pug({
                 pretty: pages ? false : true
@@ -71,7 +71,7 @@ gulp.task('pugPages', () => {
         // .pipe(rename({
         //     extname: ".php"
         //   }))
-        .pipe(gulp.dest('./public/pages'));
+        .pipe(gulp.dest('./public'));
 });
 // gulp.task('rename', () => {
 //     return gulp
@@ -105,7 +105,7 @@ gulp.task ('css', function () {
             clean({
               content: ['./public/*.html'],
               css: ['./public/css/styles.css'],
-              safelist: ['search--visible', 'user--visible', 'hamburguer--simple', 'navbar-header--scroll', 'navbar-header--hide', 'navbar-header--hamburguer', 'display-none', 'swiper-pagination-bullet', 'swiper-pagination-bullet-active'],
+              safelist: ['search--visible', 'user--visible', 'hamburguer--simple', 'dark-mode', 'navbar-header--scroll', 'navbar-header--hide', 'navbar-header--hamburguer', 'display-none', 'swiper-pagination-bullet', 'swiper-pagination-bullet-active'],
               FontFace: true,
               variables: true
             })
@@ -131,7 +131,8 @@ gulp.task ('css', function () {
 
 gulp.task('default', () => {
     gulp.watch('./src/js/*.js', gulp.series('babel'))
-    gulp.watch('./src/pug/**/*.pug', gulp.series('pugIndex'));
+    // gulp.watch('./src/pug/**/*.pug', gulp.series('pugIndex'));
+    gulp.watch('./src/pug/*.pug', gulp.series('pugPages'));
     gulp.watch('./src/pug/**/*.pug', gulp.series('pugPages'));
     gulp.watch('./src/scss/**/*.scss', gulp.series('css'))
     // gulp.watch('./src/scss/**/*.scss', gulp.series('clean'))
