@@ -1,9 +1,18 @@
 const navbarHeader = document.getElementById("navbar-header");
-let initialScroll =  window.pageYOffset;
-let mainScroll = document.querySelector("main").offsetTop;
-let hamburguer = document.getElementById("hamburguer");
+let initialScroll =  window.pageYOffset,
+mainScroll = document.querySelector("main").offsetTop,
+hamburguer = document.getElementById("hamburguer")
+
+let buttonDarkModeTextWidth = buttonDarkModeText.clientWidth
+// buttonDarkModeText.style.width = "0"
+console.log(buttonDarkModeTextWidth)
+// document.documentElement.style.setProperty('--width-button-dark-mode-text' , buttonDarkModeTextWidth + 'px')
+// console.log(getComputedStyle(document.documentElement).getPropertyValue('--width-button-dark-mode-text'))
+
+
 
 hamburguer.addEventListener("click", ()=> {
+
     document.querySelector(".hamburguer__div-center").classList.toggle("hamburguer--simple")
     navbarHeader.classList.toggle("navbar-header--hamburguer")
     if(navbarHeader.classList.contains("navbar-header--hamburguer")){
@@ -34,3 +43,6 @@ window.addEventListener("scroll", ()=> {
     }
     
 });
+
+
+

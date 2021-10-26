@@ -67,6 +67,7 @@
                                 .slider-header__img-container {
                                     justify-self: center;
                                     @extend .border-radius;
+                                    overflow: hidden;
     
                                     @include min-width-landscape(500px) {
                                         grid-column: 2 / 3;

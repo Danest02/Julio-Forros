@@ -105,7 +105,7 @@ gulp.task ('css', function () {
             clean({
               content: ['./public/*.html'],
               css: ['./public/css/styles.css'],
-              safelist: ['search--visible', 'user--visible', 'hamburguer--simple', 'dark-mode', 'navbar-header--scroll', 'navbar-header--hide', 'navbar-header--hamburguer', 'display-none', 'swiper-pagination-bullet', 'swiper-pagination-bullet-active'],
+              safelist: ['search--visible', 'user--visible', 'hamburguer--simple', 'dark-mode', 'light-mode', 'navbar-header--scroll', 'navbar-header--hide', 'navbar-header--hamburguer', 'display-none', 'swiper-pagination-bullet', 'swiper-pagination-bullet-active'],
               FontFace: true,
               variables: true
             })
