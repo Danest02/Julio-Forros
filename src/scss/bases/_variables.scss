@@ -19,6 +19,7 @@
     --logo-color: #444;
     --vector-header: #2C2C2C;
     --search-bar: #FEFEFE;
+    --hola: #FEFEFE;
 
 }
 
@@ -38,24 +39,17 @@ $navbar-header-heihgt: 3.5rem;
     --ligth-gray: #a8a8a8;
 }
 
-* {
-    --scroll-bar: 0px;
-    --width-100vw: calc(100vw - var(--scroll-bar)) --navbar-header__button-text-1: 0;
-    --navbar-header__button-text-2: 0;
-    --navbar-header__button-text-3: 0;
-
-    --width-button-dark-mode-text: 0;
-
-}
 
 :root {
+    --scroll-bar: 0px;
+    --width-100vw: calc(100vw - var(--scroll-bar));
+    --width-button-dark-mode-text: 3px;
     --space-1: 48px;
     --space-2: 40px;
     --space-3: 32px;
     --space-4: 28px;
     --space-5: 24px;
     --space-6: 16px;
-    --space-7: 8px;
 
     @include min-width(768px) {
         --space-1: 68px;

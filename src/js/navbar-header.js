@@ -3,12 +3,6 @@ let initialScroll =  window.pageYOffset,
 mainScroll = document.querySelector("main").offsetTop,
 hamburguer = document.getElementById("hamburguer")
 
-let buttonDarkModeTextWidth = buttonDarkModeText.clientWidth
-// buttonDarkModeText.style.width = "0"
-console.log(buttonDarkModeTextWidth)
-// document.documentElement.style.setProperty('--width-button-dark-mode-text' , buttonDarkModeTextWidth + 'px')
-// console.log(getComputedStyle(document.documentElement).getPropertyValue('--width-button-dark-mode-text'))
-
 
 
 hamburguer.addEventListener("click", ()=> {
