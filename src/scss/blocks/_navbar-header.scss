@@ -67,7 +67,7 @@
                     @extend .p-small;
                     margin-right: 4px;
 
-                    @include min-width($tablet-landscape) {
+                    @include min-width($desktop) {
                         display: flex;
                     }
 
@@ -174,8 +174,8 @@
         .navbar-header__logo--logotipo {
             width: 8.9rem;
 
+            fill: var(--logo-color);
             @include min-width(500px) {
-                fill: var(--logo-color);
                 width: 10rem;
             }
 
