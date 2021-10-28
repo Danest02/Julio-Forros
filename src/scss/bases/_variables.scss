@@ -19,7 +19,6 @@
     --logo-color: #444;
     --vector-header: #2C2C2C;
     --search-bar: #FEFEFE;
-    --hola: #FEFEFE;
 
 }
 
@@ -34,22 +33,23 @@ $navbar-header-heihgt: 3.5rem;
     --text: #FEFEFE;
     --logo-color: #FEFEFE;
     --vector-header: #1A2A37;
-    --icons-navbar-header: #cecece;
+    --icons-navbar-header: #a8a8a8;
     --search-bar: #1A2A37;
-    --ligth-gray: #a8a8a8;
+    --ligth-gray: #a8a8a8; 
 }
+
 
 
 :root {
     --scroll-bar: 0px;
     --width-100vw: calc(100vw - var(--scroll-bar));
-    --width-button-dark-mode-text: 3px;
     --space-1: 48px;
     --space-2: 40px;
     --space-3: 32px;
     --space-4: 28px;
     --space-5: 24px;
     --space-6: 16px;
+    --space-7: 8px;
 
     @include min-width(768px) {
         --space-1: 68px;
