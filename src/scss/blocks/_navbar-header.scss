@@ -54,7 +54,7 @@
             }
 
             .navbar-header__button {
-                color: var(--text);
+                color: var(--color-text);
                 display: flex;
                 align-items: center;
                 cursor: pointer;
@@ -76,7 +76,7 @@
 
                 @include min-width($tablet-landscape) {
                     &:hover {
-                        color: var(--color1);
+                        color: var(--color-primary);
                         transform: scale(1.05);
                         .navbar-header__button-icon {
                             color: inherit;
@@ -87,7 +87,7 @@
                 &:active {
                     .navbar-header__button-icon {
                         transform: scale(1.2);
-                        color: var(--color1);
+                        color: var(--color-primary);
                     }
                 }
 
@@ -96,7 +96,7 @@
 
                 .navbar-header__button-icon {
                     font-size: 24px;
-                    color: var(--icons-navbar-header);
+                    color: var(--color-navbar-icons);
                     transition: color .3s ease-in, transform .3s ease-in;
                 }
 
@@ -162,7 +162,7 @@
 
         .navbar-header__logo--isotipo {
             display: none;
-            fill: var(--color1);
+            fill: var(--color-primary);
             width: 3rem;
 
             @include min-width(500px) {
@@ -174,7 +174,7 @@
         .navbar-header__logo--logotipo {
             width: 8.9rem;
 
-            fill: var(--logo-color);
+            fill: var(--color-logo);
             @include min-width(500px) {
                 width: 10rem;
             }
@@ -189,7 +189,7 @@
 }
 
 .navbar-header--scroll {
-    background-color: var(--background);
+    background-color: var(--color-background);
     justify-content: end;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, .2);
     height: 3rem;
@@ -208,7 +208,7 @@
 
     .navbar-header__container-links-buttons {
         .menu {
-            background-color: var(--background);
+            background-color: var(--color-background);
             clip-path: circle(150% at 100% 0);
         }
     }

@@ -1,25 +1,23 @@
 // * COLORES
 
 .body {
-    --color1: #F1623F;
-    --color1-hover: #EE3F14;
-    --color1-active: #E33A11;
-    --color1-active: #E33A11;
-    --color1-disable: #F37A5C;
-    --color2: #E54A23;
-    --color-claro: rgba(243, 122, 92, .8);
-    --background: #FEFEFE;
-    --white: #FEFEFE;
-    --text: #020202;
-    --icon-nabvar: #4F4F4F;
-    --dark-gray: #2C2C2C;
-    --ligth-gray: #4F4F4F;
-    --icons-navbar-header: #4F4F4F;
+    --color-primary: #FD5B33;
+    --color-primary-hover: #FF3F10;
+    --color-primary-active: #FF3300;
+    --color-primary-disable: #F37A5C;
+    --color-secundary: #E54A23;
+    --color-primary-light: #f37a5ccc;
+    --color-background: #FEFEFE;
+    --color-white: #FEFEFE;
+    --color-text: #020202;
+    --color-navbar-icons: #4F4F4F;
     --color-footer-icons: #FEFEFE;
-    --logo-color: #444;
-    --vector-header: #2C2C2C;
-    --search-bar: #FEFEFE;
-
+    --color-light-neutral: #4F4F4F;
+    --color-dark-neutral: #2C2C2C;
+    --color-logo: #444;
+    --color-header-vector: #2C2C2C;
+    --color-search-bar: #FEFEFE;
+    
 }
 
 
@@ -28,14 +26,16 @@
 $navbar-header-heihgt: 3.5rem;
 
 .dark-mode {
-    --background: #16222C;
-    --dark-gray: #1A2A37;
-    --text: #FEFEFE;
-    --logo-color: #FEFEFE;
-    --vector-header: #1A2A37;
-    --icons-navbar-header: #a8a8a8;
-    --search-bar: #1A2A37;
-    --ligth-gray: #a8a8a8; 
+    --color-secundary: #E55A36;
+    --color-background: #16222C;
+    --color-dark-neutral: #1A2A37;
+    --color-text: #FEFEFE;
+    --color-logo: #FEFEFE;
+    --color-header-vector: #1A2A37;
+    --color-navbar-icons: #a8a8a8;
+    --color-search-bar: #1A2A37;
+    --color-light-neutral: #a9bccc;
+
 }
 
 

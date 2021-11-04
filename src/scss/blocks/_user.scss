@@ -4,7 +4,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: var(--background);
+    background-color: var(--color-background);
     z-index: $z-index-3;
     opacity: 0;
     pointer-events: none;
@@ -36,7 +36,7 @@
 
             .user__icon {
                 font-size: 80px;
-                color: var(--ligth-gray);
+                color: var(--color-light-neutral);
             }
 
             .user__buttons {
@@ -84,7 +84,7 @@
 
                     .sing-in__log-in {
                         .sing-in__button-log-in {
-                            color: var(--color2);
+                            color: var(--color-secundary);
                         }
                     }
 
@@ -99,17 +99,17 @@
                                 display: inline-block;
                                 vertical-align: middle;
                                 font-size: 18px;
-                                color: var(--text);
+                                color: var(--color-text);
                                 content: "\e5c8";
                                 transform: translateY(-2px);
                             }
 
                             &:hover {
-                                color: var(--color1);
+                                color: var(--color-primary);
 
                                 &::after {
                                     transition: color .3s ease;
-                                    color: var(--color1);
+                                    color: var(--color-primary);
                                 }
                             }
                         }
@@ -168,7 +168,7 @@
 
         .user__field:focus-within {
             &:before {
-                color: var(--color1);
+                color: var(--color-primary);
             }
         }
 
@@ -213,7 +213,7 @@
 
 .user__field {
     padding: .5rem .5rem .5rem 0;
-    border-bottom: 2px solid var(--ligth-gray);
+    border-bottom: 2px solid var(--color-light-neutral);
     display: flex;
     width: 280px;
     max-width: 100%;
@@ -221,7 +221,7 @@
     &::before {
         @extend .pseudo-icon;
         transition: color .3s ease-in;
-        color: var(--ligth-gray);
+        color: var(--color-light-neutral);
     }
 
     .user__input {
@@ -229,6 +229,10 @@
         border: none;
         width: 100%;
         background-color: transparent;
+        &::placeholder{
+            opacity: .9;
+            color: var(--color-text);
+        }
     }
 }
 

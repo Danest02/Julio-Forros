@@ -1,5 +1,5 @@
 .body {
-    background-color: var(--background);
+    background-color: var(--color-background);
     $vector-height: 72px;
     .header{
         .header-index {
@@ -60,7 +60,7 @@
     
                                     .slider-header__tittle {
                                         margin-bottom: 0;
-                                        color: var(--text);
+                                        color: var(--color-text);
                                     }
                                 }
     
@@ -93,12 +93,12 @@
 
                     .swiper-pagination {
                         .swiper-pagination-bullet {
-                            background-color: var(--text);
+                            background-color: var(--color-text);
                             opacity: .5;
                         }
 
                         .swiper-pagination-bullet-active {
-                            background-color: var(--color2) !important;
+                            background-color: var(--color-secundary) !important;
                             opacity: 1;
                         }
                     }
@@ -114,9 +114,9 @@
                 .vector__svg {
                     width: 100%;
                     max-height: 72px;
-                    filter: drop-shadow(0px -7px 0px rgb(112, 109, 109));
+                    filter: drop-shadow(0px -7px 0px var(--color-light-neutral));
                     path{
-                        fill: var(--vector-header);
+                        fill: var(--color-header-vector);
                     }
                 }
             }
@@ -131,7 +131,7 @@
 
         .index-catalog {
             .index-catalog__background {
-                background-color: var(--dark-gray);
+                background-color: var(--color-dark-neutral);
 
                 .index-catalog__container {
                     display: flex;
@@ -161,7 +161,7 @@
                                 height: 136px;
                                 max-height: 200px;
                                 overflow: hidden;
-                                background-color: var(--ligth-gray);
+                                background-color: var(--color-light-neutral);
                                 cursor: pointer;
                                 position: relative;
                                 @extend .border-radius;
@@ -179,7 +179,7 @@
                                     text-align: center;
                                     transition: opacity .5s ease;
                                     background-color: rgba(0, 0, 0, .6);
-                                    color: var(--white);
+                                    color: var(--color-white);
                                     z-index: $z-index-1;
                                     font-family: 'roboto-black';
                                     @extend .h2;
@@ -223,7 +223,7 @@
                             min-width: 311px;
                             height: 424px;
                             padding: var(--space-6);
-                            background-color: var(--background);
+                            background-color: var(--color-background);
                             @extend .border-radius;
                             display: none;
 
@@ -253,7 +253,7 @@
                                 }
 
                                 &::-webkit-scrollbar-thumb {
-                                    background-color: var(--color-claro);
+                                    background-color: var(--color-primary-light);
                                 }
 
                             }
@@ -277,9 +277,9 @@
                     position: relative;
                     top: -1;
                     transform: scaleY(-1);
-                    filter: drop-shadow(0px -7px 0px rgb(112, 109, 109));
+                    filter: drop-shadow(0px -7px 0px var(--color-light-neutral));
                     path{
-                        fill: var(--vector-header);
+                        fill: var(--color-header-vector);
                     }
 
                 }
@@ -315,7 +315,7 @@
                 }
 
                 .index-contact-us__paragraph {
-                    font-family: 'poppins-semibold'Arial, sans-serif;
+                    font-family: 'poppins-semibold' Arial, sans-serif;
                     font-size: 24px;
 
                     @include desktop {
@@ -339,7 +339,7 @@
 
                     grid-column: 2 / 3;
                     grid-row: 1 / 2;
-                    color: var(--ligth-gray);
+                    color: var(--color-light-neutral);
 
                 }
 
@@ -429,7 +429,7 @@
 
         .slider-index-main {
             height: min-content;
-            background-color: var(--dark-gray);
+            background-color: var(--color-dark-neutral);
             padding-top: var(--space-3);
             padding-bottom: var(--space-4);
 
@@ -456,7 +456,7 @@
                         margin-bottom: var(--space-2);
 
                         .slider-index-main__tittle {
-                            color: var(--white);
+                            color: var(--color-white);
                             margin-bottom: 0;
                             text-align: center;
 
@@ -470,7 +470,7 @@
                 .slider-index-main__swiper-pagination {
                     display: relative;
                     bottom: 0;
-                    color: var(--white);
+                    color: var(--color-white);
                 }
             }
         }
@@ -506,7 +506,7 @@
                             width: 220px;
 
                             .about-us__logotipo {
-                                fill: var(--text);
+                                fill: var(--color-text);
                                 height: 100%;
                                 width: 100%;
                             }
@@ -519,7 +519,7 @@
                             .about-us__isotipo {
                                 height: 100%;
                                 width: 100%;
-                                fill: var(--color1);
+                                fill: var(--color-primary);
 
                             }
                         }
@@ -541,7 +541,7 @@
                         @extend .border-shadow-left, .border-radius;
 
                         .about-us__venue-tittle {
-                            color: var(--text);
+                            color: var(--color-text);
                         }
                     }
                 }
@@ -602,7 +602,7 @@
                             height: min-content;
 
                             .visit-us__venue-tittle {
-                                color: var(--text);
+                                color: var(--color-text);
                             }
 
                             .visit-us__venue-paragraph {
@@ -617,7 +617,7 @@
                                 &::before {
                                     @extend .pseudo-icon;
                                     content: "\e0c8";
-                                    color: var(--color1);
+                                    color: var(--color-primary);
                                 }
                             }
                         }

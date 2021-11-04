@@ -7,7 +7,7 @@
         transform: scale(1.05);
     }
     &:hover{
-        color: var(--color1);
+        color: var(--color-primary);
     }
 
 }
@@ -51,7 +51,7 @@
     }
     
     &::-webkit-scrollbar-thumb {
-        background-color: var(--color1);
+        background-color: var(--color-primary);
         border-radius: 3px;
     }
 

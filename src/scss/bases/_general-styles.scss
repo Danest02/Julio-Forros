@@ -60,7 +60,7 @@ $z-index-5: 50;
 }
 
 body {
-    color: var(--text);
+    color: var(--color-text);
     font-family: 'poppins', arial, sans-serif;
     font-size: 1rem;
     line-height: 1;
@@ -70,7 +70,9 @@ body {
     }
 
 }
-
+input{
+    color: var(--color-text);
+}
 input::placeholder {
     user-select: none;
 }
@@ -97,7 +99,7 @@ h4 {
 
 h1 {
     text-align: center;
-    color: var(--color2);
+    color: var(--color-secundary);
 }
 
 
@@ -240,7 +242,7 @@ address {
 }
 
 .border-left {
-    border-left: 4px solid var(--ligth-gray);
+    border-left: 4px solid var(--color-light-neutral);
 }
 
 .pseudo-icon {
