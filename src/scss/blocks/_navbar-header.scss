@@ -40,18 +40,14 @@
     .navbar-header__container-links-buttons {
         display: flex;
         align-items: center;
-        gap: var(--space-1);
+        gap: 1rem;
         flex-direction: row-reverse;
 
         .navbar-header__container-buttons {
             display: flex;
             align-items: center;
-            gap: 4px;
+            gap: 8px;
             height: 100%;
-            @include min-width($tablet-landscape){
-                gap: 1rem;
-
-            }
 
             .navbar-header__button {
                 color: var(--color-text);
@@ -59,20 +55,7 @@
                 align-items: center;
                 cursor: pointer;
                 z-index: $z-index-1;
-                transition: color .3s ease-in, transform .3s ease-in, padding .3s ease-in;
-                .navbar-header__button-text {
-                    white-space: nowrap;
-                    user-select: none;
-                    display: none;
-                    @extend .p-small;
-                    margin-right: 4px;
-
-                    @include min-width($desktop) {
-                        display: flex;
-                    }
-
-                }
-
+                transition: transform .3s ease-in, padding .3s ease-in;
 
                 @include min-width($tablet-landscape) {
                     &:hover {
@@ -97,7 +80,7 @@
                 .navbar-header__button-icon {
                     font-size: 24px;
                     color: var(--color-navbar-icons);
-                    transition: color .3s ease-in, transform .3s ease-in;
+                    transition: color .3s ease, transform .3s ease;
                 }
 
 

@@ -13,16 +13,24 @@ if (localStorage.getItem('mode') == 'dark') {
 
 function changeMode() {
 
-    if (body.classList.contains('dark-mode')) {
-        buttonDarkModeText.innerHTML = "Modo Claro"
-        buttonDarkModeIcon.innerHTML = "light_mode"
-    } else{
-        buttonDarkModeText.innerHTML = "Modo Oscuro"
-        buttonDarkModeIcon.innerHTML = "dark_mode"
-    }
+    if (prefresDarkScheme.matches) {
+        if (body.classList.contains('light-mode')) {
+            buttonDarkModeIcon.innerHTML = "dark_mode"
+        } else{
+            buttonDarkModeIcon.innerHTML = "light_mode"
+        }
+    }else {
+        if (body.classList.contains('dark-mode')) {
+            buttonDarkModeIcon.innerHTML = "light_mode"
+        } else{
+            buttonDarkModeIcon.innerHTML = "dark_mode"
+        }
 
+    }
+    
 }
-    changeMode()
+
+changeMode()
 if (buttonDarkMode) {
     buttonDarkMode.addEventListener("click", () => {
         let mode;
