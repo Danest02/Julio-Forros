@@ -16,7 +16,8 @@
 //     pagination: {
 //         el: '.swiper-pagination',
 //         clickable: true,
-// type: "fraction",
+//         dynamicBullets: true,
+//         type: "fraction",
 //     },
 //     navigation: {
 //         nextEl: '.swiper-button-next',
@@ -43,6 +44,7 @@ if(swiperHeader){
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
+            dynamicBullets: true,
         },
         navigation: {
             nextEl: '.swiper-button-next',

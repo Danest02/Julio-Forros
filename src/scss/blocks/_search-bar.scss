@@ -15,21 +15,21 @@
         border: none;
         padding-left: 1rem;
         outline: none;
-        color: var(--color-secundary);
+        color: var(--color-secondary-500);
         background-color: transparent;
 
         &::placeholder {
-            color: var(--color-secundary);
+            color: var(--color-secondary-500);
             opacity: 1;
         }
 
         &:focus+.search-bar__button {
-            background: var(--color-primary);
-            color: var(--color-white);
+            background: var(--color-primary-500);
+            color: var(--color-white-500);
             pointer-events: visible;
 
             &:hover {
-                background-color: var(--color-primary-hover);
+                background-color: var(--color-primary-700);
 
                 .search-bar__button-icon {
                     font-size: 25px;
@@ -45,7 +45,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        color: var(--color-primary);
+        color: var(--color-primary-500);
         transition: color .3s ease-in, background-color .3s ease-in;
 
         .search-bar__button-icon {

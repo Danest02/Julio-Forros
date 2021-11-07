@@ -32,11 +32,10 @@
             gap: var(--space-6);
             justify-content: flex-start;
 
-            @include max-width(570px) {}
 
             .user__icon {
                 font-size: 80px;
-                color: var(--color-light-neutral);
+                color: var(--color-icons);
             }
 
             .user__buttons {
@@ -72,19 +71,31 @@
                 width: 100%;
                 display: flex;
                 flex-direction: column;
-                align-items: center;
                 gap: var(--space-4);
+                .user__tittle{
+                    margin-left: auto;
+                    margin-right: auto;
+                }
             }
 
             .sing-in {
+                max-width: 100%;
+                width: min-content;
                 .sing-in__more-options {
+                    margin-top: var(--space-6);
                     display: flex;
                     flex-direction: column;
                     gap: var(--space-6);
 
                     .sing-in__log-in {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 4px;
+                        .sing-in--question-log-in{
+                            @extend .p-small;
+                        }
                         .sing-in__button-log-in {
-                            color: var(--color-secundary);
+                            color: var(--color-secondary-500);
                         }
                     }
 
@@ -105,11 +116,11 @@
                             }
 
                             &:hover {
-                                color: var(--color-primary);
+                                color: var(--color-primary-500);
 
                                 &::after {
                                     transition: color .3s ease;
-                                    color: var(--color-primary);
+                                    color: var(--color-primary-500);
                                 }
                             }
                         }
@@ -168,7 +179,7 @@
 
         .user__field:focus-within {
             &:before {
-                color: var(--color-primary);
+                color: var(--color-primary-500);
             }
         }
 
@@ -213,15 +224,15 @@
 
 .user__field {
     padding: .5rem .5rem .5rem 0;
-    border-bottom: 2px solid var(--color-light-neutral);
+    border-bottom: 2px solid var(--color-icons);
     display: flex;
-    width: 280px;
+    width: 260px;
     max-width: 100%;
 
     &::before {
         @extend .pseudo-icon;
         transition: color .3s ease-in;
-        color: var(--color-light-neutral);
+        color: var(--color-icons);
     }
 
     .user__input {
@@ -238,19 +249,20 @@
 
 .log-in {
     .log-in__form {
-        gap: var(--space-4);
+        gap: var(--space-3);
 
         .log-in__fieldset {
             padding: 0;
             border: none;
             margin: 0;
+            margin-top: var(--space-6);
             @extend .border-radius;
-
+            
             .log-in__legend {
                 font-family: 'poppins-semibold';
                 margin: 0;
                 padding: 0;
-                margin-bottom: var(--space-6);
+                margin-bottom: var(--space-5);
                 width: 100%;
             }
         }

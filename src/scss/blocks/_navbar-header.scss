@@ -59,7 +59,7 @@
 
                 @include min-width($tablet-landscape) {
                     &:hover {
-                        color: var(--color-primary);
+                        color: var(--color-primary-500);
                         transform: scale(1.05);
                         .navbar-header__button-icon {
                             color: inherit;
@@ -70,7 +70,7 @@
                 &:active {
                     .navbar-header__button-icon {
                         transform: scale(1.2);
-                        color: var(--color-primary);
+                        color: var(--color-primary-500);
                     }
                 }
 
@@ -79,7 +79,7 @@
 
                 .navbar-header__button-icon {
                     font-size: 24px;
-                    color: var(--color-navbar-icons);
+                    color: var(--color-icons);
                     transition: color .3s ease, transform .3s ease;
                 }
 
@@ -145,7 +145,7 @@
 
         .navbar-header__logo--isotipo {
             display: none;
-            fill: var(--color-primary);
+            fill: var(--color-primary-500);
             width: 3rem;
 
             @include min-width(500px) {
