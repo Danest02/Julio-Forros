@@ -31,6 +31,8 @@
                         outline: none;
                         background-color: var(--color-buttons-navegation);
                         @extend .border-shadow;
+                        color: var(--color-secondary-400);
+                        transition: transform .3s ease-in, color .3s ease-in, background-color .3s ease-in;
                         &::after{
                             display: none;
                         }
@@ -38,16 +40,19 @@
                             border-radius: 50%;
                             padding: 4px;
                             font-family: 'material-icons-round';
+                            color: inherit;
                             font-size: 32px;
-                            color: var(--color-secondary-200);
                             padding: 1rem;
                             display: block;
-                            transition: color .3s ease;
                         }
                         &:hover{
-                            &::before{
-                                color: var(--color-primary-500);
-                            }
+                            transform: scale(1.05);
+                            background-color: var(--color-primary-400);
+                            color: var(--color-white-500);
+                        }
+                        &:active{
+                            transform: scale(.9);
+
                         }
                         @include max-width($tablet){
                             display: none;
@@ -148,10 +153,9 @@
                     }
 
                     .swiper-pagination {
-                        vertical-align: middle;
                         .swiper-pagination-bullet {
-                            height: 12px;
-                            width: 12px;
+                            height: 11px;
+                            width: 11px;
                             background-color: var(--color-text);
                             opacity: .5;
                         }
@@ -159,8 +163,8 @@
                         .swiper-pagination-bullet-active {
                             background-color: var(--color-secondary-500) !important;
                             opacity: 1;
-                            height: 12px;
-                            width: 12px;
+                            height: 11px;
+                            width: 11px;
                         }
                     }
                 }
