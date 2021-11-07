@@ -1,27 +1,29 @@
 
 .navbar-header#navbar-header
-        .navbar-header__container-logo
-            a(href="index.html")
-                //- img(class="navbar-header__logo navbar-header__logo--isotipo" src="galery/logos/Logo Julio Forros Dragón.svg", alt="logo empresa Julio Forros")
-                <svg class="navbar-header__logo navbar-header__logo--isotipo"><use href="galery/logos/logo.svg#isotipo"/></svg>
-            a(href="index.html")
-                <svg class="navbar-header__logo navbar-header__logo--logotipo"><use href="galery/logos/logo.svg#logotipo"/></svg>
-                //- img(class="navbar-header__logo navbar-header__logo--logotipo" src="galery/logos/Logo Julio Forros Nombre.svg", alt="nombre empresa Julio Forros")
-        .navbar-header__container-links-buttons
-            .navbar-header__container-buttons
-                div(class="navbar-header__button navbar-header__button--search" id="searchButtonNavBar" data-name="Buscar")
-                    span(class="material-icons-round navbar-header__button-icon") search
-                div(class="navbar-header__button navbar-header__button--dark-mode" data-name="Modo Oscuro" id="buttonDarkMode")
-                    span(class="material-icons-round navbar-header__button-icon" id="buttonDarkModeIcon" ) dark_mode
-                div(class="navbar-header__button navbar-header__button--user" id="userButtonNavBar" data-name="Iniciar Sesion")
-                    span(class="material-icons-round navbar-header__button-icon") account_circle
-                .hamburguer#hamburguer
-                    .hamburguer__div-center
-            .menu#menu
-                ul.menu__links#menu__links
-                    -const links = ["Catalogo","Pedido","Carrito","Contactanos","Nosotros",]
-                    each link in links
-                        li
-                            a(href="./" + link +".html" id="menu__link--" + link, class="menu__link animated-border animated-border  menu__link--" + link) #{link}
+    .navbar-header__container-logo
+        a(href="index.html")
+            //- img(class="navbar-header__logo navbar-header__logo--isotipo" src="galery/logos/Logo Julio Forros Dragón.svg", alt="logo empresa Julio Forros")
+            <svg class="navbar-header__logo navbar-header__logo--isotipo"><use href="galery/logos/logo.svg#isotipo"/></svg>
+        a(href="index.html")
+            <svg class="navbar-header__logo navbar-header__logo--logotipo"><use href="galery/logos/logo.svg#logotipo"/></svg>
+            //- img(class="navbar-header__logo navbar-header__logo--logotipo" src="galery/logos/Logo Julio Forros Nombre.svg", alt="nombre empresa Julio Forros")
+    .navbar-header__container-links-buttons
+        .navbar-header__container-buttons
+            div(class="navbar-header__button navbar-header__button--search" id="searchButtonNavBar" data-name="Buscar")
+                span(class="material-icons-round navbar-header__button-icon") search
+            div(class="navbar-header__button navbar-header__button--dark-mode" data-name="Modo Oscuro" id="buttonDarkMode")
+                span(class="material-icons-round navbar-header__button-icon" id="buttonDarkModeIcon" ) dark_mode
+            div(class="navbar-header__button navbar-header__button--user" id="userButtonNavBar" data-name="Iniciar Sesion")
+                span(class="material-icons-round navbar-header__button-icon") account_circle
+            div(aria-label="abrir menu" id="hamburguer" class="hamburguer")
+                .hamburguer__div-center
+        .menu#menu
+            ul.menu__links#menu__links
+                li
+                    a(href="index.html" class="menu__link animated-border menu__link--inicio menu__link--active") Inicio
+                -const links = ["Catalogo","Pedido","Carrito","Contactanos","Nosotros"]
+                each link in links
+                    li
+                        a(href="" + link +".html" id="menu__link--" + link, class="menu__link animated-border animated-border  menu__link--" + link) #{link}
 
 

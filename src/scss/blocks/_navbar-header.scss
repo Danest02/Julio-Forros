@@ -127,6 +127,9 @@
                     height: auto;
                     flex-direction: row;
                 }
+                .menu__link--active{
+                    color: var(--color-primary-500);
+                }
 
             }
 
