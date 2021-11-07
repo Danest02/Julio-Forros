@@ -22,65 +22,7 @@
 
                 .slider-header__container {
                     width: 100%;
-                    .slider-header__arrow {
-                        bottom: var(--space-1);
-                        overflow: hidden;
-                        border-radius: 50%;
-                        height: 40px;
-                        width: 40px;
-                        outline: none;
-                        background-color: var(--color-buttons-navegation);
-                        @extend .border-shadow;
-                        color: var(--color-secondary-400);
-                        transition: transform .3s ease-in, color .3s ease-in, background-color .3s ease-in;
-                        &::after{
-                            display: none;
-                        }
-                        &::before{
-                            border-radius: 50%;
-                            padding: 4px;
-                            font-family: 'material-icons-round';
-                            color: inherit;
-                            font-size: 32px;
-                            padding: 1rem;
-                            display: block;
-                        }
-                        &:hover{
-                            transform: scale(1.05);
-                            background-color: var(--color-primary-400);
-                            color: var(--color-white-500);
-                        }
-                        &:active{
-                            transform: scale(.9);
-
-                        }
-                        @include max-width($tablet){
-                            display: none;
-                        }
-                        @include min-width-landscape($tablet){
-                            margin-top: auto;
-                        }
-
-                    }
-                    .slider-header__arrow--right{
-                        @include min-width-landscape($tablet){
-                            right: var(--space-7);
-                        }
-                        &::before{
-                            transform: translateX(2px);
-                            content: "\e5e1";
-                        }
-                    }
-                    .slider-header__arrow--left{
-                        @include min-width-landscape($tablet){
-                            right: var(--space-1);
-                            left: auto;
-                        }
-                        &::before{
-                            transform: translateX(-2px);
-                            content: "\e5e0";
-                        }
-                    }
+                    
                     .slider-header__content {
                         .slider-header__slide {
                             height: 100%;
@@ -161,10 +103,69 @@
                         }
 
                         .swiper-pagination-bullet-active {
-                            background-color: var(--color-secondary-500) !important;
+                            background-color: var(--color-primary-500) ;
                             opacity: 1;
                             height: 11px;
                             width: 11px;
+                        }
+                    }
+                    .slider-header__arrow {
+                        bottom: var(--space-1);
+                        overflow: hidden;
+                        border-radius: 50%;
+                        height: 40px;
+                        width: 40px;
+                        outline: none;
+                        background-color: var(--color-buttons-navegation);
+                        @extend .border-shadow;
+                        color: var(--color-primary-400);
+                        transition: transform .3s ease-in, color .3s ease-in, background-color .3s ease-in;
+                        &::after{
+                            display: none;
+                        }
+                        &::before{
+                            border-radius: 50%;
+                            padding: 4px;
+                            font-family: 'material-icons-round';
+                            color: inherit;
+                            font-size: 32px;
+                            padding: 1rem;
+                            display: block;
+                        }
+                        &:hover{
+                            transform: scale(1.05);
+                            background-color: var(--color-secondary-400);
+                            color: var(--color-white-500);
+                        }
+                        &:active{
+                            transform: scale(.9);
+
+                        }
+                        @include max-width($tablet){
+                            display: none;
+                        }
+                        @include min-width-landscape($tablet){
+                            margin-top: auto;
+                        }
+
+                    }
+                    .slider-header__arrow--right{
+                        @include min-width-landscape($tablet){
+                            right: var(--space-7);
+                        }
+                        &::before{
+                            transform: translateX(2px);
+                            content: "\e5e1";
+                        }
+                    }
+                    .slider-header__arrow--left{
+                        @include min-width-landscape($tablet){
+                            right: var(--space-1);
+                            left: auto;
+                        }
+                        &::before{
+                            transform: translateX(-2px);
+                            content: "\e5e0";
                         }
                     }
                 }
@@ -248,7 +249,7 @@
                                     background-color: rgba(0, 0, 0, .6);
                                     color: var(--color-white-500);
                                     z-index: $z-index-1;
-                                    font-family: 'roboto-black';
+                                    font-family: 'tittle';
                                     @extend .h2;
                                     line-height: 1.1;
                                     padding: var(--space-1);
@@ -320,7 +321,7 @@
                                 }
 
                                 &::-webkit-scrollbar-thumb {
-                                    background-color: var(--color-secondary-200);
+                                    background-color: var(--color-primary-200);
                                 }
 
                             }
@@ -383,7 +384,7 @@
                 }
 
                 .index-contact-us__paragraph {
-                    font-family: 'poppins-semibold'Arial, sans-serif;
+                    font-family: 'p-semibold'Arial, sans-serif;
                     font-size: 24px;
 
                     @include desktop {
@@ -591,7 +592,7 @@
                             .about-us__isotipo {
                                 height: 100%;
                                 width: 100%;
-                                fill: var(--color-primary-500);
+                                fill: var(--color-secondary-500);
 
                             }
                         }
@@ -690,7 +691,7 @@
                                 &::before {
                                     @extend .pseudo-icon;
                                     content: "\e0c8";
-                                    color: var(--color-primary-500);
+                                    color: var(--color-secondary-500);
                                 }
                             }
                         }

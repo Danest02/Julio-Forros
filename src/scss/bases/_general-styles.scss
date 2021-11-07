@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+//  TODO:ANCHOR --- Z-INDEX
+
 $z-index-1: 10;
 $z-index-2: 20;
 $z-index-3: 30;
@@ -11,64 +13,11 @@ $z-index-4: 40;
 $z-index-5: 50;
 
 
-//  TODO: SPACED
-@font-face {
-    font-family: 'material-icons-round';
-    font-style: normal;
-    font-weight: 400;
-    // src: url(https://miweb.com/MaterialIcons-Regular.eot);
-    // /* For IE6-8 */
-    src: local('Material Icons'),
-        local('MaterialIcons-Regular'),
-        url(../galery/fonts/MaterialIconsRound-Regular.otf) format('truetype');
-}
-
-.material-icons-round {
-    font-family: 'material-icons-round';
-    line-height: 1;
-    font-size: 24px;
-    user-select: none;
-}
-
-@font-face {
-    font-family: 'poppins';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Poppins'), local('Poppins-Regular'), url(../galery/fonts/Poppins-Regular.ttf) format('truetype');
-    font-display: optional;
-}
-
-@font-face {
-    font-family: 'poppins-semibold';
-    font-style: normal;
-    font-weight: 600;
-    // font-display: optional;
-    src: local('PoppinsSemiBold'), local('Poppins-SemiBold'), url(../galery/fonts/Poppins-SemiBold.ttf) format('truetype');
-}
-
-@font-face {
-    font-family: 'roboto-black';
-    font-style: normal;
-    font-weight: 900;
-    src: local('RobotoBlack'), local('Roboto-Black'), url(../galery/fonts/Roboto-Black.ttf) format('truetype');
-    // font-display: optional;
-}
-
-@font-face {
-    font-family: 'roboto';
-    src: local('Roboto'), local('Roboto-Medium'), url(../galery/fonts/Roboto-Medium.ttf) format('truetype');
-    font-display: optional;
-}
-
 body {
     color: var(--color-text);
-    font-family: 'poppins', arial, sans-serif;
+    font-family: 'p', arial, sans-serif;
     font-size: 1rem;
     line-height: 1;
-
-    header {
-        // max-height: 100%;
-    }
 
 }
 input{
@@ -95,12 +44,12 @@ h1,
 h2,
 h3,
 h4 {
-    font-family: 'roboto-black', Helvetica;
+    font-family: 'tittle', Helvetica;
 }
 
 h1 {
     text-align: center;
-    color: var(--color-secondary-500);
+    color: var(--color-primary-500);
 }
 
 
@@ -138,7 +87,7 @@ h1 {
 }
 
 .p {
-    font-family: 'poppins';
+    font-family: 'p';
     font-size: 16px;
     font-weight: normal;
     text-align: left;

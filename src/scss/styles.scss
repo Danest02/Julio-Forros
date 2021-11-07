@@ -1,5 +1,6 @@
 @import "bases/breakpoints";
 @import "bases/variables";
+@import "bases/style-guide";
 @import "blocks/dark-mode";
 @import "bases/normalize";
 @import "bases/my-styles";
@@ -14,9 +15,11 @@
 @import "blocks/contact-button";
 @import "blocks/footer";
 
-@import "pages/index.scss";
-@import "pages/Contactanos.scss";
+@import "pages/index";
+@import "pages/Contactanos";
 @import "media-queries/index-media-queries";
+@import "bases/modifiers.scss";
+
 // npm install -g sass-migrator
 // sass-migrator division **/*.scs
 

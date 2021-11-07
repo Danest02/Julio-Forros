@@ -15,7 +15,7 @@
             flex-direction: row;
         }
         .contact-us__introduction-icon{
-            color: var(--color-secondary-500);
+            color: var(--color-primary-500);
             font-size: 80px;
         }
     }
@@ -56,7 +56,7 @@
                                     content: "Abrir el chat";
                                     margin-left: 8px;
                                     vertical-align: middle;
-                                    color: var(--color-secondary-500);
+                                    color: var(--color-primary-500);
                                     transition: opacity .3s ease;
                                     @include min-width-landscape($tablet-landscape){
                                         opacity: 0;
@@ -115,7 +115,7 @@
         }
     }
     .contact-us__subtittle{
-        color: var(--color-secondary-500);
+        color: var(--color-primary-500);
         &::before{
             @extend .pseudo-icon;
         }
@@ -137,7 +137,6 @@
     }
     .contact-us__span{
         @extend .line-height-p;
-        cursor: pointer;
     }
 
 }

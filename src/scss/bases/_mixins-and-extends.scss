@@ -1,17 +1,26 @@
 .button-effect{
+    transition: color .5s ease;
+    cursor: pointer;
+    user-select: none;
+    &:hover{
+        color: var(--color-secondary-500);
+    }
+}
+.button-effect-scale{
     transition: color .5s ease, transform .5s ease;
     cursor: pointer;
     user-select: none;
-    &:active{
-        transform: scale(1.05);
-    }
     &:hover{
-        color: var(--color-primary-500);
+        transform: scale(1.05);
+        color: var(--color-secondary-500);
     }
-
+    &:active{
+        transform: scale(.95);
+    }
 }
 
-// TODO:STUB  SCROLLBAR
+
+// TODO:ANCHOR --- SCROLLBAR
 
 
 .scrollbar-none {
@@ -44,130 +53,75 @@
     }
     
     &::-webkit-scrollbar-thumb {
-        background-color: var(--color-secondary-500);
+        background-color: var(--color-primary-500);
         border-radius: 3px;
     }
 
 }
-// .min-width-100vw{
-//     max-width: calc(100vw - var(--scroll-bar));
-//     position: relative;
-//     left: 50%;
-//     right: 50%;
-//     margin-left: -50vw;
-//     margin-right: -50vw;
-// }
+
+// TODO:ANCHOR --- BACKGROUND
+
+.background-parallax{
+    background-attachment: fixed;
+    max-width: 100%;
+    background-repeat: no-repeat;
+}
+
+.background-before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
 
 
-// @mixin background-image {
-//     @content;
-//     position: relative;
-//     background-size: cover;
-//     background-position: center;
-// }
-// @mixin background-before {
-//     &:before {
-//         content: ' ';
-//         position: absolute;
-//         top: 0;
-//         bottom: 0;
-//         left: 0;
-//         right: 0;
-//         @content;
-//     }
-// }
-// @mixin background-parallax{
-//     background-attachment: fixed;
-//     max-width: 100%;
-//     background-repeat: no-repeat;
 
-// }
-// .background-parallax{
-//     background-attachment: fixed;
-//     max-width: 100%;
-//     background-repeat: no-repeat;
-// }
-
-// .background-before {
-//     content: ' ';
-//     position: absolute;
-//     top: 0;
-//     bottom: 0;
-//     left: 0;
-//     right: 0;
-// }
-
-// .background-linear-gradient-image {
-//     background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, 0.5)), url(../../galeria/fondo4.png);
-// }
-// // TODO:STUB  BOTONES
-// @mixin scale-boton{
-//     &:active{
-//         transition: transform .7s;
-//         transform: scale(.7);
-//     }
-// }
-// @mixin mybtn-convertir{
-//     border: none;
-//     cursor: pointer;
-//     outline: none;
-//     transition: transform .5s;
-//     &:active{
-//         transform: scale(.7);
-//     }
-
-// }
+//  TODO:ANCHOR --- POSITIONING
 
 
-// // TODO:STUB  POSICIONAMIENTO
+.center-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.wrap{
+    flex-wrap: wrap;
+}
+.flex-start{
+    display: flex;
+    align-content: flex-start;
+}
+.space-between{
+    justify-content: space-between;
+}
+.space-evenly{
+    justify-content: space-evenly;
+}
+.space-around{
+    justify-content: space-around;
+}
+.position-absolute{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+.position-fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
 
-// .center-flex{
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-// }
-// .flex-column{
-//     display: flex;
-//     flex-direction: column;
-// }
-// .wrap{
-//     flex-wrap: wrap;
-// }
-// .flex-start{
-//     display: flex;
-//     align-content: flex-start;
-// }
-// .space-between{
-//     justify-content: space-between;
-// }
-// .space-evenly{
-//     justify-content: space-evenly;
-// }
-// .space-around{
-//     justify-content: space-around;
-// }
-// .position-absolute{
-//     position: absolute;
-//     top: 0;
-//     right: 0;
-//     bottom: 0;
-//     left: 0;
-//     margin: auto;
-// }
-// .position-fixed{
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     right: 0;
-//     bottom: 0;
-// }
-// @mixin position-fixed{
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     right: 0;
-//     bottom: 0;
-// }
 // .overflow-hidden{
 //     overflow: hidden;
 // }
