@@ -128,7 +128,11 @@
                     flex-direction: row;
                 }
                 .menu__link--active{
-                    color: var(--color-primary-500);
+                    color: var(--color-primary-400);
+                    pointer-events: none;
+                    &::after, &::before{
+                        display: none;
+                    }
                 }
 
             }
