@@ -129,7 +129,7 @@
                 }
                 .menu__link--active{
                     color: var(--color-primary-400);
-                    pointer-events: none;
+                    // pointer-events: none;
                     &::after, &::before{
                         display: none;
                     }

@@ -8,13 +8,18 @@ let urlActual = window.location.href;
 
 
 menuLinks.forEach(element => {
-    let href = element.getAttribute("href") 
-        if (urlActual.includes(href)) {
-            element.classList.add("menu__link--active")
+        console.log(urlActual.slice(-1))
+        let href = element.getAttribute("href")
+        if(href !== "/"){
+            if (urlActual.includes(href)) {
+                element.classList.add("menu__link--active")
+                document.getElementById("menu__link--Inicio").classList.remove("menu__link--active")
+            } else {
+                element.classList.remove("menu__link--active")
+            }
         }
-        else{
-            element.classList.remove("menu__link--active")
-        }
+
+
     }
 
 )
