@@ -3,9 +3,8 @@ const userButtonNavBar = document.getElementById("userButtonNavBar"),
     userButtonClose = document.getElementById("userButtonClose"),
     singInLogIn = document.getElementById("singInLogIn"),
     singIn = document.getElementById("singIn"),
-    logIn = document.getElementById("logIn")
-
-let userButtonGoBack = document.getElementById("userButtonGoBack")
+    logIn = document.getElementById("logIn"),
+    userButtonGoBack = document.getElementById("userButtonGoBack")
 
 userButtonNavBar.addEventListener("click", () => {
     user.classList.toggle("user--visible")

@@ -1,8 +1,8 @@
-let buttonDarkMode = document.getElementById("buttonDarkMode")
-let prefresDarkScheme = window.matchMedia('(prefers-color-scheme: dark)')
-let body = document.getElementById("body")
-let buttonDarkModeIcon = document.getElementById("buttonDarkModeIcon")
-let buttonDarkModeText = document.getElementById("buttonDarkModeText")
+const buttonDarkMode = document.getElementById("buttonDarkMode"),
+    prefresDarkScheme = window.matchMedia('(prefers-color-scheme: dark)'),
+    body = document.getElementById("body"),
+    buttonDarkModeIcon = document.getElementById("buttonDarkModeIcon"),
+    buttonDarkModeText = document.getElementById("buttonDarkModeText")
 
 
 if (localStorage.getItem('mode') == 'dark') {
@@ -11,7 +11,7 @@ if (localStorage.getItem('mode') == 'dark') {
     body.classList.toggle('light-mode');
 }
 
-function changeMode() {
+const changeMode = () => {
 
     if (prefresDarkScheme.matches) {
         if (body.classList.contains('light-mode')) {

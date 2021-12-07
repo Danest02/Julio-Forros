@@ -1,14 +1,13 @@
-const navbarHeader = document.getElementById("navbar-header");
-let initialScroll = window.pageYOffset,
+const navbarHeader = document.getElementById("navbar-header"),
     mainScroll = document.querySelector("main").offsetTop,
     hamburguer = document.getElementById("hamburguer"),
-    menuLinks = Array.from(document.querySelectorAll(".menu__link"))
+    menuLinks = document.querySelectorAll(".menu__link")
+const urlActual = window.location.href;
+let initialScroll = window.pageYOffset;
 
-let urlActual = window.location.href;
 
 
 menuLinks.forEach(element => {
-        console.log(urlActual.slice(-1))
         let href = element.getAttribute("href")
         if(href !== "/"){
             if (urlActual.includes(href)) {
@@ -21,7 +20,6 @@ menuLinks.forEach(element => {
 
 
     }
-
 )
 hamburguer.addEventListener("click", () => {
 
