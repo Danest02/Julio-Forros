@@ -1,6 +1,11 @@
+
+
 import gulp, {
     watch
 } from 'gulp';
+
+
+const squoosh = require('gulp-libsquoosh');
 
 // import htmlmin from 'gulp-htmlmin';
 
@@ -11,9 +16,10 @@ import concat from 'gulp-concat';
 import pug from 'gulp-pug';
 var sass = require('gulp-sass')(require('sass'));
 
-var postcss = require ('gulp-postcss');
-var autoprefixer = require ('autoprefixer');
-var cssnano = require ('cssnano');
+
+const postcss = require ('gulp-postcss');
+const autoprefixer = require ('autoprefixer');
+const cssnano = require ('cssnano');
 
 import clean from 'gulp-purgecss';
 
@@ -93,7 +99,7 @@ gulp.task('pugPages', () => {
 //         .pipe(gulp.dest('./public/css'))
 // });
 
-gulp.task ('css', function () {
+gulp.task ('css', () => {
     var procesadores = [
 		autoprefixer,
 		cssnano
@@ -129,12 +135,22 @@ gulp.task ('css', function () {
 //       .pipe(gulp.dest('./public/css'));
 // });
 
+gulp.task('imagemin', () => {
+    return gulp
+    .src('src/galery/images/**/*')
+    .pipe(squoosh())
+    .pipe(gulp.dest('public/galery/images'))
+})
+
+
+
 gulp.task('default', () => {
     gulp.watch('./src/js/*.js', gulp.series('babel'))
     // gulp.watch('./src/pug/**/*.pug', gulp.series('pugIndex'));
     gulp.watch('./src/pug/*.pug', gulp.series('pugPages'));
     gulp.watch('./src/pug/**/*.pug', gulp.series('pugPages'));
     gulp.watch('./src/scss/**/*.scss', gulp.series('css'))
+    gulp.watch('./src/galery/images/**/*', gulp.series('imagemin'))
     // gulp.watch('./src/scss/**/*.scss', gulp.series('clean'))
     // gulp.watch('./src/*.html', gulp.series('html-min'))
     // gulp.watch('./src/pug/**/*.pug', gulp.series('rename'));
