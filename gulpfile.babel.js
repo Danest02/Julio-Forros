@@ -138,7 +138,7 @@ gulp.task ('css', () => {
 gulp.task('imagemin', () => {
     return gulp
     .src('src/galery/images/**/*')
-    .pipe(squoosh())
+    .pipe(squoosh({webp: {}}))
     .pipe(gulp.dest('public/galery/images'))
 })
 
