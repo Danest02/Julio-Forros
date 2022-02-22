@@ -157,6 +157,29 @@
 }
 
 
+//  TODO:ANCHOR --- border radius
+
+.border-radius {
+    border-radius: 8px;
+}
+
+
+//  TODO:ANCHOR --- SHADOWS
+
+.border-shadow {
+    box-shadow: 0 0 10px rgba(0, 0, 0, .25);
+}
+
+.border-shadow-left {
+    box-shadow: -4px 4px 10px rgba(0, 0, 0, .25);
+}
+
+
+//  TODO:ANCHOR --- BORDERS
+
+.border-left {
+    border-left: 4px solid var(--color-neutral-900);
+}
 
 
 
