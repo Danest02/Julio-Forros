@@ -1,0 +1,35 @@
+.grid-slider{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-5);
+    padding: var(--space-5) 0;
+    .grid-slider__slides{
+        scroll-behavior: smooth;
+        overflow-x: scroll;
+        @extend .scrollbar-none;
+        scroll-snap-type: x mandatory;
+        --column: 3.5;
+        --row: 2;
+        display: grid;
+        grid-auto-columns: calc((100%  - ((var(--column) * var(--space-6) - var(--space-6)))) / var(--column));
+        gap: var(--space-6);
+        grid-template-rows: repeat(var(--row), auto);
+        grid-auto-flow: column;
+        padding-bottom: var(--space-6);
+        .grid-slider__slide{
+            scroll-snap-align: center;
+        }
+    }
+}
+.grid-slider__navegation{
+    display: grid;
+    grid-auto-flow: column;
+    gap: var(--space-7);
+    .grid-slider__navegation-button{
+        @extend .pseudo-icon;
+        content: "e5e1";
+        color: red;
+    }
+
+}
