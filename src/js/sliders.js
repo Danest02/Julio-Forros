@@ -1,32 +1,23 @@
 const $gridSliderNextButtom = document.getElementById("grid-slider__next-button"),
 $gridSliderBackButtom = document.getElementById("grid-slider__back-button"),
 $gridSliderSlides = document.getElementById("grid-slider__slides"),
-slideWidth = $gridSliderSlides.firstChild.clientWidth
-
+slideWidth = $gridSliderSlides.firstChild.clientWidth,
+numberOfColumns = Math.floor(parseInt(getComputedStyle(document.documentElement).getPropertyValue('--column')))
+console.log(numberOfColumns)
 $gridSliderNextButtom.addEventListener("click", (event) => {
-    if($gridSliderSlides.scrollLeft > $gridSliderSlides.offsetWidth - slideWidth ){
-        console.log("volver")
-        $gridSliderNextButtom.innerHTML = "Volver"
-    }
     if($gridSliderSlides.scrollLeft > $gridSliderSlides.offsetWidth ){
-        console.log("para")
         $gridSliderSlides.scrollLeft = 0
-        $gridSliderNextButtom.innerHTML = "Siguiente"
-        // $gridSliderNextButtom.style.display = "none"
     }
-    // alert(event.target.id)
+    // if(numberOfColumns == 2){
+    //     $gridSliderSlides.scrollLeft += slideWidth * 2
+    //     console.log("oka")
+    // }else{
+    // }
+    // window.scrollTo( slideWidth, 100 )
+    $gridSliderSlides.scrollLeft += slideWidth * numberOfColumns
     console.log($gridSliderSlides.scrollLeft)
-    $gridSliderSlides.scrollLeft += slideWidth
 })
 $gridSliderBackButtom.addEventListener("click", (event) => {
-    // alert(event.target.id)
-    if($gridSliderSlides.scrollLeft > $gridSliderSlides.offsetWidth ){
-        $gridSliderNextButtom.innerHTML = "Siguiente"
-    }
-
-    console.log($gridSliderSlides.scrollLeft)
-    $gridSliderSlides.scrollLeft -= slideWidth
+    $gridSliderSlides.scrollLeft -= slideWidth * numberOfColumns
 })
 
-console.log($gridSliderSlides.clientWidth)
-// console.log($gridSliderSlides.scrollLeft)

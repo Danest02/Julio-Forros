@@ -49,6 +49,11 @@ $desktop: 1366px - 80px;
         @content;
     }
 }
+@mixin min-height-landscape($min-height){
+    @media screen and (min-height: $min-height) and (orientation:landscape){
+        @content;
+    }
+}
 @mixin max-height-landscape($max-height){
     @media screen and (max-height: $max-height) and (orientation:landscape){
         @content;
