@@ -18,12 +18,15 @@
     }
 }
 .grid-slider{
+    background-color: aqua;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: var(--space-5);
     padding: var(--space-5) 0;
     .grid-slider__slides{
+        background-color: red;
         scroll-behavior: smooth;
         overflow-x: scroll;
         @extend .scrollbar-none;
