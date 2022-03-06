@@ -1,6 +1,5 @@
 @include desktop {
     $navbar-header-heihgt: 4rem;
-
 }
 
 .navbar-header {
@@ -9,134 +8,145 @@
     top: 0;
     right: 0;
     left: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: $navbar-header-heihgt;
     opacity: 1;
     transition: transform .5s ease, opacity .5s ease;
-    gap: 1rem;
+    display: flex;
 
-    .navbar-header__container-logo {
+    
+    .navbar-header__container {
+        height: $navbar-header-heihgt;
+        width: 100%;
         display: flex;
-        transition: transform .5s ease;
-
-        &:hover {
-            transform: scale(1.05) translateX(.25rem);
-        }
-
-        .navbar-header__logo {
-            height: 1.75rem;
-            display: flex;
-
-            @include desktop {
-                height: 2rem;
-            }
-        }
-    }
-
-    .navbar-header__container-links-buttons {
-        display: flex;
+        justify-content: space-between;
         align-items: center;
         gap: 1rem;
-        flex-direction: row-reverse;
-
-        .navbar-header__container-buttons {
+        .navbar-header__container-logo {
             display: flex;
-            align-items: center;
-            gap: 8px;
-            height: 100%;
+            transition: transform .5s ease;
 
-            .navbar-header__button {
-                color: var(--color-text);
-                display: flex;
-                align-items: center;
-                cursor: pointer;
-                z-index: $z-index-1;
-                transition: transform .3s ease-in, padding .3s ease-in;
-
-                @include min-width($tablet-landscape) {
-                    &:hover {
-                        color: var(--color-secondary-500);
-                        transform: scale(1.05);
-                        .navbar-header__button-icon {
-                            color: inherit;
-                        }
-                    }
-                }
-
-                &:active {
-                    .navbar-header__button-icon {
-                        transform: scale(1.2);
-                        color: var(--color-secondary);
-                    }
-                }
-
-
-
-
-                .navbar-header__button-icon {
-                    font-size: 24px;
-                    color: var(--color-icons);
-                    transition: color .3s ease, transform .3s ease;
-                }
-
-
+            &:hover {
+                transform: scale(1.05) translateX(.25rem);
             }
 
+            .navbar-header__logo {
+                height: 1.75rem;
+                display: flex;
 
-            .hamburguer {
-                margin-left: 4px;
-                z-index: $z-index-1;
-
-                @include min-width($tablet-landscape) {
-                    display: none;
+                @include desktop {
+                    height: 2rem;
                 }
             }
         }
 
-        .menu {
-            position: fixed;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            clip-path: circle(0.0% at 100% 0);
-            transition: background-color .7s ease-in-out, clip-path .7s ease-in-out;
+        .navbar-header__container-links-buttons {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-direction: row-reverse;
 
-            @include min-width($tablet-landscape) {
-                position: static;
-                clip-path: none;
-                transform: translateY(3px);
-
-            }
-
-            .menu__links {
-                height: 100%;
-                padding-left: 10%;
+            .navbar-header__container-buttons {
                 display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: flex-start;
-                gap: 1rem;
+                align-items: center;
+                gap: 8px;
+                height: 100%;
 
-                @include min-width($tablet-landscape) {
-                    padding: 0;
-                    height: auto;
-                    flex-direction: row;
+                .navbar-header__button {
+                    color: var(--color-text);
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    z-index: $z-index-1;
+                    transition: transform .3s ease-in, padding .3s ease-in;
+
+                    @include min-width($tablet-landscape) {
+                        &:hover {
+                            color: var(--color-secondary);
+                            transform: scale(1.05);
+
+                            .navbar-header__button-icon {
+                                color: inherit;
+                            }
+                        }
+                    }
+
+                    &:active {
+                        .navbar-header__button-icon {
+                            transform: scale(1.2);
+                            color: var(--color-secondary);
+                        }
+                    }
+
+
+
+
+                    .navbar-header__button-icon {
+                        font-size: 24px;
+                        color: var(--color-icons);
+                        transition: color .3s ease, transform .3s ease;
+                    }
+
+
                 }
-                .menu__link--active{
-                    color: var(--color-secondary);
-                    pointer-events: none;
-                    &::after, &::before{
+
+
+                .hamburguer {
+                    margin-left: 4px;
+                    z-index: $z-index-1;
+
+                    @include min-width($tablet-landscape) {
                         display: none;
                     }
                 }
-
             }
 
+            .menu {
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                clip-path: circle(0.0% at 100% 0);
+                transition: background-color .7s ease-in-out, clip-path .7s ease-in-out;
+
+                @include min-width($tablet-landscape) {
+                    position: static;
+                    clip-path: none;
+                    transform: translateY(3px);
+
+                }
+
+                .menu__links {
+                    height: 100%;
+                    padding-left: 10%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    gap: 1rem;
+
+                    @include min-width($tablet-landscape) {
+                        padding: 0;
+                        height: auto;
+                        flex-direction: row;
+                    }
+
+                    .menu__link--active {
+                        color: var(--color-secondary);
+                        pointer-events: none;
+
+                        &::after,
+                        &::before {
+                            display: none;
+                        }
+                    }
+
+                }
+
+            }
         }
     }
+
+
 }
 
 .navbar-header {
@@ -150,7 +160,7 @@
 
         .navbar-header__logo--isotipo {
             display: none;
-            fill: var(--color-secondary-500);
+            fill: var(--color-secondary);
             width: 3rem;
 
             @include min-width(500px) {
@@ -163,6 +173,7 @@
             width: 8.9rem;
 
             fill: var(--color-logo);
+
             @include min-width(500px) {
                 width: 10rem;
             }
@@ -178,12 +189,13 @@
 
 .navbar-header--scroll {
     background-color: var(--color-background);
-    justify-content: end;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, .2);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .25);
     height: 3rem;
-
-    .navbar-header__container-logo {
-        display: none;
+    .navbar-header__container{
+        justify-content: end;
+        .navbar-header__container-logo {
+            display: none;
+        }
     }
 }
 

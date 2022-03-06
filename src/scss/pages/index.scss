@@ -1,15 +1,21 @@
+$vector-curve-height: 72px;
+
 .header-index{
-    height: 100vh;
+    height: calc(100vh - $navbar-header-heihgt);
+    position: relative;
+    @include min-width-landscape(500px) {
+        height: calc(100vh + $vector-curve-height - $navbar-header-heihgt);
+    }
 }
 .main{
     .seccion-catalogue-index{
-        background-color: #1F3548;
+        background-color: var(--color-primary);
         .slider-catalogue-index{
             .slider-catalogue-index__slider{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                gap: var(--space-5);
+                gap: var(--space-6);
                 padding: var(--space-5) 0;
                 .slider-catalogue-index__slides{
                     .slider-catalogue-index__slide{
@@ -31,4 +37,26 @@
             }
         }
     }
+}
+
+.vector-curve{
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    .vector-curve__svg {
+        width: 100%;
+        max-height: 72px;
+        filter: drop-shadow(0px -7px 0px var(--color-primary-300));
+        path {
+            fill: var(--color-primary);
+        }
+    }
+
+}
+.vector-curve--mirror{
+    transform: scaleY(-1);
+    position: relative;
+    bottom: 0;
+    top: -1px;
 }
