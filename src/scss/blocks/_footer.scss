@@ -1,9 +1,9 @@
 .footer{
     max-width: var(--width-100vw);
-    background-color: var(--color-neutral-900);
+    background-color: var(--color-footer);
     margin-top: auto;
     .footer__content{
-        color: var(--color-white-500);
+        color: var(--color-white);
         display: flex;
         align-items: flex-start;
         padding-top: var(--space-1);

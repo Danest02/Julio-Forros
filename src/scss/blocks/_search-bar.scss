@@ -7,7 +7,7 @@
     overflow: hidden;
     margin-top: var(--space-6);
     @extend .border-shadow;
-    background-color: var(--color-search-bar);
+    background-color: var(--color-background);
 
     .search-bar__input {
         width: 100%;

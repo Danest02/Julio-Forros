@@ -31,12 +31,12 @@
             content: "Comenzar una conversacion por WhatsApp";
             font-size: 14px;
             padding: 12px;
-            background-color: var(--color-white-500);
+            background-color: var(--color-white);
             box-shadow: 0 0 16px 4px rgba(0, 0, 0, .2);
             border-radius: 4px;
             opacity: 0;
             transition: opacity .5s ease-in;
-            color: #111;
+            color: var(--color-text);
         }
     }
     .contact-button__icon {
