@@ -4,15 +4,21 @@
     @include min-width-portrait(310px){
         --column: 1.4;
     }
-    @include max-height-landscape(500px){
+    @include max-height(500px){
         --column: 2.7;
         --row: 1;
     }
-    @include min-width-portrait(700px){
+    @include min-width(700px){
         --column: 2.5;
         --row: 2;
     }
-    @include min-height-landscape(500px){
+    @include min-width-landscape(700px){
+        @include max-height(500px){
+            --column: 2.5;
+            --row: 1;
+        }
+    }
+    @include min-width-landscape(1100px){
         --column: 3.5;
         --row: 2;
     }
@@ -50,14 +56,9 @@
             grid-template-rows: repeat(var(--row), auto);
             grid-auto-flow: column;
             .grid-slider__slide{
-                scroll-snap-align: center;
                 scroll-snap-align: start;
-                // pointer-events: none;
             }
         }
-        // .grid-slider__slides--before-none{
-
-        // }
     }
     .grid-slider__container-slides--before-hiden{
         &::before{

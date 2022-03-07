@@ -138,8 +138,48 @@ gulp.task ('css', () => {
 gulp.task('imagemin', () => {
     return gulp
     .src('src/galery/images/**/*')
-    .pipe(squoosh({webp: {}}))
+    .pipe(
+        squoosh({
+            encodeOptions: {
+            //   oxipng: {},
+              webp: {},
+            //   avif: {},
+            //   mozjpg: {},
+            },
+            preprocessOptions: {
+              resize: {
+                enabled: true,
+                width: 720,
+                // width: Math.round(src.width / 2),
+                // height: Math.round(src.height / 2),
+              },
+            },
+          }))
+    
     .pipe(gulp.dest('public/galery/images'))
+})
+gulp.task('imagemin400', () => {
+    return gulp
+    .src('src/galery/images/400/categories/*')
+    .pipe(
+        squoosh({
+            encodeOptions: {
+            //   oxipng: {},
+              webp: {},
+            //   avif: {},
+            //   mozjpg: {},
+            },
+            preprocessOptions: {
+              resize: {
+                enabled: true,
+                width: 400,
+                // width: Math.round(src.width / 2),
+                // height: Math.round(src.height / 2),
+              },
+            },
+          }))
+    
+    .pipe(gulp.dest('public/galery/images/400/categories'))
 })
 
 
@@ -150,7 +190,7 @@ gulp.task('default', () => {
     gulp.watch('./src/pug/*.pug', gulp.series('pugPages'));
     gulp.watch('./src/pug/**/*.pug', gulp.series('pugPages'));
     gulp.watch('./src/scss/**/*.scss', gulp.series('css'))
-    gulp.watch('./src/galery/images/**/*', gulp.series('imagemin'))
+    // gulp.watch('./src/galery/images/**/*', gulp.series('imagemin'))
     // gulp.watch('./src/scss/**/*.scss', gulp.series('clean'))
     // gulp.watch('./src/*.html', gulp.series('html-min'))
     // gulp.watch('./src/pug/**/*.pug', gulp.series('rename'));

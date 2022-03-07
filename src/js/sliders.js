@@ -1,3 +1,5 @@
+// TODO:ANCHOR --- GRID SLIDER
+
 const
     $gridSliderNextButtom = document.getElementById("grid-slider__next-button"),
     $gridSliderBackButtom = document.getElementById("grid-slider__back-button"),
@@ -7,6 +9,22 @@ const
     slideWidth = $gridSliderSlides.firstChild.clientWidth,
     numberOfColumns = Math.floor(parseInt(getComputedStyle(document.documentElement).getPropertyValue('--column')))
 
+window.addEventListener('resize', () => {
+    const
+        slideWidth = $gridSliderSlides.firstChild.clientWidth,
+        numberOfColumns = Math.floor(parseInt(getComputedStyle(document.documentElement).getPropertyValue('--column')))
+    console.log(slideWidth)
+    console.log(numberOfColumns)
+
+})
+// window.addEventListener('orientationchange', () => {
+//     const
+//         slideWidth = $gridSliderSlides.firstChild.clientWidth,
+//         numberOfColumns = Math.floor(parseInt(getComputedStyle(document.documentElement).getPropertyValue('--column')))
+//     console.log(slideWidth)
+//     console.log(numberOfColumns)
+
+// })
 let
     gridSliderPressed = false,
     startX,
@@ -19,8 +37,7 @@ $gridSlider.addEventListener('mousedown', (e) => {
     e.preventDefault
     gridSliderSlideWidth = document.querySelector(".grid-slider__slide").offsetWidth
     gridSliderPressed = true
-    console.log(e.target)
-    startX = e.offsetX+e.target.getBoundingClientRect().left-e.target.parentElement.getBoundingClientRect().left
+    startX = e.offsetX + e.target.getBoundingClientRect().left - e.target.parentElement.getBoundingClientRect().left
 })
 window.addEventListener('mouseup', () => {
     gridSliderPressed = false
@@ -38,8 +55,7 @@ $gridSliderSlides.addEventListener('mousemove', (e) => {
     if (!gridSliderPressed) return
     $gridSliderSlides.style.cursor = "grabbing"
     e.preventDefault()
-    endX = e.offsetX+e.target.getBoundingClientRect().left-e.target.parentElement.getBoundingClientRect().left
-    console.log(endX)
+    endX = e.offsetX + e.target.getBoundingClientRect().left - e.target.parentElement.getBoundingClientRect().left
     difference = startX - endX
     if (Math.abs(difference) < gridSliderSlideWidth) {
         if (difference < 0) {
@@ -64,15 +80,20 @@ $gridSlider.addEventListener("click", (e) => {
         if ($gridSliderSlides.scrollLeft >= $gridSliderSlides.scrollWidth - $gridSliderSlides.offsetWidth) {
             $gridSliderSlides.scrollLeft = 0
         }
-        $gridSliderSlides.scrollLeft += slideWidth * numberOfColumns
+        console.log(slideWidth)
+        $gridSliderSlides.scrollLeft += gridSliderSlideWidth * numberOfColumns
+        // $gridSliderSlides.scrollLeft += slideWidth * numberOfColumns
     } else if (e.target == $gridSliderBackButtom) {
-        $gridSliderSlides.scrollLeft -= slideWidth * numberOfColumns
+        $gridSliderSlides.scrollLeft -= gridSliderSlideWidth * numberOfColumns
     }
 })
-$gridSliderSlides.addEventListener('scroll', () =>{
+$gridSliderSlides.addEventListener('scroll', () => {
     if ($gridSliderSlides.scrollLeft >= $gridSliderSlides.scrollWidth - $gridSliderSlides.offsetWidth) {
         document.querySelector(".grid-slider__container-slides").classList.add("grid-slider__container-slides--before-hiden")
-    }else{
+    } else {
         document.querySelector(".grid-slider__container-slides").classList.remove("grid-slider__container-slides--before-hiden")
     }
 })
+
+// TODO:ANCHOR --- DEFAULT SLIDER
+

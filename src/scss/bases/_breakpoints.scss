@@ -24,6 +24,11 @@ $desktop: 1366px - 80px;
         @content;
     }
 }
+@mixin max-height($height){
+    @media screen and (max-height: $height){
+        @content;
+    }
+}
 @mixin min-width($min-width){
     @media screen and (min-width: $min-width){
         @content;
