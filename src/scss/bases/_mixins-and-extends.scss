@@ -67,7 +67,7 @@
     background-repeat: no-repeat;
 }
 
-.background-before {
+.background-pseudo-element {
     content: ' ';
     position: absolute;
     top: 0;
@@ -81,7 +81,7 @@
 //  TODO:ANCHOR --- POSITIONING
 
 
-.center-flex{
+.flex-center{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,7 +90,8 @@
     display: flex;
     flex-direction: column;
 }
-.wrap{
+.flex-wrap{
+    display: flex;
     flex-wrap: wrap;
 }
 .flex-start{
@@ -98,12 +99,15 @@
     align-content: flex-start;
 }
 .space-between{
+    display: flex;
     justify-content: space-between;
 }
 .space-evenly{
+    display: flex;
     justify-content: space-evenly;
 }
 .space-around{
+    display: flex;
     justify-content: space-around;
 }
 .position-absolute{
