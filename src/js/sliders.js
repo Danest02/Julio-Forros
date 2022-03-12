@@ -80,11 +80,10 @@ $gridSlider.addEventListener("click", (e) => {
         if ($gridSliderSlides.scrollLeft >= $gridSliderSlides.scrollWidth - $gridSliderSlides.offsetWidth) {
             $gridSliderSlides.scrollLeft = 0
         }
-        console.log(slideWidth)
-        $gridSliderSlides.scrollLeft += gridSliderSlideWidth * numberOfColumns
         // $gridSliderSlides.scrollLeft += slideWidth * numberOfColumns
+        $gridSliderSlides.scrollLeft += gridSliderSlideWidth * numberOfColumns
     } else if (e.target == $gridSliderBackButtom) {
-        $gridSliderSlides.scrollLeft -= gridSliderSlideWidth * numberOfColumns
+        $gridSliderSlides.scrollLeft -= gridSliderSlideWidth *  numberOfColumns
     }
 })
 $gridSliderSlides.addEventListener('scroll', () => {
@@ -94,6 +93,5 @@ $gridSliderSlides.addEventListener('scroll', () => {
         document.querySelector(".grid-slider__container-slides").classList.remove("grid-slider__container-slides--before-hiden")
     }
 })
-
 // TODO:ANCHOR --- DEFAULT SLIDER
 

@@ -71,14 +71,14 @@ $vector-curve-height: 72px;
                                     line-height: 1.2;
                                 }
                                 .slider-catalogue-index__button{
-                                    background-color: var(--color-secondary);
+                                    background-color: var(--color-tertiary);
                                     padding: 0 2rem;
                                     line-height: 3rem;
                                     border-radius: 1.5rem 0 0 1.5rem;
                                     transition: background-color .3s ease;
                                     pointer-events: auto;
                                     &:hover{
-                                        background-color: var(--color-secondary-hover);
+                                        background-color: var(--color-tertiary-hover);
                                     }
                                 }
                                 
