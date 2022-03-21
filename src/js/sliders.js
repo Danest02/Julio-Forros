@@ -55,7 +55,6 @@ $gridSliderSlides.addEventListener('mousemove', (e) => {
     } else {
         $gridSliderSlides.scrollLeft += gridSliderDifference
     }
-    // $gridSliderSlides.style.transform += `translateX(${gridSliderEndX-gridSliderStartX}px)`
 
 })
 $gridSlider.addEventListener("click", (e) => {
@@ -93,12 +92,7 @@ let
 $defaultSlider.addEventListener('mousedown', (e) => {
     e.preventDefault
     defaultSliderSlideWidth = document.querySelector(".default-slider__slide").offsetWidth
-    // defaultSliderStartX = e.offsetX
     defaultSliderStartX = e.offsetX
-    // console.log(e.target)
-    // console.log($defaultSliderSlides.offsetLeft)
-    // console.log("defaultSliderStartX")
-    // console.log(defaultSliderStartX)
     defaultSliderPressed = true
 })
 
@@ -111,24 +105,12 @@ const defaultSliderTranslate = function(endX,startX){
 $defaultSlider.addEventListener('mousemove', (e) => {
     e.preventDefault
     if (!defaultSliderPressed) return
-    // console.log(e.target)
     defaultSliderEndX = e.offsetX 
-    // console.log("defaultSliderEndX")
-    // console.log(defaultSliderEndX)
     defaultSliderTranslate(defaultSliderEndX, defaultSliderStartX)
-    // defaultSliderDifference = defaultSliderEndX - defaultSliderStartX
-    // $defaultSliderSlides.style.transform = `translateX(${defaultSliderDifference}px)`
-
-
 
 })
 window.addEventListener('mouseup', (e) => {
     defaultSliderPressed = false
     defaultSliderTranslateX += defaultSliderDifference
-    // $defaultSliderSlides.style.cursor = "grab"
-    // if(Math.abs(defaultSliderEndX - defaultSliderStartX < 100)){
-    //     defaultSliderDifference = 0
-    //     $defaultSliderSlides.style.transform += `translateX(${defaultSliderDifference}px)`
-    // }
 
 })
