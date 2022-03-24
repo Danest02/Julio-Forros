@@ -111,9 +111,9 @@ gulp.task ('css', () => {
             clean({
               content: ['./public/*.html'],
               css: ['./public/css/styles.css'],
-              safelist: ['search--visible', 'grid-slider__container-slides--before-hiden', 'user--visible', 'hamburguer--simple', 'dark-mode', 'light-mode',  'navbar-header--scroll', 'navbar-header--hide', 'navbar-header--hamburguer', 'display-none', 'swiper-pagination-bullet', 'swiper-pagination-bullet-active'],
+              safelist: ['search--visible', 'my-slider__container-slides--before-hiden', 'user--visible', 'hamburguer--simple', 'dark-mode', 'light-mode',  'navbar-header--scroll', 'navbar-header--hide', 'navbar-header--hamburguer', 'display-none', 'swiper-pagination-bullet', 'swiper-pagination-bullet-active'],
               FontFace: true,
-              variables: true
+              variables: false
             })
           )    
 		.pipe (gulp.dest ('./public/css'));
