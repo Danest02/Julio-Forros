@@ -113,7 +113,7 @@ gulp.task ('css', () => {
               css: ['./public/css/styles.css'],
               safelist: ['search--visible', 'my-slider__container-slides--before-hiden', 'user--visible', 'hamburguer--simple', 'dark-mode', 'light-mode',  'navbar-header--scroll', 'navbar-header--hide', 'navbar-header--hamburguer', 'display-none', 'swiper-pagination-bullet', 'swiper-pagination-bullet-active'],
               FontFace: true,
-              variables: false
+              variables: true
             })
           )    
 		.pipe (gulp.dest ('./public/css'));

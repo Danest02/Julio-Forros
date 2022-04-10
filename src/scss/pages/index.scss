@@ -11,55 +11,64 @@ $vector-curve-height: 72px;
     overflow: hidden;
 
     .slider-header-index {
-        .slider-header-index__slides {
-            .slider-header-index-slide {
-                .slider-header-index__slide-contents {
-                    display: grid;
-                    gap: var(--space-6);
-                    padding: var(--space-5) 0;
-
-                    @include min-width-landscape(500px) {
-                        grid-template-columns: 1fr 1fr;
-                        grid-template-rows: 1fr auto auto 2fr;
-                    }
-
-                    .slider-header-index__tittle {
-                        text-align: center;
-
+        --column: 1;
+        --row: 1;
+        height: 100%;
+        .slider-header-index__container-slides{
+            min-height: 100%;
+            .slider-header-index__slides {
+                // border: 4px solid red;
+                height: 100%;
+                .slider-header-index__slide {
+                    @extend .flex-center;
+                    .slider-header-index__slide-contents {
+                        display: grid;
+                        gap: var(--space-6);
+                        padding: var(--space-5) 0;
+                        height: 100%;
+                        width: 80%;
+                        pointer-events: none;
+    
                         @include min-width-landscape(500px) {
-                            grid-column: 2 / 3;
-                            grid-row: 2 / 3;
+                            grid-template-columns: 1fr 1fr ;
+                            grid-template-rows: 1fr auto auto 2fr;
+                        }
+                        .slider-header-index__tittle {
+                            text-align: center;
+    
+                            @include min-width-landscape(500px) {
+                                grid-column: 2 / 3;
+                                grid-row: 2 / 3;
+                            }
+                        }
+    
+                        .slider-header-index__container-img {
+                            max-width: fit-content;
+                            @include min-width-landscape(500px) {
+                                grid-column: 1 / 2;
+                                grid-row: 1 / 5;
+                            }
+    
+                            .slider-header-index__img {
+                                aspect-ratio: 3/4;
+                                object-fit: contain;
+                                height: 100%;
+                            }
+                        }
+    
+                        .slider-header-index__button {
+                            justify-self: center;
+                            pointer-events: visible;
+    
+                            @include min-width-landscape(500px) {
+                                grid-column: 2 / 3;
+                                grid-row: 3 / 4;
+                            }
+    
                         }
                     }
-
-                    .slider-header-index__container-img {
-                        overflow: hidden;
-
-                        @include min-width-landscape(500px) {
-                            grid-column: 1 / 2;
-                            grid-row: 1 / 5;
-                            margin-left: var(--space-3);
-                        }
-
-                        .slider-header-index__img {
-                            aspect-ratio: 3/4;
-                            object-fit: contain;
-                            height: 100%;
-                            width: 100%;
-                        }
-                    }
-
-                    .slider-header-index__button {
-                        justify-self: center;
-
-                        @include min-width-landscape(500px) {
-                            grid-column: 2 / 3;
-                            grid-row: 3 / 4;
-                        }
-
-                    }
+    
                 }
-
             }
         }
     }
@@ -72,6 +81,34 @@ $vector-curve-height: 72px;
         background-color: var(--color-primary);
         .slider-catalogue-index{
             .slider-catalogue-index__slider{
+                --column: 1.2;
+                --row: 3;
+            
+                @include min-width-portrait(310px) {
+                    --column: 1.4;
+                }
+            
+                @include max-height(500px) {
+                    --column: 2.7;
+                    --row: 1;
+                }
+            
+                @include min-width(700px) {
+                    --column: 2.5;
+                    --row: 2;
+                }
+            
+                @include min-width-landscape(700px) {
+                    @include max-height(500px) {
+                        --column: 2.5;
+                        --row: 1;
+                    }
+                }
+            
+                @include min-width-landscape(1100px) {
+                    --column: 3.5;
+                    --row: 2;
+                }            
                 display: flex;
                 flex-direction: column;
                 align-items: center;
