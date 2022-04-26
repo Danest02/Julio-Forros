@@ -58,7 +58,7 @@
                     z-index: $z-index-1;
                     transition: transform .3s ease-in, padding .3s ease-in;
 
-                    @include min-width($tablet-landscape) {
+                    @include min-width(1150px) {
                         &:hover {
                             color: var(--color-secondary);
                             transform: scale(1.05);
@@ -93,7 +93,7 @@
                     margin-left: 4px;
                     z-index: $z-index-1;
 
-                    @include min-width($tablet-landscape) {
+                    @include min-width(1150px) {
                         display: none;
                     }
                 }
@@ -108,7 +108,7 @@
                 clip-path: circle(0.0% at 100% 0);
                 transition: background-color .7s ease-in-out, clip-path .7s ease-in-out;
 
-                @include min-width($tablet-landscape) {
+                @include min-width(1150px) {
                     position: static;
                     clip-path: none;
                     transform: translateY(3px);
@@ -124,7 +124,7 @@
                     align-items: flex-start;
                     gap: 1rem;
 
-                    @include min-width($tablet-landscape) {
+                    @include min-width(1150px) {
                         padding: 0;
                         height: auto;
                         flex-direction: row;
@@ -203,13 +203,14 @@
     transform: translateY(-100%);
     opacity: 0;
 }
-
 .navbar-header--hamburguer {
-
-    .navbar-header__container-links-buttons {
-        .menu {
-            background-color: var(--color-background);
-            clip-path: circle(150% at 100% 0);
+    .navbar-header__container{
+        .navbar-header__container-links-buttons {
+            .menu {
+                background-color: var(--color-background) ;
+                clip-path: circle(150% at 100% 0) ;
+            }
         }
     }
+
 }

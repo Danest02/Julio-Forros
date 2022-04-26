@@ -17,6 +17,27 @@
         outline: none;
         color: var(--color-primary-500);
         background-color: transparent;
+        caret-color: var(--color-tertiary-500);
+
+        &::-webkit-input-placeholder {
+            color: var(--color-primary-500);
+            opacity: 1;
+        }
+
+        &::-moz-placeholder {
+            color: var(--color-primary-500);
+            opacity: 1;
+        }
+
+        &:-ms-input-placeholder {
+            color: var(--color-primary-500);
+            opacity: 1;
+        }
+
+        &::-ms-input-placeholder {
+            color: var(--color-primary-500);
+            opacity: 1;
+        }
 
         &::placeholder {
             color: var(--color-primary-500);
@@ -25,7 +46,7 @@
 
         &:focus+.search-bar__button {
             background: var(--color-secondary-500);
-            color: var(--color-white-500);
+            color: var(--color-white);
             pointer-events: visible;
 
             &:hover {

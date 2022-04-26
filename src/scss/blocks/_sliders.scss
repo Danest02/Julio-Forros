@@ -66,8 +66,10 @@
 .my-slider__container-slides {
     position: relative;
     overflow: hidden;
-    // margin-bottom: var(--space-6);
 
+
+}
+.my-slider__container-slides--before {
     &::before {
         @extend .background-pseudo-element;
         right: -1px;
@@ -77,7 +79,6 @@
         pointer-events: none;
         background: linear-gradient(to left, var(--color-primary), rgba(121, 0, 0, 0) 10%, rgba(121, 0, 0, 0));
     }
-
 }
 
 .my-slider__container-slides--before-hiden {

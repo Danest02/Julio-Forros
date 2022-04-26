@@ -1,5 +1,6 @@
-const getScrollBarWidth = () => innerWidth - document.documentElement.clientWidth
-document.documentElement.style.setProperty('--scroll-bar' , getScrollBarWidth())
+const getScrollBarWidth = () =>
+  innerWidth - document.documentElement.clientWidth;
+document.documentElement.style.setProperty("--scroll-bar", getScrollBarWidth());
 
 // Obtener valores de variables
 // getComputedStyle(document.documentElement).getPropertyValue('--varible')
