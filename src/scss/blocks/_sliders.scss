@@ -63,12 +63,14 @@
         }
     }
 }
+
 .my-slider__container-slides {
     position: relative;
     overflow: hidden;
 
 
 }
+
 .my-slider__container-slides--before {
     &::before {
         @extend .background-pseudo-element;
@@ -101,7 +103,7 @@
     gap: var(--space-6);
     grid-template-rows: repeat(var(--row), auto);
     grid-auto-flow: column;
-    &:hover{
+    &:hover {
         cursor: grab;
     }
 
@@ -110,5 +112,3 @@
         overflow: hidden;
     }
 }
-
-
